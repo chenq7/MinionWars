@@ -2,7 +2,7 @@
 Players get to choose a dinosaur character and compete with one another to see who can collect all the coins the fastest. Users must run or jump on platforms to collect the coins. Coins are randomized, preventing gamers from memorizing coin locations. Lastly, maps are randomized so that players can experience different level layouts. 
 
 # Functionality and MVP:
-* Game logic:
+#### Game logic:
 * LevelClass 
 * DrawBackground method 
 * DrawTrees 
@@ -16,6 +16,7 @@ Players get to choose a dinosaur character and compete with one another to see w
 * Restart
 * DrawScore
 * Animate
+
 * User authorization: sign up and log in
 * Rendering player character (as a triangle) and background 
 * Add keyboard controls to allow player to move 
