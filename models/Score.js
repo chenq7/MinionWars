@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const TweetSchema = new Schema({
-  user: {
+const ScoreSchema = new Schema({
+  userId: {
     type: Schema.Types.ObjectId,
     ref: "users"
   },
-  text: {
+  points: {
     type: String,
     required: true
   },
