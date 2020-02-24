@@ -26,18 +26,18 @@ Players get to choose a dinosaur character and compete with one another to see w
 * Production README
 
 # Bonus Features:
--Multiplayer 
--background music
--action sounds (i.e. getting a coin)
+* Multiplayer 
+* Background music
+* Action sounds (i.e. getting a coin)
 
 # Technologies and Technical Challenges 
--Working on a single project with multiple collaborators (being able to resolve merge conflicts)
--canvas (not sure)
--Mongo
--Express
--react
--node.js
--sprite animations
+* Working on a single project with multiple collaborators (being able to resolve merge conflicts)
+* Canvas (not sure)
+* Mongo
+* Express
+* React
+* Node.js
+* Sprite animations
 
 ## Group Members and Work Breakdown:
 * Greg: team leader
@@ -45,32 +45,32 @@ Players get to choose a dinosaur character and compete with one another to see w
 * John: team member
 * Anton: team member
 
-Day one: Splash page and user backend/frontend
-john: create user auth
-Lawrence: create a user profile page
-Anton: create scoreboard page
-Greg: supervising group/research/planning material for next day 
+### Day one: Splash page and user backend/frontend
+* John: create user auth
+* Lawrence: create a user profile page
+* Anton: create scoreboard page
+* Greg: supervising group/research/planning material for next day 
 
 ### Day two: Display (handles window resizing, canvas) AND Game logic
-Greg: game logic
-john: display 
-Lawrence: game logic
-Anton: display 
+* Greg: game logic
+* John: display 
+* Lawrence: game logic
+* Anton: display 
 
 ### Day three: continuing Display AND Game Logic. Adding Controller
-Greg: game logic/controller
-john: display/css
-Lawrence: game logic/controller
-Anton: display/css
+* Greg: game logic/controller
+* John: display/css
+* Lawrence: game logic/controller
+* Anton: display/css
 
 ### Day four: Engine,CSS, and Sprites 
-Greg: sprite animation/engine
-john: display/css/adding sprite platforms
-Lawrence: sprite animation/engine
-Anton: display/CSS/adding sprite platforms
+* Greg: sprite animation/engine
+* John: display/css/adding sprite platforms
+* Lawrence: sprite animation/engine
+* Anton: display/CSS/adding sprite platforms
 
 ### Day five: Testing/writing readMe
-greg: stress test game
-Lawrence: refactoring CSS
-anton: stress test game
-john: refactoring CSS
+* Greg: stress test game
+* Lawrence: refactoring CSS
+* Anton: stress test game
+* John: refactoring CSS
