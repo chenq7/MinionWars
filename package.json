@@ -1,0 +1,32 @@
+{
+  "name": "dinodart",
+  "version": "1.0.0",
+  "description": "dino game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenq7/DinoDart.git"
+  },
+  "author": "dino team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenq7/DinoDart/issues"
+  },
+  "homepage": "https://github.com/chenq7/DinoDart#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
