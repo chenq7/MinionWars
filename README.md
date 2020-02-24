@@ -69,7 +69,7 @@ john: display/css/adding sprite platforms
 Lawrence: sprite animation/engine
 Anton: display/CSS/adding sprite platforms
 
-day 5: Testing/writing readMe
+Day 5: Testing/writing readMe
 greg: stress test game
 Lawrence: refactoring CSS
 anton: stress test game
