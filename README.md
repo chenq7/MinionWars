@@ -1,8 +1,8 @@
-Background and OverviewFunctionality:
+# Background and Overview Functionality:
 Players get to choose a dinosaur character and compete with one another to see who can collect all the coins the fastest. Users must run or jump on platforms to collect the coins. Coins are randomized, preventing gamers from memorizing coin locations. Lastly, maps are randomized so that players can experience different level layouts. 
 
-Functionality and MVP:
--game logic:
+# Functionality and MVP:
+* game logic:
 -LevelClass 
 drawBackground method 
 -drawTrees 
@@ -25,12 +25,12 @@ drawBackground method
 -Add timer and scoreImplementing multiple levels
 -Production README
 
-Bonus Features:
+# Bonus Features:
 -Multiplayer 
 -background music
 -action sounds (i.e. getting a coin)
 
-Technologies and Technical Challenges 
+# Technologies and Technical Challenges 
 -Working on a single project with multiple collaborators (being able to resolve merge conflicts)
 -canvas (not sure)
 -Mongo
