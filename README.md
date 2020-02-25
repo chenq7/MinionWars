@@ -1,5 +1,5 @@
 # Background and Overview:
-Users can buy and sell digital dino tokens. Each token has an assigned value that is based off the dino's traits. Users also have the option of mating their existing tokens to create new dinos.
+Users can buy and sell digital tokens. Tokens are represented by a picture. Each token has an assigned value that is based off the character's traits. Users also have the option of mating their existing tokens to create new chracters. The website includes interactions between users. A user has the option of attacking another users token, the recieveing end will get a notification that another user has attacked them. 
 
 
 # Functionality and MVP:
