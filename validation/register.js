@@ -13,9 +13,6 @@ module.exports = function validateRegisterInput(data) {
     errors.username = "username field is required";
   }
 
-  
-  
-
   if (Validator.isEmpty(data.password)) {
     errors.password = "Password field is required";
   }

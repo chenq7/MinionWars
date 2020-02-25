@@ -12,6 +12,12 @@ const UserSchema = new Schema({
         required: true
     },
 
+    coins: {
+        type: Number, 
+        default: 1000,
+        required: true
+    },
+
     date: {
         type: Date,
         default: Date.now
