@@ -1,0 +1,119 @@
+* {
+  font-family: Helvetica,Arial,sans-serif;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  border-bottom: 2px solid black;
+}
+
+.header a {
+  padding: 15px 10px;
+  text-decoration: none;
+color: black;
+
+}
+
+.title {
+  flex-grow: 1;
+  font-size: 3em;
+}
+
+.splash-links {
+  text-transform: lowercase;
+  font-size: 2em;
+  padding: 15px 25px;
+}
+
+.splash-links:hover {
+  color: #ff9c33;
+  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+
+.login:hover {
+  color: #ff9c33;
+  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  cursor: pointer;
+}
+
+.login {
+  text-transform: lowercase;
+  padding: 15px 25px;
+  font-size: 2em;
+    color: black;
+
+}
+
+.background {
+  background-color: #fafafa;
+}
+
+.minion-container {
+    width: 100%;
+}
+.splash-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem;
+}
+
+.minion-list {
+  grid-template-columns: repeat(3,1fr);
+  display: grid;
+    grid-gap: 2.4rem;
+    list-style: none;
+}
+
+.minion-list li {
+    margin: 10px 22.5px;
+}
+
+.minion-image {
+  margin: 10px 35px;
+  border-radius: 4px;
+}
+
+.information {
+  padding: 2rem;
+}
+.information h2 {
+  font-size: 2rem;
+}
+
+.information p {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.information li {
+    list-style: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.information ul{
+        padding-left:0;
+
+}
+
+.splash-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("http://unsplash.it/1200x800") center center no-repeat;
+  background-size: cover;
+}
+
+.splash-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+  opacity: 0.6;
+  z-index: -1;
+}

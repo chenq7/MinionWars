@@ -1,0 +1,72 @@
+.signupForm {
+  padding: 7px 20px;
+  width: 350px;
+  min-height: 300px;
+  border-radius: 8px;
+  border: 1px solid #002f4b;
+  background-image: linear-gradient(to left top, #002f4b, #cb8c86);
+}
+
+.signupFields {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 75%;
+}
+.signupFieldContainer{
+   display: flex;
+  justify-content: center;
+}
+.usernameField {
+  background-color: antiquewhite;
+  height: 30px;
+   text-align: center;
+   font-weight: 700;
+   font-size: 16px;
+    font-family: Lucida Console;
+    color:gray;
+    border-radius: 8px;
+}
+
+.passwordField {
+  background-color: antiquewhite;
+  height: 30px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+   font-family: Lucida Console;
+   color:gray;
+   border-radius: 8px;
+}
+
+.submitButton{ 
+  font-weight: 700;
+  height: 30px;
+  background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+  border-radius: 8px;
+    font-weight: 700;
+  font-size: 16px;
+   font-family: Lucida Console;
+}
+
+.submitButton:hover {
+  color: #ff9c33;
+  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  cursor: pointer;
+}
+
+.signupTitle{ 
+  color: antiquewhite;
+  font-size: 20px;
+  font-family: Lucida Console;
+  text-align: center;
+}
+.loginLink{ 
+  color: antiquewhite;
+  font-size: 14px;
+  font-family: Comic Sans MS;
+  text-align: center;
+  cursor: pointer;
+  padding-bottom: 20px;
+}
