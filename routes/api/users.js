@@ -8,19 +8,21 @@ const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
 const passport = require("passport");
 
+// http://localhost:5000/api/users/...
+
+
+router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
 
 router.get(
   "/current",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    res.json({ msg: "Success" });
+    res.json({
+      id: req.user.id,
+      username: req.user.username
+    });
   }
 );
-
-router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
-
-
-
 
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
@@ -68,10 +70,6 @@ router.post("/register", (req, res) => {
 });
 
 
-
-
-
-
 router.post("/login", (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body);
 
@@ -111,19 +109,12 @@ router.post("/login", (req, res) => {
   });
 });
 
-
-
-
-router.get(
-  "/current",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    res.json({
-      id: req.user.id,
-      username: req.user.username
-    });
-  }
-);
-
+// router.get("/:user_id", (req, res) => {
+//   Minion.find({ user: req.params.user_id })
+//     .then(minions => res.json(minions))
+//     .catch(err =>
+//       res.status(404).json({ nominionsfound: "No minions found from that user" })
+//     );
+// });
 
 module.exports = router;

@@ -6,22 +6,14 @@ const passport = require("passport");
 const Minion = require("../../models/Minion");
 const validateMinionInput = require("../../validation/minion");
 
-router.get("/minions", (req, res) => {
+router.get("/", (req, res) => {
   Minion.find()
     .sort({ date: -1 })
     .then(minions => res.json(minions))
     .catch(err => res.status(404).json({ nominionsfound: "No minions found" }));
 });
 
-router.get("/user/:user_id", (req, res) => {
-  Minion.find({ user: req.params.user_id })
-    .then(minions => res.json(minions))
-    .catch(err =>
-      res.status(404).json({ nominionsfound: "No minions found from that user" })
-    );
-});
-
-router.get("/minions/:minion_id", (req, res) => {
+router.get("/:minion_id", (req, res) => {
   Minion.findById(req.params.id)
     .then(minon => res.json(minion))
     .catch(err =>
@@ -31,7 +23,7 @@ router.get("/minions/:minion_id", (req, res) => {
 
 
 router.post(
-  "/minions/create",
+  "/create",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
 
@@ -43,12 +35,13 @@ router.post(
 
     const newMinion = new Minion({
       url: req.body.url,
-      attack: req.attack.id,
-      defense: req.defense.id,
-      hp: req.hp.id,
-      rarity: req.rarity.id,
-      ability: req.ability.id,
-      userId: req.userId.id
+      name: req.body.name,
+      attack: req.body.attack,
+      defense: req.body.defense,
+      hp: req.body.hp,
+      rarity: req.body.rarity,
+      ability: req.body.ability,
+      userId: req.body.userId
     });
 
     newMinion.save().then(minion => res.json(minion));

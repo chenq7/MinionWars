@@ -7,6 +7,11 @@ const MinionSchema = new Schema({
     required: true
   },
   
+  name: {
+    type: String,
+    require: true
+  },
+
   attack: {
     type: Number,
     required: true
