@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
 const users = require("./routes/api/users");
-const scores = require("./routes/api/scores");
+const minions = require("./routes/api/minions");
 const User = require('./models/User');
 const bodyParser = require('body-parser');
 const passport = require("passport");
@@ -16,11 +16,6 @@ mongoose
 
 
 app.get('/', (req,res) => {
-    const user = new User({
-        username: 'hunter',
-        password: 'password'
-    })
-    user.save()
     res.send('hello')
 })
 
@@ -34,7 +29,7 @@ app.use(bodyParser.json());
 
 
 app.use("/api/users", users);
-app.use("/api/scores", scores);
+app.use("/api/minions", minions);
 
 
 

@@ -9,9 +9,6 @@ const keys = require("../../config/keys");
 const passport = require("passport");
 
 
-
-
-
 router.get(
   "/current",
   passport.authenticate("jwt", { session: false }),
