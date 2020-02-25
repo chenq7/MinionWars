@@ -42,35 +42,3 @@ const MinionSchema = new Schema({
 });
 
 module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
-
-module.exports = Minion = mongoose.model("Minion", MinionSchema);
