@@ -6,7 +6,7 @@ const MinionSchema = new Schema({
     type: String,
     required: true
   },
-  
+
   name: {
     type: String,
     require: true
@@ -39,6 +39,11 @@ const MinionSchema = new Schema({
   userId: {
     type: Number
   },
+
+  // userId: {
+  //   type: Schema.Types.ObjectId,
+  //   ref: "User"
+  // },
 
   date: {
     type: Date,
