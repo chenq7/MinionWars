@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+
 
 class Nav extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Nav extends React.Component {
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
+    this.props.history.push('/');
   }
 
   getLinks() {
@@ -22,9 +24,8 @@ class Nav extends React.Component {
       );
     } else {
       return (
-        <div>
-          <Link to={"/signup"}>Signup</Link>
-          <Link to={"/login"}>Login</Link>
+        <div className="login" onClick={this.props.loginForm}>
+          Login
         </div>
       );
     }
@@ -50,15 +51,14 @@ class Nav extends React.Component {
             <a className="splash-links" href="">
               contact
             </a>
-            <div className="login" onClick={this.props.loginForm}>
-              Login
-            </div>
+            <a className="splash-links">
+            {this.getLinks()}
+            </a>
           </div>
         </div>
-        {/* {this.getLinks()} */}
       </div>
     );
   }
 }
 
-export default Nav;
+export default withRouter(Nav);

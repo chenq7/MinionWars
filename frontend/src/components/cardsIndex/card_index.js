@@ -16,11 +16,19 @@ class CardIndex extends React.Component {
   render() {
     const minions = this.props.minions && this.props.minions.data ?
     this.props.minions.data.map(minion => {
-      return <div key={minion.id}>{minion.name}</div>;
+      return (
+        <div>
+          <SingleCard minion={minion} />
+        </div>
+      );
     }) : null
     ;
-
-    return <div>{minions}</div>;
+    return (
+      <div>
+        <Nav />
+        {minions}
+      </div>
+    );
   }
 }
 
