@@ -1,6 +1,8 @@
 import React from 'react';
 import "./splash.css";
 import SplashCard from './card';
+import Nav from '../nav/nav_container';
+import Footer from '../footer/footer';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -12,28 +14,7 @@ class Splash extends React.Component {
         return (
           <>
             <div className="splash-container">
-              <div className="background">
-                <div className="header">
-                  <div className="title">
-                    <a href="">Minion Wars</a>
-                  </div>
-                  <a className="splash-links" href="">
-                    about
-                  </a>
-                  <a className="splash-links" href="">
-                    Minions
-                  </a>
-                  <a className="splash-links" href="">
-                    For Sale
-                  </a>
-                  <a className="splash-links" href="">
-                    contact
-                  </a>
-                  <div className="login" onClick={this.props.loginForm}>
-                    Login
-                  </div>
-                </div>
-              </div>
+              <Nav/>
               <section className="splash-content">
                 <div className="information">
                   <h2>Let the battle begin!</h2>
@@ -80,6 +61,7 @@ class Splash extends React.Component {
                     </div>
                 </section>
               </section>
+              <Footer/>
             </div>
           </>
         );

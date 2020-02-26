@@ -33,8 +33,29 @@ class Nav extends React.Component {
   render() {
     return (
       <div>
-        <h1>Dino Dart</h1>
-        {this.getLinks()}
+        <div className="background">
+          <div className="header">
+            <div className="title">
+              <a href="">Minion Wars</a>
+            </div>
+            <a className="splash-links" href="">
+              about
+            </a>
+            <a className="splash-links" href="">
+              Minions
+            </a>
+            <a className="splash-links" href="">
+              For Sale
+            </a>
+            <a className="splash-links" href="">
+              contact
+            </a>
+            <div className="login" onClick={this.props.loginForm}>
+              Login
+            </div>
+          </div>
+        </div>
+        {/* {this.getLinks()} */}
       </div>
     );
   }
