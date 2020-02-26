@@ -22,9 +22,8 @@ class Nav extends React.Component {
       );
     } else {
       return (
-        <div>
-          <Link to={"/signup"}>Signup</Link>
-          <Link to={"/login"}>Login</Link>
+        <div className="login" onClick={this.props.loginForm}>
+          Login
         </div>
       );
     }
@@ -50,12 +49,11 @@ class Nav extends React.Component {
             <a className="splash-links" href="">
               contact
             </a>
-            <div className="login" onClick={this.props.loginForm}>
-              Login
-            </div>
+            <a className="splash-links"}>
+            {this.getLinks()
+            </a>
           </div>
         </div>
-        {/* {this.getLinks()} */}
       </div>
     );
   }
