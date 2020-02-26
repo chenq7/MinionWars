@@ -23,6 +23,7 @@ header .logo{
     margin-left: 60px;
     font-weight: 700;
     font-family: Blippo, fantasy;
+
 }
 
 
@@ -42,7 +43,7 @@ header ul li a{
     text-transform: uppercase;
     padding: 10px 15px;
     font-family: Blippo, fantasy;
-    cursor: poi
+    cursor: pointer;
 }
 header ul li a:hover{
     border-bottom: 2px solid #fdcb88;
