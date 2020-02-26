@@ -1,8 +1,13 @@
-.splash-page{
-      background: url('../../app/assets/fog.jpg');
-      width: 100vw;
+body{
+  margin: 0px
 }
 
+
+
+.splash-page{
+      background: url('../../app/assets/fog.jpg') no-repeat center center/cover;
+      width: 100vw;
+}
 
 
 section{

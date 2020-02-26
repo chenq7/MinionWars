@@ -38,11 +38,20 @@ class SignupForm extends React.Component {
       password: this.state.password,
       password2: this.state.password2
     };
-
+    
     this.props.signup(user);
-    this.props.closeModal();
-    this.props.history.push("/minions");
   }
+
+  
+  
+  handleDemo(e) {
+   e.preventDefault();
+   this.props.demologin();
+   this.props.history.push("/minions");
+   this.props.closeModal();
+ };
+ 
+  
 
   renderErrors() {
     return (
@@ -88,7 +97,10 @@ class SignupForm extends React.Component {
               <br />
               <input type="submit" value="Submit" className="submitButton" />
               {this.renderErrors()}
-              <div className="loginLink" onClick={this.props.loginForm}>
+              <div>
+               <button className="demoLogin" onClick={this.handleDemo}>
+                Demo Login
+              </button>lassName="loginLink" onClick={this.props.loginForm}>
                 Already a member? Log in!
               </div>
             </div>

@@ -11,11 +11,11 @@ class Splash extends React.Component {
 
     render(){
       return (
-        <div>
+        <div className='splash-page'>
           <section id="shop">
               <div className="content">
                   <h2>Choose your Minion</h2>
-                  <div class="images">
+                  <div className="images">
                       <img src="http://placekitten.com/g/200/300" alt="" ></img>
                       <img src="http://placekitten.com/g/200/300" alt="" ></img>
                       <img src="http://placekitten.com/g/200/300" alt="" ></img>

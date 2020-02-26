@@ -35,7 +35,6 @@ class Nav extends React.Component {
   render() {
     return (
        <header>
-            {/* <input type="checkbox" name="" id="chk1"> */}
             <div className="logo">
                 <h1>Minion Wars</h1>
             </div>
@@ -55,11 +54,6 @@ class Nav extends React.Component {
                     </a>
                 </li>
             </ul>
-            <div className="menu">
-                <label for="chk1">
-                    <i className="fa fa-bars"></i>
-                </label>
-            </div>
         </header>
     );
   }
