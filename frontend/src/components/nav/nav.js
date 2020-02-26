@@ -20,13 +20,13 @@ class Nav extends React.Component {
     if (this.props.loggedIn) {
       return (
         <div className="logout" onClick={this.logoutUser}>
-          Logout
+          <a>Logout</a>
         </div>
       );
     } else {
       return (
         <div className="login" onClick={this.props.loginForm}>
-          Login
+          <a>Login</a>
         </div>
       );
     }
@@ -42,7 +42,7 @@ class Nav extends React.Component {
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Minions</a></li>
-                <li><a className="splash-links">{this.getLinks()}</a></li>
+                <li>{this.getLinks()}</li>
                 <li>
                     <a href="#">
                         <i className="fa fa-facebook"></i>
@@ -51,7 +51,7 @@ class Nav extends React.Component {
                         <i className="fa fa-instagram"></i>
                     </a>
                     <a href="#">
-                        <i className="fa fa-twitter"></i>
+                        <i className="fa fab fa-github"></i>
                     </a>
                 </li>
             </ul>
