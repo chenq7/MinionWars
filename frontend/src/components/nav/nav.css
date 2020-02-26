@@ -42,6 +42,7 @@ header ul li a{
     text-transform: uppercase;
     padding: 10px 15px;
     font-family: Blippo, fantasy;
+    cursor: poi
 }
 header ul li a:hover{
     border-bottom: 2px solid #fdcb88;
