@@ -47,6 +47,7 @@ router.post(
       defense: req.body.defense,
       hp: req.body.hp,
       rarity: req.body.rarity,
+      price: req.body.price,
       ability: req.body.ability,
       userId: req.body.userId
     });
