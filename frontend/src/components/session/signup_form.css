@@ -3,9 +3,8 @@
   width: 570px;
   min-height: 614px;
   border-radius: 18px;
-  /* border: 1px solid #3e1304; */
-  /* background-image: linear-gradient(to left top, #002f4b, #cb8c86); */
-  background-image: url(https://pngimage.net/wp-content/uploads/2018/06/fire-sword-png-8.png);
+  background: url('../../app/assets/fire_sword.png')
+  no-repeat center center/cover;
 }
 
 .signupFields {

@@ -1,3 +1,10 @@
+.splash-page{
+      background: url('../../app/assets/fog.jpg');
+      width: 100vw;
+}
+
+
+
 section{
     min-height: 100vh;
     display: flex;
@@ -25,10 +32,10 @@ img{
 section .content{
     width: 80%;
     height: 100vh;
-    position: absolute;
+    /* position: absolute; */
     left: 0;
-    background: rgb(255,2,65);
-    padding: 100px 350px 100px 100px;
+    /* background: rgb(255,2,65); */
+    /* padding: 100px 350px 100px 100px; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -61,16 +68,16 @@ section .content{
 }
 /*-------Shop, Contact----------------------*/
 #shop .content, #contact .content{
-    width: 100%;
+    /* width: 100%; */
     padding: 100px;
 }
-#shop .content{
+/* #shop .content{
     background: lightblue;
     text-align: center;
 }
 #contact .content{
     background:lightcoral;
-}
+} */
 #shop .images{
     width: 100%;
     height: 400px;

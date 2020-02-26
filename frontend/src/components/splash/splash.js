@@ -12,7 +12,7 @@ class Splash extends React.Component {
 
     render(){
         return (
-          <div>
+          <div className='splash-page'>
               <Nav/>
         <section id="shop">
             <div className="content">
