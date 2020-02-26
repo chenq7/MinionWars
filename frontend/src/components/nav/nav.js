@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+
 
 class Nav extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Nav extends React.Component {
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
+    this.props.history.push('/');
   }
 
   getLinks() {
@@ -49,8 +51,8 @@ class Nav extends React.Component {
             <a className="splash-links" href="">
               contact
             </a>
-            <a className="splash-links"}>
-            {this.getLinks()
+            <a className="splash-links">
+            {this.getLinks()}
             </a>
           </div>
         </div>
@@ -59,4 +61,4 @@ class Nav extends React.Component {
   }
 }
 
-export default Nav;
+export default withRouter(Nav);

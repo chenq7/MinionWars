@@ -18,7 +18,7 @@ class CardIndex extends React.Component {
     this.props.minions.data.map(minion => {
       return (
         <div>
-          <SingleCard minion={minion} />{" "}
+          <SingleCard minion={minion} />
         </div>
       );
     }) : null
