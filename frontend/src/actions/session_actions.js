@@ -48,3 +48,6 @@ export const logout = () => dispatch => {
   APIUtil.setAuthToken(false);
   dispatch(logoutUser());
 };
+
+export const demologin = () => dispatch =>
+  dispatch(login({ username: "demouser", password: "demopassword" }));

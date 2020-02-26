@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../nav/nav_container';
 import SingleCard from './single_card';
 import { receiveAllMinions } from '../../actions/minion_actions';
-
+import './single_card.css'
 
 class CardIndex extends React.Component {
   constructor(props) {
@@ -26,7 +26,9 @@ class CardIndex extends React.Component {
     return (
       <div>
         <Nav />
+        <div className='cards-list'>
         {minions}
+        </div>
       </div>
     );
   }

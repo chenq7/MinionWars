@@ -1,119 +1,150 @@
-* {
-  font-family: Helvetica,Arial,sans-serif;
-  color: #fff;
+section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
 }
-
-.header {
-  display: flex;
-  border-bottom: 2px solid black;
-}
-
-.header a {
-  padding: 15px 10px;
-  text-decoration: none;
-color: black;
-
-}
-
-.title {
-  flex-grow: 1;
-  font-size: 3em;
-}
-
-.splash-links {
-  text-transform: lowercase;
-  font-size: 2em;
-  padding: 15px 25px;
-}
-
-.splash-links:hover {
-  color: #ff9c33;
-  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
-}
-
-.login:hover {
-  color: #ff9c33;
-  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
-  cursor: pointer;
-}
-
-.login {
-  text-transform: lowercase;
-  padding: 15px 25px;
-  font-size: 2em;
-    color: black;
-
-}
-
-.background {
-  background-color: #fafafa;
-}
-
-.minion-container {
+section .photo{
+    position: absolute;
+    max-width: 500px;
+    height: 400px;
     width: 100%;
+    right: 50px;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 1;
 }
-.splash-content {
-  display: flex;
-  justify-content: space-between;
-  padding: 5rem;
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 0 10px #111;
+}
+section .content{
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    background: rgb(255,2,65);
+    padding: 100px 350px 100px 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: whitesmoke;
+}
+.content h2{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.content h3{
+    font-size: 1.7em;
+    margin-bottom: 20px;
+}
+.content p{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.content a{
+    color: #000;
+    text-decoration: none;
+    background: whitesmoke;
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    
+}
+/*-------Shop, Contact----------------------*/
+#shop .content, #contact .content{
+    width: 100%;
+    padding: 100px;
+}
+#shop .content{
+    background: lightblue;
+    text-align: center;
+}
+#contact .content{
+    background:lightcoral;
+}
+#shop .images{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+#shop .images img{
+    width: 30%;
 }
 
-.minion-list {
-  grid-template-columns: repeat(3,1fr);
-  display: grid;
-    grid-gap: 2.4rem;
-    list-style: none;
+
+
+/*-------------------Responsive------------------*/
+@media (max-width:1200px){
+    section .photo{
+        position: absolute;
+        max-width: 400px;
+        height: 300px;
+    }
 }
 
-.minion-list li {
-    margin: 10px 22.5px;
+@media (max-width:1000px){
+    section .photo{
+        position: relative;
+        max-width: 1000px;
+        height: 100%;
+        top:0;
+        right: 0;
+        transform: translateY(0);
+    }
+    section .content{
+        width: 100%;
+        padding: 20px;
+        position: relative;
+    }
+    header ul{
+        position: fixed;
+        top:100px;
+        right: -100%;
+        background: whitesmoke;
+        height: calc(100vh - 100px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+    header .menu{
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+    #chk1:checked ~ ul{
+        right: 0;
+    }
 }
-
-.minion-image {
-  margin: 10px 35px;
-  border-radius: 4px;
+@media (max-width:500px){
+    header .logo{
+        margin-left: 10px;
+    }
+    .logo h1{
+        font-size: 1.5em;
+    }
+    header ul{
+        width: 100%;
+    }
+    #contact .content{
+        padding: 20px;
+    }
 }
-
-.information {
-  padding: 2rem;
+input[type="checkbox"]{
+    display: none;
 }
-.information h2 {
-  font-size: 2rem;
-}
-
-.information p {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    line-height: 2rem;
-}
-
-.information li {
-    list-style: none;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.information ul{
-        padding-left:0;
-
-}
-
-.splash-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url("http://unsplash.it/1200x800") center center no-repeat;
-  background-size: cover;
-}
-
-.splash-container:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
-  opacity: 0.6;
-  z-index: -1;
+::-webkit-scrollbar{
+    display: none;
 }

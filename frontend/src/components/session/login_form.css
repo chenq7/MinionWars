@@ -1,10 +1,9 @@
 .loginForm {
   padding: 7px 20px;
-  width: 350px;
-  min-height: 300px;
-  border-radius: 8px;
-  border: 1px solid #002f4b;
-  background-image: linear-gradient(to left top, #002f4b, #cb8c86);
+  width: 570px;
+  min-height: 614px;
+  border-radius: 18px;
+  background-image: url(https://pngimage.net/wp-content/uploads/2018/06/fire-sword-png-8.png);
 }
 
 .loginFields {
@@ -17,7 +16,6 @@
 .loginFieldContainer{
    display: flex;
   justify-content: center;
-  /* margin-top: 5%; */
 }
 .usernameField {
   background-color: antiquewhite;
@@ -44,11 +42,12 @@
 .submitButton{ 
   font-weight: 700;
   height: 30px;
-  background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+  background-image: linear-gradient(to bottom right, #3e1304, #da823e);
   border-radius: 8px;
     font-weight: 700;
   font-size: 16px;
    font-family: Lucida Console;
+   
 }
 
 .submitButton:hover {
@@ -58,15 +57,22 @@
 }
 
 .loginTitle{ 
-  color: antiquewhite;
-  font-size: 20px;
-  font-family: Lucida Console;
+  color: #da823e;
+  font-size: 26px;
+  font-family: Blippo, fantasy;
   text-align: center;
 }
 .signupLink{ 
-  color: antiquewhite;
-  font-size: 14px;
-  font-family: Comic Sans MS;
-  text-align: center;
+  position: relative;
+  top: 90%;
+  color: #852806;
+  font-size: 22px;
+  font-family: Blippo, fantasy;
+  cursor: pointer;
+}
+
+.signupLink:hover {
+  color: #ff9c33;
+  transition: color 1s cubic-bezier(0.64, 0.57, 0.67, 1.53);
   cursor: pointer;
 }

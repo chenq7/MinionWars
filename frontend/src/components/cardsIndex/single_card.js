@@ -8,16 +8,14 @@ class SingleCard extends React.Component {
   render() {
       const minion = this.props.minion
     return (
-     <div className='card-container'>
-         <div className='title-header'>
-             <h1>{minion.name}</h1>
-             <h2>{minion.rarity}</h2>
-         </div>
-         <div className='minion-image-container'>
-            
-         </div>
-
-     </div>
+        <div class="card 1">
+          <div class="card_image">
+            <img src="https://i.redd.it/b3esnz5ra34y.jpg" />{" "}
+          </div>
+          <div class="card_title title-white">
+            <p>{minion.rarity}</p>
+          </div>
+        </div>
     );
   }
 }

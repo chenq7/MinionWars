@@ -1,10 +1,11 @@
 .signupForm {
   padding: 7px 20px;
-  width: 350px;
-  min-height: 300px;
-  border-radius: 8px;
-  border: 1px solid #002f4b;
-  background-image: linear-gradient(to left top, #002f4b, #cb8c86);
+  width: 570px;
+  min-height: 614px;
+  border-radius: 18px;
+  /* border: 1px solid #3e1304; */
+  /* background-image: linear-gradient(to left top, #002f4b, #cb8c86); */
+  background-image: url(https://pngimage.net/wp-content/uploads/2018/06/fire-sword-png-8.png);
 }
 
 .signupFields {
@@ -57,16 +58,23 @@
 }
 
 .signupTitle{ 
-  color: antiquewhite;
-  font-size: 20px;
-  font-family: Lucida Console;
+  color: #da823e;
+  font-size: 26px;
+  margin-bottom: 0;
+  font-family: Blippo, fantasy;
   text-align: center;
 }
 .loginLink{ 
-  color: antiquewhite;
-  font-size: 14px;
-  font-family: Comic Sans MS;
-  text-align: center;
+  position: relative;
+  top: 45%;
+  color: #852806;
+  font-size: 22px;
+  font-family: Blippo, fantasy;
   cursor: pointer;
-  padding-bottom: 20px;
+}
+
+.loginLink:hover {
+  color: #ff9c33;
+  transition: color 1s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  cursor: pointer;
 }

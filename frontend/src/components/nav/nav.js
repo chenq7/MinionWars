@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import "./nav.css";
 
 
 class Nav extends React.Component {
@@ -18,8 +19,8 @@ class Nav extends React.Component {
   getLinks() {
     if (this.props.loggedIn) {
       return (
-        <div>
-          <button onClick={this.logoutUser}>Logout</button>
+        <div className="logout" onClick={this.logoutUser}>
+          Logout
         </div>
       );
     } else {
@@ -33,30 +34,33 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="background">
-          <div className="header">
-            <div className="title">
-              <a href="">Minion Wars</a>
+       <header>
+            {/* <input type="checkbox" name="" id="chk1"> */}
+            <div className="logo">
+                <h1>Minion Wars</h1>
             </div>
-            <a className="splash-links" href="">
-              about
-            </a>
-            <a className="splash-links" href="">
-              Minions
-            </a>
-            <a className="splash-links" href="">
-              For Sale
-            </a>
-            <a className="splash-links" href="">
-              contact
-            </a>
-            <a className="splash-links">
-            {this.getLinks()}
-            </a>
-          </div>
-        </div>
-      </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Minions</a></li>
+                <li><a className="splash-links">{this.getLinks()}</a></li>
+                <li>
+                    <a href="#">
+                        <i className="fa fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i className="fa fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i className="fa fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+            <div className="menu">
+                <label for="chk1">
+                    <i className="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
     );
   }
 }
