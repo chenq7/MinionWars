@@ -17,5 +17,5 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-// ,{ logout }
+
 export default connect(mapStateToProps,mapDispatchToProps)(Nav);
