@@ -22,10 +22,10 @@ router.get("/:minion_id", (req, res) => {
 });
 
 router.get("/users/:user_id", (req, res) => {
-  Minion.findByuserId(req.params.id)
-    .then(minon => res.json(minion))
+  Minion.findByUserId(req.params.id)
+    .then(minons => res.json(minions))
     .catch(err =>
-      res.status(404).json({ notminonfound: "No minion found with that ID" })
+      res.status(404).json({ notminonsfound: "No minion found with that ID" })
     );
 });
 
