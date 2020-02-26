@@ -21,6 +21,13 @@ router.get("/:minion_id", (req, res) => {
     );
 });
 
+router.get("/users/:user_id", (req, res) => {
+  Minion.findByuserId(req.params.id)
+    .then(minon => res.json(minion))
+    .catch(err =>
+      res.status(404).json({ notminonfound: "No minion found with that ID" })
+    );
+});
 
 router.post(
   "/create",
