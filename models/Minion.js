@@ -36,6 +36,11 @@ const MinionSchema = new Schema({
     type: String
   },
 
+  price: {
+    type: Number,
+    required: true
+  },
+
   userId: {
     type: Number
   },

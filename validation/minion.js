@@ -11,6 +11,7 @@ module.exports = function validateMinionInput(data) {
     data.rarity = validText(data.rarity) ? data.rarity : "";
     data.ability = validText(data.ability) ? data.ability : null;
     data.userId = validText(data.userId) ? data.userId : null;
+    data.price = validText(data.price) ? data.price : "";
 
     if (Validator.isEmpty(data.url)) {
         errors.url = "URL field is required";
@@ -38,6 +39,14 @@ module.exports = function validateMinionInput(data) {
 
     if (!Number(data.hp)) {
         errors.hp = "Hp field must be a number";
+    }
+
+    if (Validator.isEmpty(data.price)) {
+       errors.price = "Price field is required";
+    }
+
+    if (!Number(data.price)) {
+        errors.price = "Price field must be a number";
     }
 
     if (Validator.isEmpty(data.rarity)) {

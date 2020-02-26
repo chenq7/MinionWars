@@ -1,7 +1,6 @@
 import React from 'react';
 import "./splash.css";
 import SplashCard from './card';
-import Nav from '../nav/nav_container';
 import Footer from '../footer/footer';
 
 class Splash extends React.Component {
@@ -14,7 +13,6 @@ class Splash extends React.Component {
         return (
           <>
             <div className="splash-container">
-              <Nav/>
               <section className="splash-content">
                 <div className="information">
                   <h2>Let the battle begin!</h2>
