@@ -93,8 +93,7 @@ for (let i = 0; i < 20; i++) {
     defense: Math.floor(Math.random() * 49 + 1),
     hp: Math.floor(Math.random() * 900 + 100),
     rarity: rarities[Math.floor(Math.random() * rarities.length)],
-    ability: abilities[Math.floor(Math.random() * abilities.length)],
-    userId: i+1
+    ability: abilities[Math.floor(Math.random() * abilities.length)]
   });
 }
 
