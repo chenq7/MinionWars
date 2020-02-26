@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
   return {
-        minions: state.minions
+    minions: state.minions,
+    currentUserId: state.session.id
   };
 };
 

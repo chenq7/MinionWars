@@ -37,23 +37,23 @@ class Nav extends React.Component {
         <div className="background">
           <div className="header">
             <div className="title">
-              <a href="">Minion Wars</a>
+              <Link to="/">Minion Wars</Link>
             </div>
-            <a className="splash-links" href="">
+            <Link to="/" className="splash-links">
               about
-            </a>
-            <a className="splash-links" href="">
+            </Link>
+            <Link to="/" className="splash-links">
               Minions
-            </a>
-            <a className="splash-links" href="">
+            </Link>
+            <Link to="/" className="splash-links">
               For Sale
-            </a>
-            <a className="splash-links" href="">
+            </Link>
+            <Link to="/" className="splash-links">
               contact
-            </a>
-            <a className="splash-links">
-            {this.getLinks()}
-            </a>
+            </Link>
+            <div className="splash-links">
+              {this.getLinks()}
+            </div>
           </div>
         </div>
       </div>

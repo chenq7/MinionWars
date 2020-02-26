@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from '../nav/nav_container';
 import SingleCard from './single_card';
 import { receiveAllMinions } from '../../actions/minion_actions';
 
@@ -25,7 +24,8 @@ class CardIndex extends React.Component {
     ;
     return (
       <div>
-        <Nav />
+        <h1>Card Index Page</h1>  
+        <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUserId}`)}>user profile</span>
         {minions}
       </div>
     );

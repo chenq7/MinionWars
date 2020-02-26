@@ -7,7 +7,7 @@ import SplashContainer from "./splash/splash_form_container.js";
 import Modal from "./modal/modal";
 import Nav from "./nav/nav_container";
 import CardIndex from './cardsIndex/card_index_container'; //we need to change this
-
+import UserProfile from './users/user_profile';
 
 const App = () => (
   <div>
@@ -17,10 +17,9 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={SplashContainer} />
       <Route exact path="/minions" component={CardIndex} />
+      <Route exact path="/users/:user_id" component={UserProfile} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      {/* <ProtectedRoute exact path="/tweets" component={TweetsContainer} />
-      <ProtectedRoute exact path="/profile" component={ProfileContainer} /> */}
     </Switch>
   </div>
 );

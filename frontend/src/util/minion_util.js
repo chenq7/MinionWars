@@ -15,3 +15,8 @@ export const fetchMinions = () => {
 export const fetchMinion = (minionId) => {
   return axios.get(`api/minion/${minionId}`)
 }
+
+
+export const fetchUserMinions = (userId) => {
+  return axios.get(`api/minions/user/${userId}`)
+};
