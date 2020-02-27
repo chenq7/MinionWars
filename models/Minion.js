@@ -42,7 +42,7 @@ const MinionSchema = new Schema({
   },
 
   userId: {
-    type: Number
+    type: String 
   },
 
   // userId: {

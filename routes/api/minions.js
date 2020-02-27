@@ -29,30 +29,27 @@ router.get("/users/:user_id", (req, res) => {
     );
 });
 
-router.post(
-  "/create",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
+router.post("/create", passport.authenticate("jwt", { session: false }), (req, res) => {
+  ;
+  const { errors, isValid } = validateMinionInput(req.body);
 
-    const { errors, isValid } = validateMinionInput(req.body);
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
 
-    if (!isValid) {
-      return res.status(400).json(errors);
-    }
-
-    const newMinion = new Minion({
-      url: req.body.url,
-      name: req.body.name,
-      attack: req.body.attack,
-      defense: req.body.defense,
-      hp: req.body.hp,
-      rarity: req.body.rarity,
-      price: req.body.price,
-      ability: req.body.ability,
-      userId: req.body.userId
-    });
-
-    newMinion.save().then(minion => res.json(minion));
+  const newMinion = new Minion({
+    url: req.body.url,
+    name: req.body.name,
+    attack: req.body.attack,
+    defense: req.body.defense,
+    hp: req.body.hp,
+    rarity: req.body.rarity,
+    price: req.body.price,
+    ability: req.body.ability,
+    userId: req.body.userId
+  });
+  
+  newMinion.save().then(minion => res.json(minion));
   }
 );
 

@@ -1,6 +1,6 @@
 import {
   RECEIVEALLMINIONS,
-  RECIEVEMINION,
+  RECEIVEMINION,
   RECEIVEUSERMINIONS
 } from "../../actions/minion_actions";
 import merge from "lodash/merge";
@@ -10,7 +10,7 @@ const minionReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVEALLMINIONS:
       return action.minions;
-    case RECIEVEMINION:
+    case RECEIVEMINION:
       let newState = merge({}, state, action.minion);
         // return Object.assign({}, oldState, {
         //                [action.minion.id]: action.minion

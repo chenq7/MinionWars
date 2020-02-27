@@ -184,3 +184,9 @@
   transform: rotateY(180deg);
   /* border-radius: 40px; */
 }
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

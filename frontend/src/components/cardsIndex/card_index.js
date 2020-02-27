@@ -5,6 +5,7 @@ import './single_card.css'
 class CardIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.buyMinion = this.buyMinion.bind(this);
   }
 
   componentDidMount() {
@@ -12,31 +13,44 @@ class CardIndex extends React.Component {
   }
 
   shuffleMinions(array){
-      let currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
-      while (0 !== currentIndex) {
+    while (0 !== currentIndex) {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
+    }
+    return array;
   }
 
-  return array;
-}
+  buyMinion(minion){
+    let newMinion = {
+      url: minion.url,
+      name: minion.name,
+      attack: minion.attack,
+      defense: minion.defense,
+      hp: minion.hp,
+      rarity: minion.rarity,
+      ability: minion.ability,
+      price: minion.price,
+      userId: this.props.currentUser.id
+    };
 
-
+    this.props.createMinion(newMinion);
+  }
 
   render() {
     const hiddenTokens = [1,2,3,4,5,6,7].map(ele => <div className="scene scene--card hidden"></div>)
     let minions = this.props.minions && this.props.minions.data ?
     this.shuffleMinions(this.props.minions.data).map(minion => {
       return (
-        <div className='card-conatiner'>
+        <div className='card-container'>
           <div className="scene scene--card">
             <SingleCard minion={minion} />
           </div>
-          <button>buy this card</button>
+          <button onClick={() => this.buyMinion(minion)}>buy this card</button>
         </div>
       );
     }) : null;

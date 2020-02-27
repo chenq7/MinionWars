@@ -1,10 +1,8 @@
 import * as minionUtil from "../util/minion_util";
-
-
-
 export const RECEIVEALLMINIONS = "RECEIVEALLMINIONS";
-export const RECIEVEMINION = "RECIEVEMINION";
+export const RECEIVEMINION = "RECEIVEMINION";
 export const RECEIVEUSERMINIONS = "RECEIVEUSERMINIONS";
+export const RECEIVE_MINION_ERRORS = "RECEIVE_MINION_ERRORS";
 
 
 export const receiveAllMinions = (minions) => ({
@@ -13,7 +11,7 @@ export const receiveAllMinions = (minions) => ({
 });
 
 export const receiveMinion = minion => ({
-    type: RECIEVEMINION,
+    type: RECEIVEMINION,
     minion
 });
 
@@ -22,7 +20,10 @@ export const receiveUserMinions = (minions) => ({
   minions
 });
 
-
+export const receiveErrors = errors => ({
+  type: RECEIVE_MINION_ERRORS,
+  errors
+});
 
 
 export const fetchMinions = () => dispatch => {
@@ -31,8 +32,11 @@ export const fetchMinions = () => dispatch => {
   );
 }
 
-export const fetchMinion = (minionId) => dispatch =>
-         minionUtil.fetchMinion(minionId).then((minion) => dispatch(receiveMinion(minion)));
+export const fetchMinion = (minionId) => dispatch => {
+  return minionUtil.fetchMinion(minionId)
+  .then((minion) => dispatch(receiveMinion(minion))
+  );
+}
 
 export const fetchUserMinions = (userId) => dispatch => {
   return minionUtil.fetchUserMinions(userId)
@@ -40,6 +44,11 @@ export const fetchUserMinions = (userId) => dispatch => {
   );
 }
 
+export const createMinion = (minionForm) => dispatch => {
+  return minionUtil.createMinion(minionForm)
+    .then(minion => dispatch(receiveMinion(minion), errors => dispatch(receiveErrors(errors)))
+  );
+}
 
 
 

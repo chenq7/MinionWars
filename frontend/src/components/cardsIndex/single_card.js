@@ -5,17 +5,17 @@ class SingleCard extends React.Component {
     super(props);
     this.state = {
       active: false
-    }
-    this.flipCard = this.flipCard.bind(this)
+    };
+    this.flipCard = this.flipCard.bind(this);
   }
 
-  flipCard(){
+  flipCard() {
     const currentState = this.state.active;
-    this.setState({active: !currentState});
+    this.setState({ active: !currentState });
   }
 
   render() {
-      const minion = this.props.minion
+    const minion = this.props.minion;
     return (
       <>
         <div
@@ -24,11 +24,8 @@ class SingleCard extends React.Component {
         >
           <div class="card__face card__face--front">
             <div className="info">
-
               <h3 className="name">{minion.name}</h3>
-              <h3 className={minion.rarity + "-" + "tag"}>
-                {minion.rarity}
-              </h3>
+              <h3 className={minion.rarity + "-" + "tag"}>{minion.rarity}</h3>
             </div>
             <div className={minion.rarity + "-" + "background"}></div>
             {/* <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> */}
@@ -37,7 +34,7 @@ class SingleCard extends React.Component {
           </div>
           <div class="card__face card__face--back">back</div>
         </div>
-        </>
+      </>
     );
   }
 }

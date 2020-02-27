@@ -3,7 +3,8 @@ import axios from "axios";
 
 
 export const createMinion = minionData => {
-  return axios.post("/api/minions/create", minionData);
+  
+  return axios.post("api/minions/create", minionData);
 };
 
 

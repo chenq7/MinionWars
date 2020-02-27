@@ -1,8 +1,9 @@
-import {fetchMinions} from '../../actions/minion_actions';
+import {fetchMinions, createMinion } from '../../actions/minion_actions';
 import CardIndex from './card_index';
 import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
+  debugger;
   const user = (state.session ? state.session.user : null);
   return {
     minions: state.minions,
@@ -12,7 +13,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-      fetchMinions: () => dispatch(fetchMinions())
+      fetchMinions: () => dispatch(fetchMinions()),
+      createMinion: (minionForm) => dispatch(createMinion(minionForm))
   };
 };
 
