@@ -1,15 +1,21 @@
 import { connect } from "react-redux";
-import { logout } from "../../actions/session_actions";
+import { logout, receiveCurrentUser } from "../../actions/session_actions";
 import UserProfile from "./user_profile";
+import { fetchMinions } from "../../actions/minion_actions"
 
-const mapStateToProps = state => ({
-    loggedIn: state.session.isAuthenticated,
-    
-});
+const mapStateToProps = state => {
+    return {
+        loggedIn: state.session.isAuthenticated,
+        currentUser: state.session.user,
+        minions: state.minions
+    }
+};
 
 const mapDispatchToProps = dispatch => {
+    
     return {
         logout: () => dispatch(logout()),
+        fetchMinions: () => dispatch(fetchMinions())
     };
 };
 
