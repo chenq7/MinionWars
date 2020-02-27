@@ -1,7 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "./nav.css";
-import Logo from './logo.png'
+import Logo from '../../../src/app/assets/logo.png'
+import Coin from '../../../src/app/assets/coin.png'
 
 
 class Nav extends React.Component {
@@ -20,12 +21,19 @@ class Nav extends React.Component {
   getLinks() {
     if (this.props.loggedIn) {
       return (
+         <div className="navItems">
         <div className="logout" onClick={this.logoutUser}>
           <a>Logout</a>
         </div>
+        <div className="coins">
+           <img className='coin' src={Coin} /> 
+           <p className="money">1000</p>
+        </div>
+       </div >
       );
     } else {
       return (
+       
         <div className="login" onClick={this.props.loginForm}>
           <a>Login</a>
         </div>
