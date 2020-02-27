@@ -39,13 +39,9 @@ class CardIndex extends React.Component {
       userId: this.props.currentUser.id
     };
 
-<<<<<<< HEAD
     this.props.createMinion(newMinion);
   }
 
-=======
-  
->>>>>>> modal
   render() {
     const hiddenTokens = [1,2,3,4,5,6,7].map(ele => <div className="scene scene--card hidden"></div>)
     let minions = this.props.minions && this.props.minions.data ?
@@ -55,12 +51,8 @@ class CardIndex extends React.Component {
           <div className="scene scene--card">
             <SingleCard minion={minion} />
           </div>
-<<<<<<< HEAD
-          <button onClick={() => this.buyMinion(minion)}>buy this card</button>
-=======
           {/* <button>buy this card</button> */}
           <button className="BuyAlert" onClick={this.props.BuyAlert}>Buy this card</button>
->>>>>>> modal
         </div>
       );
     }) : null;
