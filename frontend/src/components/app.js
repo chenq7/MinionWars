@@ -8,6 +8,7 @@ import Modal from "./modal/modal";
 import Nav from "./nav/nav_container";
 import CardIndex from './cardsIndex/card_index_container'; //we need to change this
 import UserProfile from './users/user_profile_container';
+import HowToPlay from './how_to_play/how_to_play';
 
 const App = () => (
   <div>
@@ -15,6 +16,7 @@ const App = () => (
     <Nav />
 
     <Switch>
+      <Route exact path='/learn' component={HowToPlay}/>
       <Route exact path="/" component={SplashContainer} />
       <Route exact path="/minions" component={CardIndex} />
       <Route exact path="/users/:user_id" component={UserProfile} />
