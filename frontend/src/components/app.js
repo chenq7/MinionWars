@@ -7,7 +7,7 @@ import SplashContainer from "./splash/splash_form_container.js";
 import Modal from "./modal/modal";
 import Nav from "./nav/nav_container";
 import CardIndex from './cardsIndex/card_index_container'; //we need to change this
-import UserProfile from './users/user_profile';
+import UserProfile from './users/user_profile_container';
 
 const App = () => (
   <div>

@@ -12,9 +12,6 @@ const minionReducer = (state = {}, action) => {
       return action.minions;
     case RECIEVEMINION:
       let newState = merge({}, state, action.minion);
-        // return Object.assign({}, oldState, {
-        //                [action.minion.id]: action.minion
-        //              });
       return newState;
     case RECEIVEUSERMINIONS:
       newState = merge({}, state, action.minions)
