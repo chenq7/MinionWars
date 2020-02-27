@@ -3,7 +3,7 @@ import CardIndex from './card_index';
 import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
-  debugger;
+  ;
   const user = (state.session ? state.session.user : null);
   return {
     minions: state.minions,
