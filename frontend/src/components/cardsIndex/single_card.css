@@ -1,36 +1,70 @@
+:root {
+  --rare-color: cyan;
+  --rare-background: lightblue;
+  --common-color: gray;
+  --common-background: lightgray;
+  --legendary-color: orangered;
+  --legendary-background: #f2856e;
+  --uncommon-color: green;
+  --uncommon-background: lightgreen;
+}
+
+.Rare-background {
+  background-color: var(--rare-background);
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.Uncommon-background {
+  background-color: var(--uncommon-background);
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.Common-background {
+  background-color: var(--common-background);
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.Legendary-background {
+  background-color: var(--legendary-background);
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
 .cards-list {
   z-index: 0;
-  width: 100%; 
+  width: 100%;
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
-
-
-.card {
-  margin: 30px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 40px;
-box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-  cursor: pointer;
-  transition: 0.4s;
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 }
-
-.card .card_image {
+.card .card__face img {
   width: inherit;
   height: inherit;
+  object-fit: initial;
   border-radius: 40px;
 }
 
-.card .card_image img {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-  object-fit: cover;
+.type {
+  color: black;
+  font-size: 1em;
+  z-index: 100;
+  /* position: absolute;
+  right: 50%;
+  transform: translate(50%, -50%); */
 }
-
 
 .card .card_title {
   text-align: center;
@@ -40,16 +74,57 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
   font-size: 30px;
   margin-top: -80px;
   height: 40px;
+  z-index: 100;
 }
 
-
-.card:hover {
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
+.scene {
+  width: 200px;
+  height: 260px;
+  /* border: 1px solid #ccc; */
+  margin: 40px 20px;
+  perspective: 600px;
 }
 
-.title-white {
+.card {
+  /* margin: 30px auto; */
+  cursor: pointer;
+
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  border-radius: 40px;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
   color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 40px;
 }
 
+.card__face--front {
+  /* background: red; */
+  /* border-radius: 40px; */
+}
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg);
+  /* border-radius: 40px; */
+}
