@@ -1,4 +1,6 @@
 import React from "react";
+import troll from "./cardimage/troll.png";
+import dragon from "./cardimage/dragon1.png";
 
 class SingleCard extends React.Component {
   constructor(props) {
@@ -23,19 +25,17 @@ class SingleCard extends React.Component {
           onClick={this.flipCard}
         >
           <div class="card__face card__face--front">
-            <div className="info">
+            <div className="info"></div>
               <div className="show-top">
                 <h3 className="name">{minion.name}</h3>
               </div>
+              { minion.url === "tempurl" ? null : 
+                <img src={minion.url}></img> }   
               <div className="show-bottom">
                 <h3 className={minion.rarity + "-" + "tag"}>{minion.rarity}</h3>
                 <h4 className="gold">{minion.price}</h4>
               </div>
-            </div>
             <div className={minion.rarity + "-" + "background"}></div>
-            {/* <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> */}
-            {/* <div className="card_title">
-            </div> */}
           </div>
           <div class="card__face card__face--back">
             <ul className="abilities">

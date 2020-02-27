@@ -19,7 +19,7 @@ class UserProfile extends React.Component {
 
     const userMinions = this.props.minions && this.props.minions.data ?
      this.props.minions.data.map(minion => {
-       debugger
+       
         if(minion.userId === this.props.currentUser.id){
           return (
             <div className="scene scene--card">
