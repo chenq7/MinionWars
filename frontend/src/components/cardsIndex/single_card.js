@@ -17,6 +17,7 @@ class SingleCard extends React.Component {
   render() {
       const minion = this.props.minion
     return (
+      <>
         <div
           class={this.state.active ? "card is-flipped" : "card"}
           onClick={this.flipCard}
@@ -36,6 +37,7 @@ class SingleCard extends React.Component {
           </div>
           <div class="card__face card__face--back">back</div>
         </div>
+        </>
     );
   }
 }

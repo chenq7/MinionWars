@@ -11,6 +11,15 @@
   --epic-background: violet;
 }
 
+.card-container{
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.buy-card-container{
+  /* width: 70%; */
+}
+
 .name{
   max-height: 2em;
 }
