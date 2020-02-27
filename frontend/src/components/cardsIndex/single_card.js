@@ -26,6 +26,7 @@ class SingleCard extends React.Component {
             <div className="info">
               <div className="show-top">
                 <h3 className="name">{minion.name}</h3>
+              </div>
               <div className="show-bottom">
                 <h3 className={minion.rarity + "-" + "tag"}>{minion.rarity}</h3>
                 <h4 className="gold">{minion.price}</h4>
