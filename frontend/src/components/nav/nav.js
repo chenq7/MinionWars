@@ -35,6 +35,7 @@ class Nav extends React.Component {
 
   render() {
     return (
+      <div className='background'>
        <header>
             <div className="logo">
                 <img className='logo' src={Logo}/>
@@ -44,18 +45,14 @@ class Nav extends React.Component {
                 <li><Link to="/minions">Minions</Link></li>
                 <li>{this.getLinks()}</li>
                 <li>
-                    <a href="#">
-                        <i className="fa fa-facebook"></i>
-                    </a>
-                    <a href="#">
-                        <i className="fa fa-instagram"></i>
-                    </a>
+          
                     <a href="#">
                         <i className="fa fab fa-github"></i>
                     </a>
                 </li>
             </ul>
         </header>
+        </div>
     );
   }
 }
