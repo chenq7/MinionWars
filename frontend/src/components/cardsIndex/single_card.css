@@ -7,6 +7,56 @@
   --legendary-background: #f2856e;
   --uncommon-color: green;
   --uncommon-background: lightgreen;
+  --epic-color: purple;
+  --epic-background: violet;
+}
+
+.name{
+  max-height: 2em;
+}
+
+.Rare-tag{
+  color: var(--rare-color);
+  font-size: 0.7em;
+  
+}
+
+.Legendary-tag{
+  color: var(--legendary-color);
+  font-size: 0.7em;
+
+}
+.Uncommon-tag{
+  color: var(--uncommon-color);
+  font-size: 0.7em;
+
+}
+.Common-tag{
+  color: var(--common-color);
+  font-size: 0.7em;
+
+}
+
+.Epic-tag{
+  color: var(--epic-color);
+  font-size: 0.7em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, -50%);
+  top: 50%;
+}
+
+.Epic-background{
+   background-color: var(--epic-background);
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
 }
 
 .Rare-background {
@@ -95,8 +145,7 @@
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.25), -1px -1px 20px 2px rgba(0, 0, 0, 0.22);
   border-radius: 40px;
 }
 
@@ -108,8 +157,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  line-height: 260px;
-  color: white;
   text-align: center;
   font-weight: bold;
   font-size: 40px;

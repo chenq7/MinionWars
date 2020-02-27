@@ -17,22 +17,25 @@ class SingleCard extends React.Component {
   render() {
       const minion = this.props.minion
     return (
-      <div class="scene scene--card">
         <div
           class={this.state.active ? "card is-flipped" : "card"}
           onClick={this.flipCard}
         >
           <div class="card__face card__face--front">
-            <div className={minion.rarity+'-'+'background'}></div>
+            <div className="info">
+
+              <h3 className="name">{minion.name}</h3>
+              <h3 className={minion.rarity + "-" + "tag"}>
+                {minion.rarity}
+              </h3>
+            </div>
+            <div className={minion.rarity + "-" + "background"}></div>
             {/* <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> */}
             {/* <div className="card_title">
-              <h3 className='name'>{minion.name}</h3>
-              <h3 className='type'>{minion.rarity}</h3>
             </div> */}
           </div>
           <div class="card__face card__face--back">back</div>
         </div>
-      </div>
     );
   }
 }

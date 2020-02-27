@@ -12,6 +12,14 @@
     margin-left: 10px;
 }
 
+.background{
+ background: url('../../app/assets/dragon.jpg')  
+    no-repeat center center/cover;
+    position: relative;
+     opacity: .88; 
+    filter: alpha(opacity=20);
+}
+
 
 header{
     width: 100%;
@@ -22,28 +30,39 @@ header{
     /* position: fixed; */
     z-index: 30;
     box-shadow: 0 0 10px #000;
-    background: url('../../app/assets/dragon.jpg')  
-    no-repeat center center/cover;
-    position: relative;
+   
+       /* background-blend-mode: lighten; */
 }
+
+/* header:after{
+    background: rgba(0, 0, 0, 0.6);
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    z-index: 0;
+} */
 
 
 
 header ul{
-    flex: 2;
-    display: flex;
-    justify-content: space-evenly;
+    flex: 2 1;
+display: flex;
+justify-content: space-evenly;
+max-width: 50em;
+margin-right: 2em;
 }
 header ul li{
     list-style: none;
 }
 header ul li a{
     text-decoration: none;
-    color: #FAFAFA;
-    font-size: 1.2em;
+    color: black;
+    font-size: 1.5em;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 10px 15px;
+    padding: 5px 15px;
     font-family: Blippo, fantasy;
     cursor: pointer;
 }
