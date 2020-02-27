@@ -1,6 +1,7 @@
 import React from 'react';
 import SingleCard from './single_card';
 import './single_card.css'
+import './card_index.css'
 
 class CardIndex extends React.Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class CardIndex extends React.Component {
     let minions = this.props.minions && this.props.minions.data ?
     this.shuffleMinions(this.props.minions.data).map(minion => {
       return (
-        <div className='card-conatiner'>
+        <div className='card-container'>
           <div className="scene scene--card">
             <SingleCard minion={minion} />
           </div>
