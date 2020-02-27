@@ -1,80 +1,106 @@
-body{
-  margin: 0px
+body {
+  margin: 0px;
 }
 
+.monster-background {
+  background-image: radial-gradient(circle, rgb(209, 223, 23), #f06d06);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 
-
-.splash-page{
-      background: url('../../app/assets/fog.jpg') no-repeat center center/cover;
-      width: 100vw;
+  width: 55rem;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  border-radius: 40px;
+  margin-left: 40px;
+}
+.monster {
+  width: 100%;
+  height: 100%;
+  /* object-fit: fill; */
+  /* position: absolute; */
+  /* width: 100px; */
 }
 
+.splash-page {
+  background: url("../../app/assets/background.jpg") no-repeat center
+    center/cover;
+  width: 100vw;
+}
 
-section{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
 }
-section .photo{
-    position: absolute;
-    max-width: 500px;
-    height: 400px;
-    width: 100%;
-    right: 50px;
-    top:50%;
-    transform: translateY(-50%);
-    z-index: 1;
+section .photo {
+  position: absolute;
+  max-width: 500px;
+  height: 400px;
+  width: 100%;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
-img{
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    box-shadow: 0 0 10px #111;
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  /* box-shadow: 0 0 10px #111; */
 }
-section .content{
-    width: 80%;
-    height: 100vh;
-    /* position: absolute; */
-    left: 0;
-    /* background: rgb(255,2,65); */
-    /* padding: 100px 350px 100px 100px; */
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    color: whitesmoke;
+section .content {
+  width: 80%;
+  height: 100vh;
+  /* position: absolute; */
+  left: 0;
+  /* background: rgb(255,2,65); */
+  /* padding: 100px 350px 100px 100px; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: whitesmoke;
 }
-.content h2{
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+.content h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  left: 50%;
+  right: 50%;
+  transform: translate;
+  font-family: Blippo, fantasy;
+  color: #fafafa;
+  margin-left: 70px;
+  text-align: center;
 }
-.content h3{
-    font-size: 1.7em;
-    margin-bottom: 20px;
+.content h3 {
+  font-size: 1.7em;
+  margin-bottom: 20px;
 }
-.content p{
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    line-height: 1.5;
+.content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
-.content a{
-    color: #000;
-    text-decoration: none;
-    background: whitesmoke;
-    width: 150px;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 700;
-    
+.content a {
+  color: #000;
+  text-decoration: none;
+  background: whitesmoke;
+  width: 150px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 /*-------Shop, Contact----------------------*/
-#shop .content, #contact .content{
-    /* width: 100%; */
-    padding: 100px;
+#shop .content,
+#contact .content {
+  /* width: 100%; */
+  /* padding: 100px; */
+  margin-top: 130px;
 }
 /* #shop .content{
     background: lightblue;
@@ -83,80 +109,78 @@ section .content{
 #contact .content{
     background:lightcoral;
 } */
-#shop .images{
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
+#shop .images {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
 }
-#shop .images img{
+/* #shop .images img{
     width: 30%;
-}
-
-
+} */
 
 /*-------------------Responsive------------------*/
-@media (max-width:1200px){
-    section .photo{
-        position: absolute;
-        max-width: 400px;
-        height: 300px;
-    }
+@media (max-width: 1200px) {
+  section .photo {
+    position: absolute;
+    max-width: 400px;
+    height: 300px;
+  }
 }
 
-@media (max-width:1000px){
-    section .photo{
-        position: relative;
-        max-width: 1000px;
-        height: 100%;
-        top:0;
-        right: 0;
-        transform: translateY(0);
-    }
-    section .content{
-        width: 100%;
-        padding: 20px;
-        position: relative;
-    }
-    header ul{
-        position: fixed;
-        top:100px;
-        right: -100%;
-        background: whitesmoke;
-        height: calc(100vh - 100px);
-        width: 50%;
-        flex-direction: column;
-        align-items: center;
-        transition: right 0.5s linear;
-    }
-    header .menu{
-        display: block;
-        width: 100px;
-        text-align: center;
-    }
-    #chk1:checked ~ ul{
-        right: 0;
-    }
+@media (max-width: 1000px) {
+  section .photo {
+    position: relative;
+    max-width: 1000px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transform: translateY(0);
+  }
+  section .content {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+  }
+  header ul {
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    background: whitesmoke;
+    height: calc(100vh - 100px);
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.5s linear;
+  }
+  header .menu {
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
+  #chk1:checked ~ ul {
+    right: 0;
+  }
 }
-@media (max-width:500px){
-    header .logo{
-        margin-left: 10px;
-    }
-    .logo h1{
-        font-size: 1.5em;
-    }
-    header ul{
-        width: 100%;
-    }
-    #contact .content{
-        padding: 20px;
-    }
+@media (max-width: 500px) {
+  header .logo {
+    margin-left: 10px;
+  }
+  .logo h1 {
+    font-size: 1.5em;
+  }
+  header ul {
+    width: 100%;
+  }
+  #contact .content {
+    padding: 20px;
+  }
 }
-input[type="checkbox"]{
-    display: none;
+input[type="checkbox"] {
+  display: none;
 }
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
