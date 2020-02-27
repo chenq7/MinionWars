@@ -1,6 +1,7 @@
 :root {
+  
   --rare-color: cyan;
-  --rare-background: lightblue;
+  --rare-background: rgba(173, 216, 230, 0.63);
   --common-color: gray;
   --common-background: lightgray;
   --legendary-color: orangered;
@@ -8,7 +9,7 @@
   --uncommon-color: green;
   --uncommon-background: lightgreen;
   --epic-color: purple;
-  --epic-background: violet;
+  --epic-background: rgba(238, 130, 238, 0.568);
 }
 
 .card-container{

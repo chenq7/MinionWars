@@ -1,6 +1,7 @@
 import {fetchMinions} from '../../actions/minion_actions';
 import CardIndex from './card_index';
 import { connect } from "react-redux";
+import { openModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state) => {
   const user = (state.session ? state.session.user : null);
@@ -12,7 +13,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-      fetchMinions: () => dispatch(fetchMinions())
+      fetchMinions: () => dispatch(fetchMinions()),
+       BuyAlert: () => dispatch(openModal("BuyAlert"))
   };
 };
 
