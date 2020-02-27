@@ -69,3 +69,37 @@ header .menu {
   font-size: 2.5em;
   display: none;
 }
+header .menu{
+    font-size: 2.5em;
+    display: none;
+}
+
+.coins {
+    margin:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+.money { 
+    margin-top: 50px;
+     transform: translate(-100px);
+     color: black;
+     font-family: Blippo, fantasy;
+     font-weight: 800;
+     font-size: 18px;
+
+}
+
+.coin {
+
+    height: 100px;
+    width: 100px;
+   box-shadow: none;
+   position: relative;
+   right: 96%;
+
+}
+
+
+
