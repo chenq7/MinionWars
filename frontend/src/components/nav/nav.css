@@ -1,5 +1,5 @@
 .fa{
-     color: black;
+     color: gold;
 }
 
 
@@ -13,11 +13,11 @@
 }
 
 .background{
- background: url('../../app/assets/dragon.jpg')  
-    no-repeat center center/cover;
+ /* background: url('../../app/assets/dragon.jpg')   */
+ background-color: #211510;
     position: relative;
-     opacity: .88; 
-    filter: alpha(opacity=20);
+     /* opacity: .88; 
+    filter: alpha(opacity=20); */
 }
 
 
@@ -58,7 +58,7 @@ header ul li{
 }
 header ul li a{
     text-decoration: none;
-    color: black;
+    color: gold;
     font-size: 1.5em;
     font-weight: 700;
     text-transform: uppercase;
