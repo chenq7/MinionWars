@@ -29,7 +29,7 @@ header{
     align-items: center;
     /* position: fixed; */
     z-index: 30;
-    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 30px #000;
    
        /* background-blend-mode: lighten; */
 }
