@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./nav.css";
 import Logo from './logo.png'
 
@@ -40,8 +40,8 @@ class Nav extends React.Component {
                 <img className='logo' src={Logo}/>
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Minions</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/minions">Minions</Link></li>
                 <li>{this.getLinks()}</li>
                 <li>
                     <a href="#">
