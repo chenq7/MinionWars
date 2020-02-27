@@ -11,6 +11,7 @@
   --epic-background: violet;
 }
 
+
 .card-container{
   /* display: flex;
   flex-direction: column; */
@@ -182,6 +183,10 @@
 .card__face--back {
   background: blue;
   transform: rotateY(180deg);
+    /* backface-visibility: hidden; */
+  /* -webkit-backface-visibility: hidden; */
+
+
   /* border-radius: 40px; */
 }
 
