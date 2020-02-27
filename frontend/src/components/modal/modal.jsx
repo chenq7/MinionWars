@@ -3,6 +3,7 @@ import { closeModal, openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from "../session/login_form_container";
 import SignupFormContainer from "../session/signup_form_container";
+import BuyAlert from "../buyAlert/buy_alert_container";
 import './modal.css';
 
 function Modal({ modal, closeModal }) {
@@ -17,6 +18,9 @@ function Modal({ modal, closeModal }) {
       case "signupForm":
         component = <SignupFormContainer />;
         break;
+        case "BuyAlert":
+            component = <BuyAlert />;
+            break;
       default:
         return null;
     }
@@ -38,7 +42,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         closeModal: () => dispatch(closeModal()),
-         signupForm: () => dispatch(openModal("signupForm"))
+        signupForm: () => dispatch(openModal("signupForm")),
+        BuyAlert: () => dispatch(openModal("BuyAlert"))
     };
 };
 
