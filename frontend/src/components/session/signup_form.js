@@ -11,7 +11,8 @@ class SignupForm extends React.Component {
       password2: "",
       errors: {}
     };
-
+    
+    this.handleDemo = this.handleDemo.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearedErrors = false;
   }
@@ -97,12 +98,12 @@ class SignupForm extends React.Component {
               <br />
               <input type="submit" value="Submit" className="submitButton" />
               {this.renderErrors()}
-              <div>
                <button className="demoLogin" onClick={this.handleDemo}>
                 Demo Login
-              </button>lassName="loginLink" onClick={this.props.loginForm}>
+                </button> 
+              <div className="loginLink" onClick={this.props.loginForm}>
                 Already a member? Log in!
-              </div>
+                </div> 
             </div>
           </div>
         </form>

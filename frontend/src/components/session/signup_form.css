@@ -45,9 +45,10 @@
   height: 30px;
   background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
   border-radius: 8px;
-    font-weight: 700;
+  font-weight: 700;
   font-size: 16px;
    font-family: Lucida Console;
+   color: lightgray;
 }
 
 .submitButton:hover {
@@ -76,4 +77,24 @@
   color: #ff9c33;
   transition: color 1s cubic-bezier(0.64, 0.57, 0.67, 1.53);
   cursor: pointer;
+
+}
+
+.demoLogin {
+  width: 21%;
+  font-weight: 500;
+  border-radius: 12px;
+  color: lightgray;
+  font-size: 19px;
+  font-family: Lucida Console;
+  cursor: pointer;
+   background: linear-gradient(to bottom right, #002f4b, #dc4225);
+   padding: 5px;
+}
+
+.demoLogin:hover {
+  color: #ff9c33;
+  transition: color 0.5s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  cursor: pointer;
+
 }
