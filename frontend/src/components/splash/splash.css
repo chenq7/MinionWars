@@ -23,9 +23,9 @@ body {
 }
 
 .splash-page {
-  background: url("../../app/assets/background.jpg") no-repeat center
-    center/cover;
-  width: 100vw;
+  /* background: url("../../app/assets/background.jpg") no-repeat center */
+    /* center/cover; */
+  /* width: 100vw; */
 }
 
 section {
@@ -66,14 +66,10 @@ section .content {
 }
 .content h2 {
   font-size: 3rem;
-  margin-bottom: 50px;
   text-transform: uppercase;
-  left: 50%;
-  right: 50%;
-  transform: translate;
-  font-family: Blippo, fantasy;
+transform: translate(0,-90%); 
+ font-family: Blippo, fantasy;
   color: #fafafa;
-  margin-left: 70px;
   text-align: center;
 }
 .content h3 {
@@ -96,26 +92,25 @@ section .content {
   font-weight: 700;
 }
 /*-------Shop, Contact----------------------*/
-#shop .content,
-#contact .content {
-  /* width: 100%; */
-  /* padding: 100px; */
-  margin-top: 130px;
-}
-/* #shop .content{
-    background: lightblue;
-    text-align: center;
+
+ #shop{
+    background: url(/static/media/background3.8b9d61b5.jpg) no-repeat center/cover;
+width: 100%;
+height: 100px;
+position: relative;
+height: 900px;
+border-bottom: 8px solid black;
 }
 #contact .content{
-    background:lightcoral;
-} */
+    background: url("../../app/assets/background.jpg") no-repeat center;
+    width: 100%;
+}
 #shop .images {
   width: 100%;
   height: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
 }
 /* #shop .images img{
     width: 30%;
