@@ -32,8 +32,11 @@ class CardIndex extends React.Component {
     let minions = this.props.minions && this.props.minions.data ?
     this.shuffleMinions(this.props.minions.data).map(minion => {
       return (
-        <div className="scene scene--card">
-          <SingleCard minion={minion} />
+        <div className='card-conatiner'>
+          <div className="scene scene--card">
+            <SingleCard minion={minion} />
+          </div>
+          <button>buy this card</button>
         </div>
       );
     }) : null;
