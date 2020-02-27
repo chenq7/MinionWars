@@ -11,6 +11,18 @@
   --epic-background: violet;
 }
 
+* {
+  font-family: Blippo, fantasy;
+}
+
+.abilities{
+  list-style: none;
+}
+
+.show-bottom{
+  line-height: 0;
+}
+
 
 .card-container{
   /* display: flex;
@@ -23,6 +35,11 @@
 
 .name{
   max-height: 2em;
+  font-size:20px;
+}
+
+.gold{
+  color: gold;
 }
 
 .Rare-tag{
