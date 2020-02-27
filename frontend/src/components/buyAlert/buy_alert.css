@@ -1,0 +1,36 @@
+
+
+.scroll {
+    min-width: 600px;
+    min-height: 675px;
+    background-image: url('../../app/assets/scroll.png');
+
+
+}
+
+.congrats { 
+    color: black;
+    font-style: Trattatello, fantasy;
+    font-size: 24px;
+    font-weight: 700;
+    transform: translate(85px, 100px)
+
+}
+
+.BuyAlert {
+     transform: translate(70px, -42px);
+  font-weight: 500;
+  height: 30px;
+  background-image: linear-gradient(to bottom left, #c22a0cfd, brown);
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+   font-family: Lucida Console;
+   color: #ffbe33;
+}
+
+.BuyAlert:hover {
+  color: #fbe148;
+  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  cursor: pointer;
+}
