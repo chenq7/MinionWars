@@ -16,58 +16,112 @@
   font-family: Blippo, fantasy;
 }
 
-.abilities{
+.abilities {
   list-style: none;
 }
 
-.show-bottom{
+.show-bottom {
   line-height: 0;
 }
 
-
-.card-container{
+.card-container {
   /* display: flex;
   flex-direction: column; */
 }
 
-.buy-card-container{
+.buy-card-container {
   /* width: 70%; */
 }
 
-.name{
+.name {
   max-height: 2em;
-  font-size:20px;
+
+font-size: 20px;
+
+position: absolute;
+
+
+right: 50%;
+
+transform: translate(50%,-50%);
 }
 
-.gold{
+.gold {
   color: gold;
 }
 
-.Rare-tag{
+.Rare-tag {
   color: var(--rare-color);
-  font-size: 0.7em;
-  
+
+font-size: 0.7em;
+
+position: absolute;
+
+bottom: 5%;
+
+
+right: 50%;
+
+transform: translate(50%,-50%);
 }
 
-.Legendary-tag{
+.Legendary-tag {
   color: var(--legendary-color);
-  font-size: 0.7em;
 
+font-size: 0.7em;
+
+position: absolute;
+
+bottom: 5%;
+
+
+
+right: 50%;
+
+transform: translate(50%,-50%);
 }
-.Uncommon-tag{
+.Uncommon-tag {
   color: var(--uncommon-color);
-  font-size: 0.7em;
 
+font-size: 0.7em;
+
+position: absolute;
+
+bottom: 5%;
+
+
+
+right: 50%;
+
+transform: translate(50%,-50%);
 }
-.Common-tag{
+.Common-tag {
   color: var(--common-color);
-  font-size: 0.7em;
 
+font-size: 0.7em;
+
+position: absolute;
+
+bottom: 5%;
+
+right: 50%;
+
+transform: translate(50%,-50%);
 }
 
-.Epic-tag{
+.Epic-tag {
   color: var(--epic-color);
-  font-size: 0.7em;
+ color: var(--rare-color);
+
+font-size: 0.7em;
+
+position: absolute;
+
+bottom: 5%;
+
+right: 50%;
+
+transform: translate(50%,-50%);
 }
 
 .info {
@@ -80,39 +134,104 @@
   top: 50%;
 }
 
-.Epic-background{
-   background-color: var(--epic-background);
+.Epic-background {
+  background-color: var(--epic-background);
+
   width: 100%;
+
   height: 100%;
+
   border-radius: 40px;
+
+  position: absolute;
+
+  left: 50%;
+
+  right: 50%;
+
+  transform: translate(-50%);
+
+  top: 0%;
 }
 
 .Rare-background {
   background-color: var(--rare-background);
+
   width: 100%;
+
   height: 100%;
+
   border-radius: 40px;
+
+  position: absolute;
+
+  left: 50%;
+
+  right: 50%;
+
+  transform: translate(-50%);
+
+  top: 0%;
 }
 
 .Uncommon-background {
   background-color: var(--uncommon-background);
+
   width: 100%;
+
   height: 100%;
+
   border-radius: 40px;
+
+  position: absolute;
+
+  left: 50%;
+
+  right: 50%;
+
+  transform: translate(-50%);
+
+  top: 0%;
 }
 
 .Common-background {
   background-color: var(--common-background);
+
   width: 100%;
+
   height: 100%;
+
   border-radius: 40px;
+
+  position: absolute;
+
+  left: 50%;
+
+  right: 50%;
+
+  transform: translate(-50%);
+
+  top: 0%;
 }
 
 .Legendary-background {
   background-color: var(--legendary-background);
+
   width: 100%;
+
   height: 100%;
+
   border-radius: 40px;
+
+  position: absolute;
+
+  left: 50%;
+
+  right: 50%;
+
+  transform: translate(-50%);
+
+  top: 0%;
 }
 
 .cards-list {
@@ -129,10 +248,8 @@
     -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 }
 .card .card__face img {
-  width: inherit;
-  height: inherit;
-  object-fit: initial;
-  border-radius: 40px;
+  object-fit: contain;
+  z-index: 10;
 }
 
 .type {
@@ -156,11 +273,14 @@
 }
 
 .scene {
-  width: 200px;
-  height: 260px;
-  /* border: 1px solid #ccc; */
-  margin: 40px 20px;
-  perspective: 600px;
+ width: 240px;
+
+height: 330px;
+
+
+margin: 40px 20px;
+
+perspective: 600px;
 }
 
 .card {
@@ -173,7 +293,8 @@
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
-  box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.25), -1px -1px 20px 2px rgba(0, 0, 0, 0.22);
+  box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.25),
+    -1px -1px 20px 2px rgba(0, 0, 0, 0.22);
   border-radius: 40px;
 }
 
@@ -201,9 +322,8 @@
 .card__face--back {
   background: blue;
   transform: rotateY(180deg);
-    /* backface-visibility: hidden; */
+  /* backface-visibility: hidden; */
   /* -webkit-backface-visibility: hidden; */
-
 
   /* border-radius: 40px; */
 }
