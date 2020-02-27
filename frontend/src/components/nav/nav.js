@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "./nav.css";
+import Logo from './logo.png'
 
 
 class Nav extends React.Component {
@@ -36,7 +37,7 @@ class Nav extends React.Component {
     return (
        <header>
             <div className="logo">
-                <h1>Minion Wars</h1>
+                <img className='logo' src={Logo}/>
             </div>
             <ul>
                 <li><a href="#">Home</a></li>
