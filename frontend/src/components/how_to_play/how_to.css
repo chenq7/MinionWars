@@ -17,12 +17,11 @@
 
 .description{
     margin: 20px;
-    color: white;
+    color: #e1c4a3;
     font-size: 2em;
     text-align: center;
     width: 500px;
-    height: 550px;
-    border: 1px solid white;
+    height: 570px;
     border-radius: 10px;
     background-color: black;
     opacity: 0.6;
