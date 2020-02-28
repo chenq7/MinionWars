@@ -37,7 +37,6 @@ class LoginForm extends React.Component {
       username: this.state.username,
       password: this.state.password
     };
-    debugger
     this.props.login(user);
     this.props.closeModal();
     this.props.history.push('/minions');

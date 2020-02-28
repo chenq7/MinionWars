@@ -32,7 +32,6 @@ class UserProfile extends React.Component {
         }
       }) : null;
 
-    debugger
     const otherUsers = this.props.users && this.props.users.data ?
       this.props.users.data.map(user => {
         if (user.username !== this.props.currentUser.username){
