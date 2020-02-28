@@ -17,7 +17,13 @@
 }
 
 .abilities {
+  font-size: 30px;
   list-style: none;
+text-align: center;
+position: absolute;
+right: 55%;
+transform: translate(50%,-50%);
+top: 40%;
 }
 
 .show-bottom {
@@ -81,7 +87,6 @@ transform: translate(50%,-50%);
 
 .Epic-tag {
   color: var(--epic-color);
-z-index: 2;
 font-size: 0.7em;
 position: absolute;
 bottom: 5%;
@@ -238,7 +243,7 @@ perspective: 600px;
 }
 
 .card__face--back {
-  background: blue;
+  background: darkgrey;
   transform: rotateY(180deg);
   /* backface-visibility: hidden; */
   /* -webkit-backface-visibility: hidden; */

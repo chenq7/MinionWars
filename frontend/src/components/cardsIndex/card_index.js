@@ -27,20 +27,29 @@ class CardIndex extends React.Component {
   }
 
   buyMinion(minion){
-    let newMinion = {
-      url: minion.url,
-      name: minion.name,
-      attack: minion.attack,
-      defense: minion.defense,
-      hp: minion.hp,
-      rarity: minion.rarity,
-      ability: minion.ability,
-      price: minion.price,
-      userId: this.props.currentUser.id
-    };
+        let newMinion = {
+          url: minion.url,
+          name: minion.name,
+          attack: minion.attack,
+          defense: minion.defense,
+          hp: minion.hp,
+          rarity: minion.rarity,
+          ability: minion.ability,
+          price: minion.price,
+          userId: this.props.currentUser.id
+        };
+        if(this.props.currentUser.coins > minion.price){
+          this.props.currentUser.coins = this.props.currentUser.coins - minion.price
+        }
+        
+      this.props.createMinion(newMinion);
+      this.props.BuyAlert()
+    }
 
-    this.props.createMinion(newMinion);
-  }
+  
+    
+
+  
 
   render() {
     const hiddenTokens = [1,2,3,4,5,6,7].map(ele => <div className="scene scene--card hidden"></div>)
@@ -52,8 +61,12 @@ class CardIndex extends React.Component {
             <SingleCard minion={minion} />
           </div>
           <button className="BuyAlert" 
+<<<<<<< HEAD
           onClick={() => this.buyMinion(minion)}
           onClick={this.props.BuyAlert}>buy this card</button>
+=======
+          onClick={() => this.buyMinion(minion)}>Buy this card for {minion.price}</button>
+>>>>>>> 5f0be4c9013df1d0a4672980f63b79954b59472a
         </div>
       );
     }) : null;
@@ -61,7 +74,7 @@ class CardIndex extends React.Component {
     return (
       <div>
         <h1>Minions Market</h1>  
-        <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span>
+        {/* <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span> */}
         <div className='cards-list'>
           {minions}
           {hiddenTokens}

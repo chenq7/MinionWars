@@ -19,13 +19,21 @@ class Splash extends React.Component {
               <h2>Choose your Minion</h2>
               <div className="images">
                 <div className="monster-background">
-                  <img className="monster" src={Character} alt=""></img>
+                  <img
+                    className="monster"
+                    src="https://i.imgur.com/lBC7PWk.png"
+                    alt=""
+                  ></img>
                 </div>
                 <div className="monster-background">
                   <img className="monster" src={Character} alt=""></img>
                 </div>
                 <div className="monster-background">
-                  <img className="monster" src={Character} alt=""></img>
+                  <img
+                    className="monster"
+                    src="https://i.imgur.com/XVNQ98E.png"
+                    alt=""
+                  ></img>
                 </div>
               </div>
             </div>
@@ -35,13 +43,17 @@ class Splash extends React.Component {
             <div className="content">
               <div className="content-container">
                 <h2>Let the Battle begin</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  sodales nulla in posuere tempus. Fusce malesuada odio vitae
-                  imperdiet molestie. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Sed sodales nulla in posuere tempus. Fusce
-                  malesuada odio vitae imperdiet molestie.
-                </p>
+                <div className="content-learn-text">
+                  <p>
+                    They were called Minions. Creatures of many sizes, shapes, origins: followers of your command. Once a myth of the past. Now they are realitize in your hand.
+                  </p>
+                  <p>
+                    Summon them to do your battles. Win for huge awards. 
+                  </p>
+                  <p>
+                    Gotta collect them all !!
+                  </p>
+                </div>
                 <Link to="./learn">Learn more</Link>
               </div>
             </div>
