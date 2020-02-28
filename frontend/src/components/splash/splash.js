@@ -19,13 +19,21 @@ class Splash extends React.Component {
               <h2>Choose your Minion</h2>
               <div className="images">
                 <div className="monster-background">
-                  <img className="monster" src={Character} alt=""></img>
+                  <img
+                    className="monster"
+                    src="https://i.imgur.com/lBC7PWk.png"
+                    alt=""
+                  ></img>
                 </div>
                 <div className="monster-background">
                   <img className="monster" src={Character} alt=""></img>
                 </div>
                 <div className="monster-background">
-                  <img className="monster" src={Character} alt=""></img>
+                  <img
+                    className="monster"
+                    src="https://i.imgur.com/XVNQ98E.png"
+                    alt=""
+                  ></img>
                 </div>
               </div>
             </div>

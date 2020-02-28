@@ -38,8 +38,12 @@ class CardIndex extends React.Component {
           price: minion.price,
           userId: this.props.currentUser.id
         };
-
+        if(this.props.currentUser.coins > minion.price){
+          this.props.currentUser.coins = this.props.currentUser.coins - minion.price
+        }
+        
       this.props.createMinion(newMinion);
+      this.props.BuyAlert()
     }
 
   
@@ -57,9 +61,7 @@ class CardIndex extends React.Component {
             <SingleCard minion={minion} />
           </div>
           <button className="BuyAlert" 
-          onClick={this.hideMe} 
-          onClick={() => this.buyMinion(minion)}
-          onClick={this.props.BuyAlert}>buy this card</button>
+          onClick={() => this.buyMinion(minion)}>Buy this card for {minion.price}</button>
         </div>
       );
     }) : null;
@@ -67,7 +69,7 @@ class CardIndex extends React.Component {
     return (
       <div>
         <h1>Minions Market</h1>  
-        <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span>
+        {/* <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span> */}
         <div className='cards-list'>
           {minions}
           {hiddenTokens}

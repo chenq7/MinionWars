@@ -3,7 +3,7 @@ import "./user_profile.css";
 import SingleCard from '../cardsIndex/single_card';
 import '../cardsIndex/card_index.css';
 import '../cardsIndex/single_card.css';
-
+import Coin from '../../../src/app/assets/coin.png'
 
 class UserProfile extends React.Component {
   constructor(props){
@@ -31,7 +31,11 @@ class UserProfile extends React.Component {
     
     return (
       <div className="user-profile-container">
-        <h1>{this.props.currentUser.username}</h1>
+        <div className="profile">
+        <h1>{this.props.currentUser.username}</h1>   
+        <img className='coin' src={Coin}/>
+        <p className="money">1000</p>
+        </div>
         <div>{userMinions}</div>
       </div>
     );

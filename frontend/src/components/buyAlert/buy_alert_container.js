@@ -3,18 +3,18 @@ import BuyAlert from "./buy_alert";
 import { fetchMinions } from "../../actions/minion_actions";
 import { closeModal } from "../../actions/modal_actions";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state,ownprops) => {
     return {
         loggedIn: state.session.isAuthenticated,
         currentUser: state.session.user,
-        minions: state.minions
+        // oneMinion: 
+        // oneMinion: state.entities.movies[ownprops.match.params.minionId]
     }
 };
 
 const mapDispatchToProps = dispatch => {
 
     return {
-        fetchMinions: () => dispatch(fetchMinions()),
         closeModal: () => dispatch(closeModal()),
      
     };
