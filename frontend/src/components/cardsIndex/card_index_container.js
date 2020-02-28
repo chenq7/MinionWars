@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
   const user = (state.session ? state.session.user : null);
   return {
     loggedIn: state.session.isAuthenticated,
-    minions: state.minions,
+    minions: state.entities.minions,
     currentUser: user
   };
 };

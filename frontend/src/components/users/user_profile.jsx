@@ -10,7 +10,8 @@ class UserProfile extends React.Component {
     super(props);
   }
   componentDidMount() {
-    this.props.fetchMinions()
+    this.props.fetchMinions();
+    this.props.fetchUsers();
   }
 
  
@@ -19,7 +20,6 @@ class UserProfile extends React.Component {
 
     const userMinions = this.props.minions && this.props.minions.data ?
      this.props.minions.data.map(minion => {
-       
         if(minion.userId === this.props.currentUser.id){
           return (
             <div className="scene scene--card">
@@ -27,12 +27,25 @@ class UserProfile extends React.Component {
             </div>
           );
         }
-      }) : null
+      }) : null;
+
+    debugger
+    const otherUsers = this.props.users && this.props.users.data ?
+      this.props.users.data.map(user => {
+        if (user.username !== this.props.currentUser.username){
+          return (
+            <div>
+              {user.username}
+            </div>
+          );
+        }
+      }) : null;
     
     return (
       <div className="user-profile-container">
         <h1>{this.props.currentUser.username}</h1>
         <div>{userMinions}</div>
+        <div>{otherUsers}</div>
       </div>
     );
   }
