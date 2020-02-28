@@ -55,15 +55,16 @@ class CardIndex extends React.Component {
     const hiddenTokens = [1,2,3,4,5,6,7].map(ele => <div className="scene scene--card hidden"></div>)
     let minions = this.props.minions && this.props.minions.data ?
     this.shuffleMinions(this.props.minions.data).map(minion => {
+      if(minion.userId === null){
       return (
         <div className="card-container">
           <div className="scene scene--card">
             <SingleCard minion={minion} />
           </div>
-          <button className="BuyAlert" 
-          onClick={() => this.buyMinion(minion)}>Buy this card for {minion.price}</button>
+          {this.props.loggedIn ? <button className="BuyAlert" 
+          onClick={() => this.buyMinion(minion)}>Buy this card for {minion.price}</button>:null}
         </div>
-      );
+      )};
     }) : null;
     
     return (

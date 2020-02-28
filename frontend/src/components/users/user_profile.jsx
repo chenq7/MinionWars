@@ -2,7 +2,7 @@ import React from 'react';
 import "./user_profile.css";
 import SingleCard from '../cardsIndex/single_card';
 import '../cardsIndex/card_index.css';
-import '../cardsIndex/single_card.css';
+import '../cardsIndex/single_card.css'; 
 import Coin from '../../../src/app/assets/coin.png'
 
 class UserProfile extends React.Component {
@@ -32,7 +32,6 @@ class UserProfile extends React.Component {
         }
       }) : null;
 
-    debugger
     const otherUsers = this.props.users && this.props.users.data ?
       this.props.users.data.map(user => {
         if (user.username !== this.props.currentUser.username){
