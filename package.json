@@ -1,7 +1,7 @@
 {
-  "name": "dinodart",
+  "name": "minionwars",
   "version": "1.0.0",
-  "description": "dino game",
+  "description": "minion game",
   "main": "index.js",
   "scripts": {
     "frontend-install": "npm install --prefix frontend",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chenq7/DinoDart.git"
+    "url": "git+https://github.com/chenq7/MinionWars.git"
   },
-  "author": "dino team",
+  "author": "minion team",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chenq7/DinoDart/issues"
+    "url": "https://github.com/chenq7/MinionWars/issues"
   },
-  "homepage": "https://github.com/chenq7/DinoDart#readme",
+  "homepage": "https://github.com/chenq7/MinionWars#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
