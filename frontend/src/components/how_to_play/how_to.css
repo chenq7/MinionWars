@@ -1,0 +1,21 @@
+.how-to-container{
+    background: url('../../app/assets/background2.jpg')no-repeat center/cover;
+    height: 100vh;
+    
+    z-index: 0;
+}
+
+
+.how-title{
+   color: #FAFAFA;
+   margin: 0;
+   text-align: center;
+   font-size: 10em;
+}
+
+
+.description{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
