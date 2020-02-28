@@ -98,12 +98,12 @@ class SignupForm extends React.Component {
               <br />
               <input type="submit" value="Submit" className="submitButton" />
               {this.renderErrors()}
-               <button className="demoLogin" onClick={this.handleDemo}>
-                Demo Login
-                </button> 
               <div className="loginLink" onClick={this.props.loginForm}>
                 Already a member? Log in!
                 </div> 
+               <button className="demoLogin" onClick={this.handleDemo}>
+                Demo Login
+                </button> 
             </div>
           </div>
         </form>

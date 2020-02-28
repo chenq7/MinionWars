@@ -1,8 +1,7 @@
 .signupForm {
-  padding: 7px 20px;
-  width: 570px;
-  min-height: 614px;
-  border-radius: 18px;
+  padding: 15px 20px;
+  width: 620px;
+  min-height: 720px;
   background: url('../../app/assets/fire_sword.png')
   no-repeat center center/cover;
 }
@@ -12,7 +11,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 75%;
+  width: 45%;
+  position: relative;
+  top: 9em;
 }
 .signupFieldContainer{
    display: flex;
@@ -43,13 +44,16 @@
 .submitButton{ 
   font-weight: 700;
   height: 30px;
-  background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+  background-image: linear-gradient(to bottom right, #3b0000, #dc4225);
   border-radius: 8px;
   font-weight: 700;
   font-size: 16px;
    font-family: Lucida Console;
-   color: lightgray;
+   color: #fff5a0;
+   border-color: #b88c27;
+   box-shadow: 1px 1px rgba(255, 245, 157, 0.892);
 }
+
 
 .submitButton:hover {
   color: #ff9c33;
@@ -63,14 +67,15 @@
   margin-bottom: 0;
   font-family: Blippo, fantasy;
   text-align: center;
+  display: none;
 }
 .loginLink{ 
-  position: relative;
-  top: 45%;
-  color: #852806;
-  font-size: 22px;
+  color: #fff5a0;
+  font-size: 20px;
   font-family: Blippo, fantasy;
   cursor: pointer;
+  text-align: center;
+  padding-top: 5px;
 }
 
 .loginLink:hover {
@@ -81,15 +86,19 @@
 }
 
 .demoLogin {
-  width: 21%;
-  font-weight: 500;
-  border-radius: 12px;
-  color: lightgray;
+  margin-top: 8px;
+  display: flex;
+  border-radius: 4px 4px 20px 20px;
+  color: #f2ce68;
   font-size: 19px;
   font-family: Lucida Console;
   cursor: pointer;
-   background: linear-gradient(to bottom right, #002f4b, #dc4225);
-   padding: 5px;
+   background: linear-gradient(to bottom right, #3b0000, #dc4225);
+   padding: 8px;
+   align-self: center;
+     color: #fff5a0;
+   border-color: #b88c27;
+   box-shadow: 1px 2px rgba(255, 248, 188, 0.749);
 }
 
 .demoLogin:hover {
