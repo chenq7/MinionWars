@@ -32,7 +32,7 @@ class SingleCard extends React.Component {
 
             <div className="show-bottom">
               <h3 className={minion.rarity + "-" + "tag"}>{minion.rarity}</h3>
-              <h4 className="gold">{minion.price}</h4>
+              {/* <h4 className="gold">{minion.price}</h4> */}
             </div>
             <div className={minion.rarity + "-" + "background"}>
               <div className="info"></div>
