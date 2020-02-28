@@ -2,8 +2,8 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./nav.css";
 import Logo from '../../../src/app/assets/logo.png'
-import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 
@@ -53,7 +53,7 @@ class Nav extends React.Component {
             <li><Link to="/minions">Minions</Link></li>
 
             <div className="dropdown" >
-              <FontAwesomeIcon className="dots" icon={faEllipsisH} />
+              <FontAwesomeIcon className="dots" icon={f0} />
               <div className="dropdown-content">
               <a href="#">
                 <i className="fa fab fa-github"></i>

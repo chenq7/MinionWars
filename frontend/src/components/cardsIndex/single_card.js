@@ -1,8 +1,8 @@
 import React from "react";
 import troll from "./cardimage/troll.png";
 import dragon from "./cardimage/dragon1.png";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faEllipsisH} from '@fortawesome/free-solid-svg-icons';
+
+
 
 class SingleCard extends React.Component {
   constructor(props) {
