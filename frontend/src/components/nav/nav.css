@@ -3,8 +3,12 @@
   font-size: 40px;
   cursor: pointer;
   transform: translate(75px);
+  
 }
 
+.fab:hover {
+  color: orange;
+}
 
 .logo {
   /* background: url('../../app/assets/logo.png')   no-repeat center center/cover; */
@@ -97,6 +101,7 @@ position: absolute;
 
 .SessionButton:hover a {
   cursor: pointer;
+  color: orange;
 }
 
 
@@ -123,9 +128,17 @@ list-style: none;
     font-size: 22px;
     text-align: center;
 }
+.userProfile:hover {
+  color: orange;
+}
 
 .SessionButton {
-  text-align: center;
+     color: gold;
+     font-family: Blippo, fantasy;
+     font-weight: 800;
+     cursor: pointer;
+    font-size: 22px;
+    text-align: center;
 }
 
 
