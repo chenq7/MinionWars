@@ -56,8 +56,10 @@ class CardIndex extends React.Component {
           <div className="scene scene--card">
             <SingleCard minion={minion} />
           </div>
-          {/* <button>buy this card</button> */}
-          <button className="BuyAlert" onClick={this.props.BuyAlert}>Buy this card</button>
+          <button className="BuyAlert" 
+          onClick={this.hideMe} 
+          onClick={() => this.buyMinion(minion)}
+          onClick={this.props.BuyAlert}>buy this card</button>
         </div>
       );
     }) : null;
