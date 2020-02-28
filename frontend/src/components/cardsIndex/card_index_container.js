@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
   return {
       fetchMinions: () => dispatch(fetchMinions()),
       createMinion: (minionForm) => dispatch(createMinion(minionForm)),
-       BuyAlert: () => dispatch(openModal("BuyAlert"))
+      BuyAlert: () => dispatch(openModal("BuyAlert"))
   };
 };
 

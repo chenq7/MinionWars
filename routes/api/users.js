@@ -11,7 +11,12 @@ const passport = require("passport");
 // http://localhost:5000/api/users/...
 
 
-router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
+router.get("/", (req, res) => {
+  User.find()
+    .sort({ date: -1 })
+    .then(users => res.json(users))
+    .catch(err => res.status(404).json({ nousersfound: "No users found" }));
+});
 
 router.get(
   "/current",
