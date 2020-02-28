@@ -2,8 +2,6 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./nav.css";
 import Logo from '../../../src/app/assets/logo.png'
-// import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 
@@ -41,26 +39,35 @@ class Nav extends React.Component {
     }
   }
 
+  showGetLinks(){
+    if(this.props.loggedIn){
+
+    }
+  }
+
   render() {
     return (
-      <div className='background'>
+      <div className="background">
         <header>
           <div className="logo">
-            <img className='logo' src={Logo} />
+            <img className="logo" src={Logo} />
           </div>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/minions">Minions</Link></li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/minions">Minions</Link>
+            </li>
 
-            <div className="dropdown" >
-              <FontAwesomeIcon className="dots" icon={f0} />
+            <div className="dropdown">
+              <i class="fas fa-bars dots"></i>
               <div className="dropdown-content">
-              <a href="#">
-                <i className="fa fab fa-github"></i>
-              </a>
-              <li>{this.getLinks()}</li>
+                <a href="#">
+                  <i className="fab fa-github"></i>
+                </a>
+                <li>{this.getLinks()}</li>
               </div>
-
             </div>
           </ul>
         </header>
