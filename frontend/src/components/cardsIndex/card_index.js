@@ -67,7 +67,7 @@ class CardIndex extends React.Component {
     return (
       <div>
         <h1>Minions Market</h1>  
-        <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span>
+        {/* <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span> */}
         <div className='cards-list'>
           {minions}
           {hiddenTokens}

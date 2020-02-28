@@ -1,6 +1,10 @@
 .fa {
   color: gold;
+  font-size: 40px;
+  cursor: pointer;
+  transform: translate(75px);
 }
+
 
 .logo {
   /* background: url('../../app/assets/logo.png')   no-repeat center center/cover; */
@@ -15,8 +19,6 @@
   /* background: url('../../app/assets/dragon.jpg')   */
   background-color: #211510;
   position: relative;
-  /* opacity: .88; 
-    filter: alpha(opacity=20); */
 }
 
 header {
@@ -25,22 +27,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: fixed; */
   z-index: 30;
   box-shadow: 0 0 10px #000;
-
-  /* background-blend-mode: lighten; */
 }
-
-/* header:after{
-    background: rgba(0, 0, 0, 0.6);
-     position: absolute;
-    top: 0;
-    left: 0;
-    width: inherit;
-    height: 100%;
-    z-index: 0;
-} */
 
 header ul {
   flex: 2 1;
@@ -74,32 +63,69 @@ header .menu{
     display: none;
 }
 
-.coins {
-    margin:0;
+.profile{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 
 }
 .money { 
-    margin-top: 50px;
-     transform: translate(-100px);
      color: gold;
      font-family: Blippo, fantasy;
      font-weight: 800;
      font-size: 18px;
-
+     transform: translate(0px, 15px);
 }
 
 .coin {
+    height: 70px;
+    width: 70px;
+}
 
-    height: 100px;
-    width: 100px;
-   box-shadow: none;
-   position: relative;
-   right: 96%;
+.dots {
+   color: #ddb905;
+   font-size: 36px;
+   cursor: pointer;
+}
+
+.dropdown { 
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-image: linear-gradient(to bottom left, #620000, brown);
+  min-width: 190px;
+  /* padding-left: 20px; */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,6,0.8);
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.dropdown-list {
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: -.4px;
+  padding: 12px 16px;
 
 }
 
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.userProfile {
+     color: gold;
+     font-family: Blippo, fantasy;
+     font-weight: 800;
+     cursor: pointer;
+    font-size: 22px;
+    text-align: center;
+}
+
+.SessionButton {
+  text-align: center;
+}
 
