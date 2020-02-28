@@ -3,16 +3,14 @@
 .scroll {
     /* min-width: 600px; */
     width: 60%;
-    min-height: 675px;
+    min-height: 900px;
     text-align: center;
-    /* background-image: url('../../app/assets/scroll.png'); */
-
 }
 
 .scroll-image{
   z-index: 0;
   max-width: 1000px;
-  max-height: 1000px;
+  min-height: 800px;
   position: absolute;
   /* left:50%; */
   top:50%;

@@ -10,6 +10,11 @@ class Nav extends React.Component {
     super(props);
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
+    this.changeClass = this.changeClass.bind(this)
+
+    this.state = {
+      hidden: true
+    }
     
   }
 
@@ -19,10 +24,16 @@ class Nav extends React.Component {
     this.props.history.push('/');
   }
 
+  changeClass(){
+    const currentState = this.state.hidden;
+
+    this.setState({hidden: !currentState})
+  }
+
   getLinks() {
     if (this.props.loggedIn) {
       return (
-        <div className="navItems">
+        <div className='nav-items'>
           <div className="userProfile" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>Profile</div>
           <div className="SessionButton" onClick={this.logoutUser}>
             <a>Logout</a>
@@ -59,17 +70,17 @@ class Nav extends React.Component {
             <li>
               <Link to="/minions">Minions</Link>
             </li>
+          </ul>
 
             <div className="dropdown">
-              <i class="fas fa-bars dots"></i>
-              <div className="dropdown-content">
+              <i onClick={this.changeClass} class="fas fa-bars dots"></i>
+              <div className={this.state.hidden ? "hide-me" : "dropdown-content"}>
                 <a href="#">
                   <i className="fab fa-github"></i>
                 </a>
                 <li>{this.getLinks()}</li>
               </div>
             </div>
-          </ul>
         </header>
       </div>
     );

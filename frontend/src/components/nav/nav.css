@@ -63,24 +63,6 @@ header .menu{
     display: none;
 }
 
-.profile{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-.money { 
-     color: gold;
-     font-family: Blippo, fantasy;
-     font-weight: 800;
-     font-size: 18px;
-     transform: translate(0px, 15px);
-}
-
-.coin {
-    height: 70px;
-    width: 70px;
-}
 
 .dots {
    color: #ddb905;
@@ -90,6 +72,8 @@ header .menu{
 
 .dropdown { 
   display: block;
+right: 3%;
+position: absolute;
 }
 
 .dropdown-content {
@@ -111,10 +95,25 @@ header .menu{
 
 }
 
-
-.dropdown:hover .dropdown-content {
-  display: block;
+.SessionButton:hover a {
+  cursor: pointer;
 }
+
+
+.dropdown-content {
+ display: block;
+position: absolute;
+left: 50%;
+right: 50%;
+transform: translate(-80%);
+list-style: none;
+} 
+
+.hide-me{
+  display: none;
+}
+
+
 
 .userProfile {
      color: gold;
@@ -127,5 +126,44 @@ header .menu{
 
 .SessionButton {
   text-align: center;
+}
+
+
+@media (max-width: 1200px) {
+  header {
+    /* position: absolute; */
+    width: 100%;
+  }
+
+  header .dropdown{
+    position: absolute;
+    left: 50%;
+    right:50%;
+    top: 20%;
+    z-index: 10;
+  }
+
+  header .dots {
+     position: absolute;
+    left: 70%;
+    top: 40px;
+    z-index: 10;
+  }
+  header ul{
+    padding: 0;
+    right: 0%;
+    margin-right: 0;
+    position: absolute;
+    z-index: 10;
+    display: none;
+  }
+
+  header ul a {
+    display: none;
+  }
+
+  .logo{
+    display:none;
+  }
 }
 

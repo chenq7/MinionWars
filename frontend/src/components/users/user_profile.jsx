@@ -22,20 +22,23 @@ class UserProfile extends React.Component {
        
         if(minion.userId === this.props.currentUser.id){
           return (
-            <div className="scene scene--card">
+            <div className="grid">
+               <div className="scene scene--card">
               <SingleCard minion={minion} />
             </div>
+            </div>
+           
           );
         }
       }) : null
     
     return (
       <div className="user-profile-container">
-        <div className="profile">
+        <span className="profile">
         <h1>{this.props.currentUser.username}</h1>   
         <img className='coin' src={Coin}/>
         <p className="money">1000</p>
-        </div>
+        </span>
         <div>{userMinions}</div>
       </div>
     );

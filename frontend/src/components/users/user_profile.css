@@ -1,3 +1,32 @@
 .user-profile-container h1 {
   color: black;
+  
+}
+
+.user-profile-container div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
+    grid-gap: 20px;
+
+ }
+
+ .money { 
+     color: gold;
+     font-family: Blippo, fantasy;
+     font-weight: 800;
+     font-size: 18px;
+     transform: translate(0px, 15px);
+}
+
+.coin {
+    height: 70px;
+    width: 70px;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
 }

@@ -133,6 +133,12 @@ transform: translate(-50%);
   }
 }
 
+@media (max-width: 1200px){
+  .content h2 {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 1000px) {
   section .photo {
     position: relative;
