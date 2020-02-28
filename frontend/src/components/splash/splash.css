@@ -116,10 +116,7 @@ transform: translate(-50%);
 }
 #shop .images {
   width: 100%;
-  height: 400px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /*-------------------Responsive------------------*/
@@ -182,6 +179,6 @@ transform: translate(-50%);
 input[type="checkbox"] {
   display: none;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */

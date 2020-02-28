@@ -1,11 +1,23 @@
 
 
 .scroll {
-    min-width: 600px;
+    /* min-width: 600px; */
+    width: 60%;
     min-height: 675px;
-    background-image: url('../../app/assets/scroll.png');
+    text-align: center;
+    /* background-image: url('../../app/assets/scroll.png'); */
 
+}
 
+.scroll-image{
+  z-index: 0;
+  max-width: 1000px;
+  max-height: 1000px;
+  position: absolute;
+  /* left:50%; */
+  top:50%;
+  right:50%;
+  transform: translate(43%,-50%)
 }
 
 .congrats { 

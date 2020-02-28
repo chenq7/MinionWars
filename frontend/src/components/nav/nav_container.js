@@ -5,7 +5,8 @@ import Nav from "./nav";
 
 const mapStateToProps = state => ({
   loggedIn: state.session.isAuthenticated,
-    errors: state.errors.session
+    errors: state.errors.session,
+    currentUser: state.session.user
 });
 
 const mapDispatchToProps = dispatch => {

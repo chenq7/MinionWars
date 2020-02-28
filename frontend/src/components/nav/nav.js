@@ -27,7 +27,7 @@ class Nav extends React.Component {
         </div>
         <div className="coins">
            <img className='coin' src={Coin} /> 
-           <p className="money">1000</p>
+           <p className="money">{this.props.currentUser.coins}</p>
         </div>
        </div >
       );
