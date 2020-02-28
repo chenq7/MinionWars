@@ -5,7 +5,6 @@ import Logo from '../../../src/app/assets/logo.png'
 
 
 
-
 class Nav extends React.Component {
   constructor(props) {
     super(props);

@@ -63,24 +63,6 @@ header .menu{
     display: none;
 }
 
-.profile{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-.money { 
-     color: gold;
-     font-family: Blippo, fantasy;
-     font-weight: 800;
-     font-size: 18px;
-     transform: translate(0px, 15px);
-}
-
-.coin {
-    height: 70px;
-    width: 70px;
-}
 
 .dots {
    color: #ddb905;
