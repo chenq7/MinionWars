@@ -27,25 +27,20 @@ class CardIndex extends React.Component {
   }
 
   buyMinion(minion){
-        let newMinion = {
-          url: minion.url,
-          name: minion.name,
-          attack: minion.attack,
-          defense: minion.defense,
-          hp: minion.hp,
-          rarity: minion.rarity,
-          ability: minion.ability,
-          price: minion.price,
-          userId: this.props.currentUser.id
-        };
+    let newMinion = {
+      url: minion.url,
+      name: minion.name,
+      attack: minion.attack,
+      defense: minion.defense,
+      hp: minion.hp,
+      rarity: minion.rarity,
+      ability: minion.ability,
+      price: minion.price,
+      userId: this.props.currentUser.id
+    };
 
-      this.props.createMinion(newMinion);
-    }
-
-  
-    
-
-  
+    this.props.createMinion(newMinion);
+  }
 
   render() {
     const hiddenTokens = [1,2,3,4,5,6,7].map(ele => <div className="scene scene--card hidden"></div>)
