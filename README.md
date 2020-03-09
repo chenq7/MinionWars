@@ -1,6 +1,7 @@
 # Background and Overview:
 Minion Wars is a MERN stack project game that is centered around collecting, selling, battling digital tokens called minions. Minions are represented by a image. Each minion has an assigned trait value that is randomzied upon creation. Users also have the option of mating their existing minions to create new child minions. The website includes interactions between users. A user has the option of attacking another user's territory, the recieveing end will get a notification that another user has attacked them. Attacking user can leave comment to the defending user.  
 
+Heroku Link[https://minion-wars.herokuapp.com/#/]
 
 # Functionality and MVP:
 * Buying minions
