@@ -49,6 +49,7 @@ class LoginForm extends React.Component {
     this.props.closeModal();
   }
 
+
   renderErrors() {
     return (
       <ul>

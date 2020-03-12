@@ -75,7 +75,7 @@ class Nav extends React.Component {
             <div className="dropdown">
               <i onClick={this.changeClass} class="fas fa-bars dots"></i>
               <div className={this.state.hidden ? "hide-me" : "dropdown-content"}>
-                <a href="#">
+              <a href="https://github.com/chenq7/MinionWars">
                   <i className="fab fa-github"></i>
                 </a>
                 <li>{this.getLinks()}</li>
