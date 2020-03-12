@@ -64,26 +64,25 @@ class Nav extends React.Component {
         <div className="logo-container">
           <img className="logo" src={Logo} />
         </div>
-        <ul>
-          
-          
+        <ul className='nav'>
+          <Link to="/">Home</Link>
+          <Link to="/minions">Marketplace</Link>
+          {this.getLinks()}
         </ul>
-        <div className='dropdown-container'>
+        <div className="dropdown-container">
           <i onClick={this.changeClass} class="fas fa-bars hamburger"></i>
           <div className="dropdown">
-              <div
-                className={this.state.hidden ? "hide-me" : "dropdown-content"}
-              >
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/minions">Marketplace</Link>
-                  </li>
-                  <li>{this.getLinks()}</li>
-                </ul>
-              </div>
+            <div className={this.state.hidden ? "hide-me" : "dropdown-content"}>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/minions">Marketplace</Link>
+                </li>
+                <li>{this.getLinks()}</li>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
