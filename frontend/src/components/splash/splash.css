@@ -1,139 +1,17 @@
-body {
-  margin: 0px;
-}
 
-.monster-background {
-  background-image: radial-gradient(circle, #ffe786bf, #f06b0690);
-  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
-  width: 55rem;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-  border-radius: 40px;
-  margin-left: 40px;
-}
-.monster {
-  width: 100%;
-  height: 100%;
-}
-
-.splash-page {
-  /* background: url("../../app/assets/background.jpg") no-repeat center */
-  /* center/cover; */
-  /* width: 100vw; */
-}
-
-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-}
-section .photo {
-  position: absolute;
-  max-width: 500px;
-  height: 400px;
-  width: 100%;
-  right: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-section .content {
-  width: 80%;
-  height: 100vh;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: #e1c4a3;
-}
-.content h2 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  transform: translate(0, -90%);
-  font-family: Blippo, fantasy;
-  color: #fafafa;
-  text-align: center;
-}
-.content h3 {
-  font-size: 1.7em;
-  margin-bottom: 20px;
-}
-.content p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-
-.content-container {
-  width: 70%;
-position: absolute;
-right: 50%;
-left: 50%;
-transform: translate(-50%);
-
-}
-.content-learn-text{
-  text-shadow:1px 1px black;
-  font-size: 20px;
-}
-
-
-.content a {
-  color: #000;
-  text-decoration: none;
-  background: whitesmoke;
-  width: 150px;
-  padding: 10px 0;
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: 700;
-  text-align: center;
-  left: 50%;
-  transform: translate(-50%);
-  position: absolute;
-  right: 50%;
-}
-/*-------Shop, Contact----------------------*/
-
-#shop {
-  background: url("../../app/assets/background3.jpg") no-repeat center/cover;
-  width: 100%;
-  height: 100px;
-  position: relative;
-  height: 900px;
-  border-bottom: 8px solid black;
-}
-#contact .content {
-  background: url("../../app/assets/background.jpg") no-repeat center;
-  width: 100%;
-}
-#shop .images {
-  width: 100%;
-  display: flex;
-}
 
 /*-------------------Responsive------------------*/
-@media (max-width: 1200px) {
-  section .photo {
-    position: absolute;
-    max-width: 400px;
-    height: 300px;
+@media (max-width: 600px) {
+  .single-card-container {
+    max-width: 12rem;
+    max-height: 15rem;
+  }
+  #item-1,#item-3{
+    display: none;
   }
 }
-
-@media (max-width: 1200px){
+/* 
+@media (max-width: 1200px) {
   .content h2 {
     font-size: 20px;
   }
@@ -173,23 +51,84 @@ transform: translate(-50%);
     right: 0;
   }
 }
-@media (max-width: 500px) {
-  header .logo {
-    margin-left: 10px;
-  }
-  .logo h1 {
-    font-size: 1.5em;
-  }
-  header ul {
-    width: 100%;
-  }
-  #contact .content {
-    padding: 20px;
-  }
+ */
+
+
+/*-------------------css------------------*/
+
+
+body h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  list-style: none;
 }
-input[type="checkbox"] {
-  display: none;
+
+section {
+  min-height: 100vh;
+  position: relative;
 }
-/* ::-webkit-scrollbar {
-  display: none;
-} */
+
+#top-section {
+  background: url("../../app/assets/background3.jpg") no-repeat center/cover;
+}
+
+#top-section-title {
+  text-align: center;
+}
+
+#bottom-section {
+  background: url("../../app/assets/background.jpg") no-repeat center;
+  padding: 5em;
+}
+
+#welcome-page-information {
+  text-align: center;
+}
+
+.front {
+  background: url("../../app/assets/frame_wood.png") no-repeat center;
+}
+
+.cards-container{
+  margin: 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.single-card-container {
+  background-image: radial-gradient(circle, #ffe786bf, #f06b0690);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  width: 25rem;
+  z-index: 2;
+  border-radius: 40px;
+  height: 30rem;
+}
+
+.monster {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+body {
+  margin: 0;
+}
