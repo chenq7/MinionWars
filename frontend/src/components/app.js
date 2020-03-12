@@ -9,6 +9,7 @@ import Nav from "./nav/nav_container";
 import CardIndex from './cardsIndex/card_index_container'; //we need to change this
 import UserProfile from './users/user_profile_container';
 import HowToPlay from './how_to_play/how_to_play';
+import Versus from "./users/versus";
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
       <Route exact path="/" component={SplashContainer} />
       <Route exact path="/minions" component={CardIndex} />
       <Route exact path="/users/:user_id" component={UserProfile} />
+      <Route exact path="/users/:user_id/vs/:user_id2" component={Versus} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
     </Switch>
