@@ -50,8 +50,11 @@ class UserProfile extends React.Component {
         <img className='coin' src={Coin}/>
         <p className="money">1000</p>
         </span>
-        <div>{userMinions}</div>
-        <div>{otherUsers}</div>
+        <div className="profileContent">
+          <div className="minions">{userMinions}</div>
+        <div className="otherUsers">{otherUsers}</div>
+        </div>
+        
       </div>
     );
   }

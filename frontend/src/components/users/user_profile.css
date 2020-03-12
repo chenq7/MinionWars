@@ -2,12 +2,16 @@
   color: black;
   
 }
-
+.user-profile-container {
+    background-image: url(../../app/assets/war_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+}
 .user-profile-container div{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
     grid-gap: 20px;
-
  }
 
  .money { 
@@ -29,4 +33,19 @@
     justify-content: center;
     
 
+}
+
+
+.profileContent {
+    margin: 0 2% 0 2%;
+}
+
+.otherUsers {
+    font-size: 22px;
+    font-weight: 700;
+     height: 100%;
+}
+
+.minions {
+    height: 100%;
 }

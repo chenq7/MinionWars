@@ -52,7 +52,7 @@ class CardIndex extends React.Component {
   
 
   render() {
-    const hiddenTokens = [1,2,3,4,5,6,7].map(ele => <div className="scene scene--card hidden"></div>)
+    // const hiddenTokens = [1,2,3,4,5,6,7].map(ele => <div className="scene scene--card hidden"></div>)
     let minions = this.props.minions && this.props.minions.data ?
     this.shuffleMinions(this.props.minions.data).map(minion => {
       if(minion.userId === null){
@@ -69,11 +69,11 @@ class CardIndex extends React.Component {
     
     return (
       <div>
-        <h1>Minions Market</h1>  
+        <h1 className="market">Minions Market</h1>  
         {/* <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span> */}
         <div className='cards-list'>
           {minions}
-          {hiddenTokens}
+          {/* {hiddenTokens} */}
         </div>
       </div>
     );

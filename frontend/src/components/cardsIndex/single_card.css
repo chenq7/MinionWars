@@ -162,11 +162,21 @@ background-image: radial-gradient(circle, #868377bf, #5c5c5690);  width: 100%;
 }
 
 .cards-list {
-  z-index: 0;
+  /* z-index: 0;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+     /* margin: 20px; 
+      margin-left: 40px;  */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
+    grid-gap: 10px;
+    background-image: url(../../app/assets/war_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 .card:hover {
@@ -255,4 +265,8 @@ perspective: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.market {
+  text-align: center;
 }
