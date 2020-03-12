@@ -6,16 +6,16 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 # Functionality and MVP:
 * Buying minions
 * Selling minions
-* Randomize minion's characteristics
-* User can purchase a random token
+* Fight other user's minions
 * User profile page that shows all the minions
 * Splash page
 * User authorization: sign up and log in
 * Production README
 
 # Bonus Features:
-* Fight other user's minions
 * Mating minions to create new child minions
+* Randomize minion's characteristics
+* User can purchase a random token
 
 # Technologies and Technical Challenges 
 * Working on a single project with multiple collaborators (being able to resolve merge conflicts)

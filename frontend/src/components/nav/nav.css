@@ -8,6 +8,7 @@
 
 .fab:hover {
   color: orange;
+   transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
 }
 
 .logo {
@@ -104,6 +105,8 @@ position: absolute;
 .SessionButton:hover a {
   cursor: pointer;
   color: orange;
+  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  
 }
 
 
@@ -132,6 +135,7 @@ list-style: none;
 }
 .userProfile:hover {
   color: orange;
+   transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
 }
 
 .SessionButton {

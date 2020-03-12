@@ -2,12 +2,16 @@
   color: black;
   
 }
-
+.user-profile-container {
+    background-image: url(../../app/assets/war_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+}
 .user-profile-container div{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
     grid-gap: 20px;
-
  }
 
  .money { 
@@ -21,6 +25,7 @@
 .coin {
     height: 70px;
     width: 70px;
+    margin-left: 50px;
 }
 
 .profile{
@@ -29,4 +34,42 @@
     justify-content: center;
     
 
+}
+
+
+.profileContent {
+    margin: 0 2% 0 2%;
+}
+
+.otherUsers {
+    margin-top: 42px;
+    font-weight: 700;
+    height: 20px;
+}
+
+.minions {
+    height: 100%;
+}
+
+.userToAttack{
+    min-height: 365px;
+    max-width: 300px;
+    background-image: url(https://pluspng.com/img-png/crossed-swords-png-hd-crossingswords-png-554.png);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(148, 11, 11, 0);
+    border-radius: 42px;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 75px;
+    border: none;
+    cursor: pointer;
+      box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.25),
+    -1px -1px 20px 2px rgba(0, 0, 0, 0.22);
+}
+.userToAttack:hover {
+    background-color: rgba(182, 7, 7, 0.342);
+    cursor: pointer;
+       box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.25),
+    -1px -1px 20px 2px rgba(240, 12, 12, 0.589);
 }
