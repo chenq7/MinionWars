@@ -67,7 +67,9 @@ header .menu{
     display: none;
 }
 
-
+.fa-github { 
+  margin-top: 12px;
+}
 .dots {
    color: #ddb905;
    font-size: 36px;
