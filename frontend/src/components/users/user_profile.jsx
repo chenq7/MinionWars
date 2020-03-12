@@ -8,13 +8,19 @@ import Coin from '../../../src/app/assets/coin.png'
 class UserProfile extends React.Component {
   constructor(props){
     super(props);
+    this.user = null;
+    this.handleVersus = this.handleVersus.bind(this);
   }
+
   componentDidMount() {
     this.props.fetchMinions();
     this.props.fetchUsers();
   }
 
- 
+  handleVersus(user2){
+    let newState = { currentUser: this.user, enemy: user2 }
+    this.props.history.push({ pathname: `/users/${this.user._id}/vs/${user2}`, state: newState });
+  }
 
   render() {
 
@@ -36,19 +42,28 @@ class UserProfile extends React.Component {
       this.props.users.data.map(user => {
         if (user.username !== this.props.currentUser.username){
           return (
-            <div>
+            <button onClick={() => this.handleVersus(user)}>
               {user.username}
-            </div>
+            </button>
           );
         }
       }) : null;
+
+    if (this.props.currentUser && this.props.users.data) {
+      for (let i = 0; i < this.props.users.data.length; i++) {
+        if (this.props.users.data[i]["username"] === this.props.currentUser.username) {
+          this.user = this.props.users.data[i];
+          break;
+        }
+      }
+    }
     
     return (
       <div className="user-profile-container">
         <span className="profile">
         <h1>{this.props.currentUser.username}</h1>   
         <img className='coin' src={Coin}/>
-        <p className="money">1000</p>
+        <p className="money">{this.user ? this.user.coins : null}</p>
         </span>
         <div>{userMinions}</div>
         <div>{otherUsers}</div>

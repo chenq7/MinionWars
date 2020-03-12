@@ -6,11 +6,13 @@ import './card_index.css'
 class CardIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.user = null;
     this.buyMinion = this.buyMinion.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchMinions();
+    this.props.fetchUsers();
   }
 
   shuffleMinions(array){
@@ -38,18 +40,16 @@ class CardIndex extends React.Component {
           price: minion.price,
           userId: this.props.currentUser.id
         };
-        if(this.props.currentUser.coins > minion.price){
-          this.props.currentUser.coins = this.props.currentUser.coins - minion.price
+        if(this.user){
+           
+          this.user.coins -= minion.price;
+          this.props.updateUser(this.user);
         }
         
       this.props.createMinion(newMinion);
       this.props.BuyAlert()
     }
 
-  
-    
-
-  
 
   render() {
     const hiddenTokens = [1,2,3,4,5,6,7].map(ele => <div className="scene scene--card hidden"></div>)
@@ -67,9 +67,19 @@ class CardIndex extends React.Component {
       )};
     }) : null;
     
+    if (this.props.currentUser && this.props.users.data){
+      for (let i=0; i < this.props.users.data.length; i++){
+        if (this.props.users.data[i]["username"] === this.props.currentUser.username){
+          this.user = this.props.users.data[i];
+          break;
+        }
+      }
+    }
+
     return (
       <div>
-        <h1>Minions Market</h1>  
+        <h1>Minions Market</h1>
+        {this.user ? "coins: " + this.user.coins : null}  
         {/* <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span> */}
         <div className='cards-list'>
           {minions}
