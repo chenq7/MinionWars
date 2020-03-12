@@ -42,7 +42,7 @@ class UserProfile extends React.Component {
       this.props.users.data.map(user => {
         if (user.username !== this.props.currentUser.username){
           return (
-            <button onClick={() => this.handleVersus(user)}>
+            <button className="userToAttack" onClick={() => this.handleVersus(user)}>
               {user.username}
             </button>
           );

@@ -78,8 +78,11 @@ class CardIndex extends React.Component {
 
     return (
       <div>
-        <h1>Minions Market</h1>
-        {this.user ? "coins: " + this.user.coins : null}  
+        <div className="market">
+           <h1>Minions Market</h1>
+        <img className="coin" src="/static/media/coin.849bfb99.png"></img>
+        <div className="currency">{this.user ? + this.user.coins : null}</div>
+        </div>
         {/* <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span> */}
         <div className='cards-list'>
           {minions}

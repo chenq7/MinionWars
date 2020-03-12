@@ -10,3 +10,16 @@
   font-size: 10px;
 }
 
+.currency{
+     color: gold;
+     font-family: Blippo, fantasy;
+     font-weight: 800;
+     font-size: 18px;
+     transform: translate(0px, 32px);
+}
+
+.market {
+   display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

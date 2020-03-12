@@ -25,6 +25,7 @@
 .coin {
     height: 70px;
     width: 70px;
+    margin-left: 50px;
 }
 
 .profile{
@@ -41,11 +42,34 @@
 }
 
 .otherUsers {
-    font-size: 22px;
+    margin-top: 42px;
     font-weight: 700;
-     height: 100%;
+    height: 20px;
 }
 
 .minions {
     height: 100%;
+}
+
+.userToAttack{
+    min-height: 365px;
+    max-width: 300px;
+    background-image: url(https://pluspng.com/img-png/crossed-swords-png-hd-crossingswords-png-554.png);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(148, 11, 11, 0);
+    border-radius: 42px;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 75px;
+    border: none;
+    cursor: pointer;
+      box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.25),
+    -1px -1px 20px 2px rgba(0, 0, 0, 0.22);
+}
+.userToAttack:hover {
+    background-color: rgba(182, 7, 7, 0.342);
+    cursor: pointer;
+       box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.25),
+    -1px -1px 20px 2px rgba(240, 12, 12, 0.589);
 }
