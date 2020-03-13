@@ -79,31 +79,47 @@ class Versus extends React.Component {
       this.attack(this.minion1, this.minion2);
     }
 
+    let leftList = "";
+    let rightList = "";
 
+    for (let i= 0; i < this.result.split("\n").length; i++){
+      debugger
+      if (i % 2 === 0){
+        leftList += i + ") " + this.result.split("\n")[i] + "\n";
+      }
+      else {
+        rightList += i + ") " + this.result.split("\n")[i] + "\n";
+      }
+    };
     
+
     return(
       <div className="versus-container">
         <div className="vs">
-          <div className="textLog">
-        {this.currentUser ? this.currentUser.username : null}
-                        {" vs "}
-                        {this.enemy ? this.enemy.username : null }
-                        <br/>
-                        {this.minion1 ? this.minion1.name : null}
-                        {" vs "}
-                        {this.minion2 ? this.minion2.name : null}
-                
+              <div className="textLog">
+                {this.currentUser ? this.currentUser.username : null}
+                {" vs "}
+                {this.enemy ? this.enemy.username : null } <br></br>
+                {this.minion1 ? this.minion1.name : null}
+                {" vs "}
+                {this.minion2 ? this.minion2.name : null} <br></br>
                 <ul>
-                  {this.result.split("\n").map(line => {
+                  {leftList.split("\n").map(line => {
+                    return <li>
+                      {line}
+                    </li>
+                  })}
+                </ul>
+
+                <ul>
+                  {rightList.split("\n").map(line => {
                     return <li>
                       {line}
                     </li>
                   })}
                 </ul>
           </div>
-        
-    </div>
-          
+          </div>
       </div>
     );
   }
