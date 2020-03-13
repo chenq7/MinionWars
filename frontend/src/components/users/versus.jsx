@@ -63,7 +63,10 @@ class Versus extends React.Component {
       this.currentUser = this.props.history.location.state.currentUser; 
       this.enemy = this.props.history.location.state.enemy;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c9528f5a7a358b6aec0cdfe559793621fabde3b
       let minions = Object.values(this.props.minions.data);
 
       if (minions) {
