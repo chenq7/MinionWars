@@ -1,0 +1,26 @@
+.versus-container {
+    background-image: url(../../app/assets/war_background.jpg);
+    min-height: 4500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.vs{
+    /* position: fixed; */
+    height: 2000px;
+    width: 350px;
+    margin-left: 37%;
+    padding: 10px;
+    background-image: linear-gradient(to bottom left, #620000d2, rgba(34, 6, 6, 0.815));
+    min-height: 4500px;
+    box-shadow: 10px 10px 120px 15px rgba(90, 6, 6, 0.15),
+    -5px -5px 30px 15px rgba(187, 4, 4, 0.22);
+ 
+}
+
+.textLog{
+ font-size: 20px;
+  color: white;
+ font-weight: 800;
+}

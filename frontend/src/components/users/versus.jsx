@@ -1,6 +1,7 @@
 import React from "react";
 import { fetchMinions } from '../../actions/minion_actions';
 import { connect } from 'react-redux';
+import './versus.css';
 
 const mapStateToProps = (state) => {
   return {
@@ -84,20 +85,27 @@ class Versus extends React.Component {
 
     
     return(
-      <div>
+      <div className="versus-container">
+        <div className="vs">
+          <div className="textLog">
         {this.currentUser ? this.currentUser.username : null}
-        {" vs "}
-        {this.enemy ? this.enemy.username : null } <br></br>
-        {this.minion1 ? this.minion1.name : null}
-        {" vs "}
-        {this.minion2 ? this.minion2.name : null} <br></br>
-        <ul>
-          {this.result.split("\n").map(line => {
-            return <li>
-              {line}
-            </li>
-          })}
-        </ul>
+                        {" vs "}
+                        {this.enemy ? this.enemy.username : null }
+                        <br/>
+                        {this.minion1 ? this.minion1.name : null}
+                        {" vs "}
+                        {this.minion2 ? this.minion2.name : null}
+                
+                <ul>
+                  {this.result.split("\n").map(line => {
+                    return <li>
+                      {line}
+                    </li>
+                  })}
+                </ul>
+          </div>
+        
+    </div>
           
       </div>
     );
