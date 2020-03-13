@@ -29,9 +29,7 @@ class UserProfile extends React.Component {
         if(minion.userId === this.props.currentUser.id){
           return (
             <div className="grid">
-               <div className="scene scene--card">
               <SingleCard minion={minion} />
-            </div>
             </div>
            
           );
