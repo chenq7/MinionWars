@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { logout } from "../../actions/session_actions";
 import UserProfile from "./user_profile";
-import { fetchMinions, deleteMinion } from "../../actions/minion_actions"
+import { fetchMinions, deleteMinion } from "../../actions/minion_actions";
 import { fetchUsers, updateUser } from "./../../actions/user_actions";
 
 const mapStateToProps = state => {

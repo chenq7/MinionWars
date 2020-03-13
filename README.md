@@ -23,6 +23,10 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 * Express
 * React
 * Node.js
+* HTML5
+* CSS3
+* Axios
+* Postman
 
 ## Group Members and Work Breakdown:
 * Greg: 
@@ -37,25 +41,25 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 * Greg: Supervising group/research/planning material for next day 
 
 ### Day two: Display (handles window resizing, canvas) AND Game logic
-* Greg: Backend, User & Minion schema, validations, routes
-* John: Backend, User & Minion schema, validations, routes
+* Greg: Backend - User & Minion schema, validations, routes
+* John: Backend - User & Minion schema, validations, routes
 * Lawrence: Frontend Splash page
 * Anton: User profile page
 
 ### Day three: 
-* Greg: Backend User, minion assoicatation, seeding 
-* John: Backend User, minion assoicatation, seeding
-* Lawrence: Frontend profile page, and minion index, as well as a footer for all the pages
-* Anton: Frontend profile page, and minion index, as well as a footer for all the pages
+* Greg: Backend - User, minion assoicatation, seeding 
+* John: Backend - User, minion assoicatation, seeding
+* Lawrence: Frontend - profile page, and minion index, as well as a footer for all the pages
+* Anton: Frontend - profile page, and minion index, as well as a footer for all the pages
 
 ### Day four: 
-<!-- * Greg: sprite animation/engine
-* John: display/css/adding sprite platforms
-* Lawrence: sprite animation/engine
-* Anton: display/CSS/adding sprite platforms -->
+* Greg: Backend - buy/sell feature
+* John: Backend - buy/sell feature
+* Lawrence: Frontend - update navbar, slash page 
+* Anton: Frontend - attack page, profile page
 
 ### Day five: Test and Update README
-<!-- * Greg: stress test game
-* Lawrence: refactoring CSS
-* Anton: stress test game
-* John: refactoring CSS -->
+* Greg: Backend - attack feature and refactor miscellaneous
+* John: Backend - attack feature and refactor miscellaneous 
+* Lawrence: Frontend - Update miscellaneous css
+* Anton: Frontend - Update miscellaneous css 
