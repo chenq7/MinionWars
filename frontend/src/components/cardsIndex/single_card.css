@@ -1,49 +1,31 @@
-:root {
-  
-  --rare-color: cyan;
-  --rare-background: rgba(173, 216, 230, 0.63);
-  --common-color: gray;
-  --common-background: lightgray;
-  --legendary-color: orangered;
-  --legendary-background: #f2856e;
-  --uncommon-color: green;
-  --uncommon-background: lightgreen;
-  --epic-color: purple;
-  --epic-background: rgba(238, 130, 238, 0.568);
+.card{
+  width: 20rem;
+  height: 30rem;
 }
 
-* {
-  font-family: Blippo, fantasy
-}
 
-.abilities {
-  font-size: 30px;
-  list-style: none;
-text-align: center;
-position: absolute;
-right: 55%;
-transform: translate(50%,-50%);
-top: 40%;
+.col-lg-3{
+    width: 25%;
+    min-width: 20rem;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #aaa;
+    text-align: center;
 }
-
-.show-bottom {
-  line-height: 0;
+.col-lg-3 img {
+    max-width: 100%;
 }
-
-.card-container {
-  /* display: flex;
-  flex-direction: column; */
+.img-container {
+    display: inline-block;
+    position: relative;
 }
-
-.buy-card-container {
-  /* width: 70%; */
-}
-
-.name {
-  max-height: 2em;
-font-size: 20px;
-position: absolute;
+.positioning{
+   position: absolute;
 right: 50%;
+<<<<<<< HEAD
 transform: translate(50%,-50%);
 }
 
@@ -268,3 +250,16 @@ perspective: 600px;
 }
 
 
+=======
+transform: translate(-50%);
+bottom: 6rem;
+color:
+black;
+padding: 4px;
+font-size: 17px;
+line-height: 18px;
+left: 50%;
+min-width: 200px;
+display: block;
+}
+>>>>>>> cssRefactor
