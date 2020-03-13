@@ -7,6 +7,7 @@ class CardIndex extends React.Component {
   constructor(props) {
     super(props);
     this.user = null;
+    this.state = { notice: "" }
     this.buyMinion = this.buyMinion.bind(this);
   }
 
@@ -29,22 +30,28 @@ class CardIndex extends React.Component {
   }
 
   buyMinion(minion){
-        let newMinion = {
-          url: minion.url,
-          name: minion.name,
-          attack: minion.attack,
-          defense: minion.defense,
-          hp: minion.hp,
-          rarity: minion.rarity,
-          ability: minion.ability,
-          price: minion.price,
-          userId: this.props.currentUser.id
-        };
-        if(this.user){
-           
-          this.user.coins -= minion.price;
-          this.props.updateUser(this.user);
-        }
+    let newAmount = this.user.coins - minion.price;
+    if (newAmount < 0){
+      debugger
+      this.setState({ notice: "not enough coins!"})
+      return
+    }
+    else {
+      this.user.coins = newAmount;
+      this.props.updateUser(this.user);
+    }
+    
+    let newMinion = {
+      url: minion.url,
+      name: minion.name,
+      attack: minion.attack,
+      defense: minion.defense,
+      hp: minion.hp,
+      rarity: minion.rarity,
+      ability: minion.ability,
+      price: minion.price,
+      userId: this.props.currentUser.id
+    };
         
       this.props.createMinion(newMinion);
       this.props.BuyAlert()
@@ -52,7 +59,7 @@ class CardIndex extends React.Component {
 
 
   render() {
-    const hiddenTokens = [1,2,3,4,5,6,7].map(ele => <div className="scene scene--card hidden"></div>)
+    // const hiddenTokens = [1,2,3,4,5,6,7].map(ele => <div className="scene scene--card hidden"></div>)
     let minions = this.props.minions && this.props.minions.data ?
     this.shuffleMinions(this.props.minions.data).map(minion => {
       if(minion.userId === null){
@@ -76,14 +83,18 @@ class CardIndex extends React.Component {
       }
     }
 
+    
     return (
       <div>
-        <h1>Minions Market</h1>
-        {this.user ? "coins: " + this.user.coins : null}  
+        <div className="market">
+           <h1>Minions Market</h1>
+        <img className="coin" src="/static/media/coin.849bfb99.png"></img>
+        <div className="currency">{this.user ? + this.user.coins : null}</div>
+        </div>
         {/* <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span> */}
         <div className='cards-list'>
           {minions}
-          {hiddenTokens}
+          {/* {hiddenTokens} */}
         </div>
       </div>
     );

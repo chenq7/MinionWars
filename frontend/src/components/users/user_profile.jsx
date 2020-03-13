@@ -42,7 +42,7 @@ class UserProfile extends React.Component {
       this.props.users.data.map(user => {
         if (user.username !== this.props.currentUser.username){
           return (
-            <button onClick={() => this.handleVersus(user)}>
+            <button className="userToAttack" onClick={() => this.handleVersus(user)}>
               {user.username}
             </button>
           );
@@ -65,8 +65,11 @@ class UserProfile extends React.Component {
         <img className='coin' src={Coin}/>
         <p className="money">{this.user ? this.user.coins : null}</p>
         </span>
-        <div>{userMinions}</div>
-        <div>{otherUsers}</div>
+        <div className="profileContent">
+          <div className="minions">{userMinions}</div>
+        <div className="otherUsers">{otherUsers}</div>
+        </div>
+        
       </div>
     );
   }

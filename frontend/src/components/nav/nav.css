@@ -28,6 +28,7 @@ header {
 
 .fab:hover {
   color: orange;
+   transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
 }
 
 header ul li a {
@@ -97,6 +98,8 @@ header .menu {
 .SessionButton:hover a {
   cursor: pointer;
   color: orange;
+  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  
 }
 
 
@@ -110,6 +113,7 @@ header .menu {
 }
 .userProfile:hover {
   color: orange;
+   transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
 }
 
 .SessionButton {
