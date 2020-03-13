@@ -50,7 +50,9 @@ export const createMinion = (minionForm) => dispatch => {
   );
 }
 
-
+export const deleteMinion = (minionId) => dispatch => {
+  return minionUtil.deleteMinion(minionId).then()
+}
 
 
 

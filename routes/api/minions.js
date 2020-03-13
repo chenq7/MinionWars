@@ -53,4 +53,15 @@ router.post("/create", passport.authenticate("jwt", { session: false }), (req, r
   }
 );
 
+router.delete("/:minion_id", (req, res) => {
+  Minion.deleteOne({ _id: req.params.minion_id })
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((err) => {
+      console.error(err);
+      next(err);
+    });
+});
+
 module.exports = router;

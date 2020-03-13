@@ -10,6 +10,7 @@ class UserProfile extends React.Component {
     super(props);
     this.user = null;
     this.handleVersus = this.handleVersus.bind(this);
+    this.sellMinion = this.sellMinion.bind(this);
   }
 
   componentDidMount() {
@@ -22,6 +23,14 @@ class UserProfile extends React.Component {
     this.props.history.push({ pathname: `/users/${this.user._id}/vs/${user2}`, state: newState });
   }
 
+  sellMinion(minion){
+       
+    this.props.deleteMinion(minion._id);
+    this.user.coins += minion.price / 2;
+    this.props.updateUser(this.user);
+    window.location.reload();
+  }
+
   render() {
 
     const userMinions = this.props.minions && this.props.minions.data ?
@@ -29,9 +38,10 @@ class UserProfile extends React.Component {
         if(minion.userId === this.props.currentUser.id){
           return (
             <div className="grid">
-               <div className="scene scene--card">
-              <SingleCard minion={minion} />
-            </div>
+              <div className="scene scene--card">
+                <SingleCard minion={minion} />
+              </div>
+            <button onClick={() => this.sellMinion(minion)}>sell for {minion.price/2}</button>
             </div>
            
           );
