@@ -1,258 +1,38 @@
-:root {
-  
-  --rare-color: cyan;
-  --rare-background: rgba(173, 216, 230, 0.63);
-  --common-color: gray;
-  --common-background: lightgray;
-  --legendary-color: orangered;
-  --legendary-background: #f2856e;
-  --uncommon-color: green;
-  --uncommon-background: lightgreen;
-  --epic-color: purple;
-  --epic-background: rgba(238, 130, 238, 0.568);
+.card{
+  width: 20rem;
+  height: 30rem;
 }
 
-* {
-  font-family: Blippo, fantasy
-}
 
-.abilities {
-  font-size: 30px;
-  list-style: none;
-text-align: center;
-position: absolute;
-right: 55%;
-transform: translate(50%,-50%);
-top: 40%;
+.col-lg-3{
+    width: 25%;
+    min-width: 20rem;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #aaa;
+    text-align: center;
 }
-
-.show-bottom {
-  line-height: 0;
+.col-lg-3 img {
+    max-width: 100%;
 }
-
-.card-container {
-  /* display: flex;
-  flex-direction: column; */
+.img-container {
+    display: inline-block;
+    position: relative;
 }
-
-.buy-card-container {
-  /* width: 70%; */
-}
-
-.name {
-  max-height: 2em;
-font-size: 20px;
-position: absolute;
+.positioning{
+   position: absolute;
 right: 50%;
-transform: translate(50%,-50%);
-}
-
-.gold {
-  color: gold;
-}
-
-.Rare-tag {
-  color: var(--rare-color);
-font-size: 0.7em;
-position: absolute;
-bottom: 5%;
-right: 50%;
-transform: translate(50%,-50%);
-}
-
-.Legendary-tag {
-  color: var(--legendary-color);
-font-size: 0.7em;
-position: absolute;
-bottom: 5%;
-right: 50%;
-transform: translate(50%,-50%);
-}
-.Uncommon-tag {
-  color: var(--uncommon-color);
-font-size: 0.7em;
-position: absolute;
-bottom: 5%;
-right: 50%;
-transform: translate(50%,-50%);
-}
-.Common-tag {
-  color: var(--common-color);
-font-size: 0.7em;
-position: absolute;
-bottom: 5%;
-right: 50%;
-transform: translate(50%,-50%);
-}
-
-.Epic-tag {
-  color: var(--epic-color);
-font-size: 0.7em;
-position: absolute;
-bottom: 5%;
-right: 50%;
-transform: translate(50%,-50%);
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  right: 50%;
-  transform: translate(50%, -50%);
-  top: 50%;
-}
-
-.Epic-background {
-background-image: radial-gradient(circle, #96099bbf, #915fa890);  width: 100%;
-  height: 100%;
-  border-radius: 40px;
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%);
-  top: 0%;
-}
-
-.Rare-background {
-background-image: radial-gradient(circle, #86edffbf, #0650f090);  width: 100%;
-  height: 100%;
-  border-radius: 40px;
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%);
-  top: 0%;
-}
-
-.Uncommon-background {
-  background-image: radial-gradient(circle, #9eff86bf, #06f06790);
-  width: 100%;
-  height: 100%;
-  border-radius: 40px;
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%);
-top: 0%;
-}
-
-.Common-background {
-background-image: radial-gradient(circle, #868377bf, #5c5c5690);  width: 100%;
-  height: 100%;
-  border-radius: 40px;
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%);
-  top: 0%;
-}
-
-.Legendary-background {
-  background-image: radial-gradient(circle, #ffe786bf, #f06b0690);
-  width: 100%;
-  height: 100%;
-  border-radius: 40px;
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%);
-  top: 0%;
-}
-
-.cards-list {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.card:hover {
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
-}
-.card .card__face img {
-  object-fit: contain;
-  z-index: 10;
-  position: absolute;
-}
-
-.type {
-  color: black;
-  font-size: 1em;
-  z-index: 100;
-  /* position: absolute;
-  right: 50%;
-  transform: translate(50%, -50%); */
-}
-
-.card .card_title {
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-  z-index: 100;
-}
-
-.scene {
- width: 270px;
-height: 360px;
-margin: 40px 20px;
-perspective: 600px;
-}
-
-.card {
-  /* margin: 30px auto; */
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
-  box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.25),
-    -1px -1px 20px 2px rgba(0, 0, 0, 0.22);
-  border-radius: 40px;
-}
-
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-weight: bold;
-  font-size: 40px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 40px;
-}
-
-.card__face--front {
-  /* background: red; */
-  /* border-radius: 40px; */
-}
-
-.card__face--back {
-  background: darkgrey;
-  transform: rotateY(180deg);
-  /* backface-visibility: hidden; */
-  /* -webkit-backface-visibility: hidden; */
-
-  /* border-radius: 40px; */
-}
-
-.card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+transform: translate(-50%);
+bottom: 6rem;
+color:
+black;
+padding: 4px;
+font-size: 17px;
+line-height: 18px;
+left: 50%;
+min-width: 200px;
+display: block;
 }

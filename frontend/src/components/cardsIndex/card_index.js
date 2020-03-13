@@ -58,9 +58,7 @@ class CardIndex extends React.Component {
       if(minion.userId === null){
       return (
         <div className="card-container">
-          <div className="scene scene--card">
             <SingleCard minion={minion} />
-          </div>
           {this.props.loggedIn ? <button className="BuyAlert" 
           onClick={() => this.buyMinion(minion)}>Buy this card for {minion.price}</button>:null}
         </div>
