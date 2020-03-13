@@ -32,7 +32,6 @@ class CardIndex extends React.Component {
   buyMinion(minion){
     let newAmount = this.user.coins - minion.price;
     if (newAmount < 0){
-      debugger
       this.setState({ notice: "not enough coins!"})
       return
     }

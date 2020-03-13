@@ -22,7 +22,6 @@ class SingleCard extends React.Component {
   }
 
   rarity(minion){
-    debugger
     switch (minion.rarity) {
       case "Common":
         return <img className="card" src={rare}></img>;
@@ -48,12 +47,24 @@ class SingleCard extends React.Component {
       <>
         <div id="container" class="col-lg-3">
           <div class="img-container">
-            <div class="positioning">
+            <div className='image-positioning'>
+              <img src={minion.url}></img>
+            </div>
+            <div className="positioning">
               <ul>
                 <li>
                   HP:{minion.hp}
-                  <i className="fas fa-briefcase-medical">  </i>Defense:{minion.defense}<i class="fas fa-shield-alt"></i>
+                  <i className="fas fa-briefcase-medical"></i>
                 </li>
+                <li>
+                  Defense:{minion.defense}
+                  <i class="fas fa-shield-alt"></i>
+                </li>
+                <li>
+                  Attack:{minion.attack}
+                  <i class="fas fa-bolt"></i>
+                </li>
+                <li>Ability:{minion.ability}</li>
               </ul>
             </div>
             {this.rarity(minion)}

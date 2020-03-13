@@ -10,10 +10,9 @@
     float: left;
     position: relative;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
     background-color: #aaa;
     text-align: center;
+    border-radius: 4px;
 }
 .col-lg-3 img {
     max-width: 100%;
@@ -23,16 +22,25 @@
     position: relative;
 }
 .positioning{
-   position: absolute;
+  position: absolute;
 right: 50%;
 transform: translate(-50%);
-bottom: 6rem;
-color:
-black;
-padding: 4px;
-font-size: 17px;
-line-height: 18px;
+bottom: 4rem;
 left: 50%;
-min-width: 200px;
-display: block;
+min-width: 250px;
+min-height: 75px;
 }
+
+.image-positioning{
+  position: absolute;
+  top: 25px;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 95%;
+  height: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+
