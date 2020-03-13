@@ -1,25 +1,5 @@
-
-
-.card-container{
-  text-align: center;
-}
-
-
-.errors{
-  color:black;
-  font-size: 10px;
-}
-
-.currency{
-     color: gold;
-     font-family: Blippo, fantasy;
-     font-weight: 800;
-     font-size: 18px;
-     transform: translate(0px, 32px);
-}
-
-.market {
-   display: flex;
-    flex-direction: row;
-    justify-content: center;
+.cards-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  grid-gap: 10px;
 }

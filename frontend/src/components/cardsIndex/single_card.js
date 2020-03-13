@@ -1,6 +1,8 @@
 import React from "react";
 import troll from "./cardimage/troll.png";
 import dragon from "./cardimage/dragon1.png";
+import rare from '../../app/cards/rare.png'
+import legendary from '../../app/cards/legendary.png'
 
 
 
@@ -11,6 +13,7 @@ class SingleCard extends React.Component {
       active: false
     };
     this.flipCard = this.flipCard.bind(this);
+    this.rarity = this.rarity.bind(this)
   }
 
   flipCard() {
@@ -18,48 +21,53 @@ class SingleCard extends React.Component {
     this.setState({ active: !currentState });
   }
 
+  rarity(minion){
+    switch (minion.rarity) {
+      case "Common":
+        return <img className="card" src={rare}></img>;
+        break;
+      case "Rare":
+        return <img className="card" src={rare}></img>;
+        break;
+      case "Legendary":
+        return <img className="card" src={legendary}></img>;
+        break;
+      case "Epic":
+        return <img className="card" src={rare}></img>;
+        break;
+
+      default:
+        break;
+    }
+  }
+
   render() {
     const minion = this.props.minion;
     return (
       <>
-        <div
-          className={this.state.active ? "card is-flipped" : "card"}
-          onClick={this.flipCard}
-        >
-          <div className="card__face card__face--front">
-            <div className="info"></div>
-            <div className="show-top">
-              <h3 className="name">{minion.name}</h3>
+        <div id="container" class="col-lg-3">
+          <div class="img-container">
+            <div className='image-positioning'>
+              <img src={minion.url}></img>
             </div>
-
-            <div className="show-bottom">
-              <h3 className={minion.rarity + "-" + "tag"}>{minion.rarity}</h3>
-              {/* <h4 className="gold">{minion.price}</h4> */}
+            <div className="positioning">
+              <ul>
+                <li>
+                  HP:{minion.hp}
+                  <i className="fas fa-briefcase-medical"></i>
+                </li>
+                <li>
+                  Defense:{minion.defense}
+                  <i class="fas fa-shield-alt"></i>
+                </li>
+                <li>
+                  Attack:{minion.attack}
+                  <i class="fas fa-bolt"></i>
+                </li>
+                <li>Ability:{minion.ability}</li>
+              </ul>
             </div>
-            <div className={minion.rarity + "-" + "background"}>
-              <div className="info"></div>
-              <div className="show-top">
-                {minion.url === "tempurl" ? null : <img src={minion.url}></img>}
-                <h3 className="name">{minion.name}</h3>
-              </div>
-
-              <div className="show-bottom">
-                <h3 className={minion.rarity + "-" + "tag"}>{minion.rarity}</h3>
-                {/* <h4 className="gold">{minion.price}</h4> */}
-              </div>
-            </div>
-          </div>
-          <div className="card__face card__face--back">
-            <ul className="abilities">
-              <li>
-                HP:{minion.hp}<i className="fas fa-briefcase-medical"></i>
-              </li>
-              <li>
-                Attack:{minion.attack}<i class="fas fa-bolt"></i>
-              </li>
-              <li>Defense:{minion.defense}<i class="fas fa-shield-alt"></i></li>
-              <li>Ability:{minion.ability}</li>
-            </ul>
+            {this.rarity(minion)}
           </div>
         </div>
       </>

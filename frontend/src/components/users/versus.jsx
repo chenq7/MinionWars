@@ -39,7 +39,6 @@ class Versus extends React.Component {
       this.result = this.currentUser.username + " wins by default"
       return;
     }
-    
     let dmg;
     while (minion1.hp > 0 && minion2.hp > 0){
       dmg = minion1.attack - minion2.defense;
@@ -60,11 +59,9 @@ class Versus extends React.Component {
   }
 
   render() {
-    
     if (this.props.history.location.state){
       this.currentUser = this.props.history.location.state.currentUser; 
       this.enemy = this.props.history.location.state.enemy;
-
       let minions = Object.values(this.props.minions.data);
 
       if (minions) {
