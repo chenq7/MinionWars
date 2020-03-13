@@ -44,7 +44,7 @@
 .otherUsers {
     margin-top: 42px;
     font-weight: 700;
-    height: 20px;
+    height: 1%;
 }
 
 .minions {
@@ -52,8 +52,8 @@
 }
 
 .userToAttack{
-    min-height: 365px;
-    max-width: 300px;
+    height: 365px;
+    width: 300px;
     background-image: url(https://pluspng.com/img-png/crossed-swords-png-hd-crossingswords-png-554.png);
     background-size: cover;
     background-position: center;
