@@ -22,7 +22,7 @@
 */ 
 
 .textLog { 
-    margin-top: 2%;
+    margin-top: 3%;
     display: flex;
     justify-content: space-evenly;    
 }
@@ -33,9 +33,9 @@
     height: fit-content;
     margin-top: 20%;
     background-image: linear-gradient(to top left, #e1bc8d, #a66c39);
-    box-shadow: 0px 10px 20px 15px #e1bd8d75;
+    box-shadow: 0px 0px 20px 5px #e1bd8d75;
     border: solid 0.5px #aa703a;
-    padding: 15px;
+    padding: 5px;
     border-radius: 10px;
     color: rgb(235, 226, 203);
     font-size: 30px;
@@ -48,7 +48,7 @@
 .leftLog {
       background-image: linear-gradient(to bottom right, #632917, rgba(34, 6, 6, 0.924));
       box-shadow: 0px 20px 20px 15px #641d0871;
-      padding: 25px;
+      padding: 15px;
       border-radius: 20px;
       color: #dad8bf;
       font-size: 22px;
@@ -60,7 +60,7 @@
 .rightLog {
       background-image: linear-gradient(to bottom right, #632917, rgba(34, 6, 6, 0.915));
       box-shadow: 0px 20px 20px 15px #641d0871;
-      padding: 25px;
+      padding: 15px;
       border-radius: 20px;
       color: #dad8bf;
       font-size: 22px;
