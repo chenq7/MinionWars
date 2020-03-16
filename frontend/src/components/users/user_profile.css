@@ -3,10 +3,13 @@
   
 }
 .user-profile-container {
-    background-image: url(../../app/assets/war_background.jpg);
+  background-image: url(../../app/assets/war_background.jpg);
+    width: auto;
+    min-height: 1024px;
+    height: auto;
     background-size: cover;
     background-repeat: no-repeat;
-     background-attachment: fixed;
+    background-attachment: fixed;
 }
 
 
