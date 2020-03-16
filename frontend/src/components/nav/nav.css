@@ -126,17 +126,43 @@ header .menu {
 }
 
 .userProfile {
-  font-size: 10px;
+  font-size: 2rem;
+  margin-right: 15px;
 }
-.userProfile:hover {
+/* .userProfile:hover {
   font-size: 10px;
-}
+} */
 
 
 
 
 .dropdown-container {
   display: none;
+}
+
+.nav{
+  display: flex;
+}
+
+.nav a{
+  color: gold;
+  font-family: Blippo, fantasy;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.nav a:hover{
+  color: orange;
+   transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+
+.nav-items{
+  display: flex;
 }
 
 
