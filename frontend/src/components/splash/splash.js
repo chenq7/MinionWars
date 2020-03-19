@@ -37,6 +37,9 @@ class Splash extends React.Component {
                 </li>
               </ul>
             </div>
+            <p class="goto-next scrolly">
+              Scroll to Learn More
+            </p>
           </section>
 
           <section id="bottom-section">

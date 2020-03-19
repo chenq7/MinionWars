@@ -66,7 +66,7 @@ ul {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 84vh;
   position: relative;
 }
 
@@ -128,3 +128,35 @@ section {
 body {
   margin: 0;
 }
+
+.goto-next{
+		border: 0;
+		bottom: 0;
+		display: block;
+		height: 5em;
+		left: 50%;
+		margin: 0 0 0 -5em;
+		overflow: hidden;
+		position: absolute;
+    color: white;
+    padding-bottom: 15px;
+		white-space: nowrap;
+		width: 10em;
+		z-index: 1;
+}
+
+.goto-next:before {
+			background-image: url("arrow.svg");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: '';
+			display: block;
+			height: 1.5em;
+			left: 50%;
+			margin: -0.75em 0 0 -1em;
+			position: absolute;
+			top: 50%;
+			width: 2em;
+			z-index: 1;
+		}
