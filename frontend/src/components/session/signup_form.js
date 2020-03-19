@@ -25,14 +25,11 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let user = {
-      username: this.state.username,
-      password: this.state.password,
-      password2: this.state.password2
-    };
+    let user = this.state;
     
-    this.props.signup(user)
-    .then(() => this.props.login(user))
+    this.props.signup(user);
+    // this.props.signup(user)
+    // .then(() => this.props.login(user))
   }
   
   handleDemo(e) {
@@ -54,7 +51,9 @@ class SignupForm extends React.Component {
 
   render() {
 
-    if (this.props.loggedIn){
+    if (this.props.signedIn){
+      this.props.clearErrors();
+      this.props.login(this.state);
       this.props.history.push('/minions');
       this.props.closeModal();
     }
@@ -92,7 +91,10 @@ class SignupForm extends React.Component {
               <br />
               <input type="submit" value="Submit" className="submitButton" />
               {this.renderErrors()}
-              <div className="loginLink" onClick={this.props.loginForm}>
+              <div className="loginLink" onClick={() => {
+                this.props.clearErrors();
+                this.props.loginForm();
+                }}>
                 Already a member? Log in!
                 </div> 
                <button className="demoLogin" onClick={this.handleDemo}>
