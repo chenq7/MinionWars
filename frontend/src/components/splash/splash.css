@@ -159,4 +159,22 @@ body {
 			top: 50%;
 			width: 2em;
 			z-index: 1;
-		}
+    }
+    
+    .market{
+      display: flex;
+      justify-content: center;
+    }
+
+    .market>h1{
+      display: flex;
+      align-items: center;
+      font-size: 50px;
+    }
+
+    .currency{
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+      color: gold;
+    } 
