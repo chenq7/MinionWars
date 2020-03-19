@@ -11,6 +11,7 @@ import UserProfile from './users/user_profile_container';
 import HowToPlay from './how_to_play/how_to_play';
 import AboutUs from './about_us/about_us';
 import Versus from "./users/versus";
+import Footer from "./footer/footer";
 
 const App = () => (
   <div>
