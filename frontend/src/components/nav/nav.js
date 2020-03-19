@@ -66,11 +66,12 @@ class Nav extends React.Component {
         </div>
         <ul className='nav'>
           <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
           <Link to="/minions">Marketplace</Link>
           {this.getLinks()}
         </ul>
         <div className="dropdown-container">
-          <i onClick={this.changeClass} class="fas fa-bars hamburger"></i>
+          <i onClick={this.changeClass} className="fas fa-bars hamburger"></i>
           <div className="dropdown">
             <div className={this.state.hidden ? "hide-me" : "dropdown-content"}>
               <ul>
