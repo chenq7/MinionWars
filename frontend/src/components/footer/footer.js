@@ -9,12 +9,12 @@ class Footer extends React.Component {
     render(){
         return(
         <footer className="footer">
-          <p>Designed by Lawrence Nicastro</p>
+          <p>Designed by </p>
           <div className="footer-cols">
             <ul>
               <li>
-                <a href="https://www.linkedin.com/in/lawrencenicastro">
-                  <span>LinkedIn </span>
+                <a href="#">
+                  <span></span>
                   {/* <i className="fab fa-linkedin"></i> */}
                 </a>
               </li>
