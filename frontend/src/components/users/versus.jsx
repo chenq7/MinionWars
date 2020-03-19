@@ -1,17 +1,21 @@
 import React from "react";
 import { fetchMinions } from '../../actions/minion_actions';
 import { connect } from 'react-redux';
+import { updateUser } from "../../actions/user_actions";
+
 import './versus.css';
 
 const mapStateToProps = (state) => {
   return {
-    minions: state.entities.minions
+    minions: state.entities.minions,
+    users: state.entities.users
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     fetchMinions: () => dispatch(fetchMinions()),
+    updateUser: (userData) => dispatch(updateUser(userData))
   };
 };
 
@@ -23,6 +27,9 @@ class Versus extends React.Component {
     this.minion1 = null;
     this.minion2 = null;
     this.result = "";
+    this.user = null;
+    this.victoryNotice = "";
+    this.attacked = false;
     this.attack = this.attack.bind(this);
   }
 
@@ -31,12 +38,16 @@ class Versus extends React.Component {
   }
 
   attack(minion1, minion2){
+    this.attacked = true;
     if (!minion1){
       this.result = this.currentUser.username + " go buy a minion!"
       return;
     }
     if (!minion2){
       this.result = this.currentUser.username + " wins by default"
+      this.victoryNotice = "You have earned 100 coins for this victory!";
+      this.currentUser.coins += 100;
+      this.props.updateUser(this.currentUser);
       return;
     }
     let dmg;
@@ -46,6 +57,9 @@ class Versus extends React.Component {
       this.result += `${minion1.name} deals ${dmg} to ${minion2.name}, hp left: ${minion2.hp}\n`;
       if (minion2.hp <= 0){
         this.result += this.currentUser.username + "'s " + minion1.name + " wins";
+        this.victoryNotice = "You have earned 100 coins for this victory!";
+        this.currentUser.coins += 100;
+        this.props.updateUser(this.currentUser);
         break
       }
       dmg = minion2.attack - minion1.defense
@@ -59,7 +73,7 @@ class Versus extends React.Component {
   }
 
   render() {
-    if (this.props.history.location.state){
+    if (this.props.history.location.state && !this.attacked){
       this.currentUser = this.props.history.location.state.currentUser; 
       this.enemy = this.props.history.location.state.enemy;
       let minions = Object.values(this.props.minions.data);
@@ -83,7 +97,6 @@ class Versus extends React.Component {
     let rightList = "";
 
     for (let i= 0; i < this.result.split("\n").length; i++){
-      debugger
       if (i % 2 === 0){
         leftList += this.result.split("\n")[i] + "\n";
       }
@@ -96,8 +109,6 @@ class Versus extends React.Component {
     return(
         <div className="vs">  
           <div className="textLog"> 
-              
-
                
                 <ul className="leftLog">   
                   {leftList.split("\n").map(line => {
@@ -105,6 +116,7 @@ class Versus extends React.Component {
                       {line}
                     </li>
                   })}
+                  <li>{this.victoryNotice}</li>
                 </ul>
 
               <div className="versusNames">

@@ -52,6 +52,7 @@ class LoginForm extends React.Component {
 
   render() {
     if (this.props.loggedIn) {
+      this.props.clearErrors();
       this.props.history.push("/minions");
       this.props.closeModal();
     }
@@ -79,7 +80,10 @@ class LoginForm extends React.Component {
               <br />
               <input type="submit" value="Submit" className="submitButton" />
               {this.renderErrors()}
-              <div className="signupLink" onClick={this.props.signupForm}>
+              <div className="signupLink" onClick={() => {
+                this.props.clearErrors(); 
+                this.props.signupForm();
+                }}>
                 Need an account? Sign up!
               </div>
               <button className="demoLogin" onClick={this.handleDemo}>
