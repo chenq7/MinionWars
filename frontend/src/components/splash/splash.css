@@ -86,6 +86,7 @@ section {
 #bottom-section {
   background: url("../../app/assets/background.jpg") no-repeat center;
   padding: 5em;
+  background-size: cover;
 }
 
 #welcome-page-information {
