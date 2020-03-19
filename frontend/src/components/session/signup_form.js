@@ -8,22 +8,13 @@ class SignupForm extends React.Component {
     this.state = {
       username: "",
       password: "",
-      password2: "",
-      errors: {}
+      password2: ""
     };
     
     this.handleDemo = this.handleDemo.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearedErrors = false;
   }
-
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.signedIn === true) {
-  //     this.props.history.push("/signup");
-  //   }
-
-  //   this.setState({ errors: nextProps.errors });
-  // }
 
   update(field) {
     return e =>
@@ -42,16 +33,7 @@ class SignupForm extends React.Component {
     
     this.props.signup(user)
     .then(() => this.props.login(user))
-    this.props.history.push('/minions');
-    this.props.closeModal();
   }
-
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   const user = Object.assign({}, this.state);
-  //   this.props.processForm(user)
-  //     .then(() => this.props.history.push('/home'));
-  // }
   
   handleDemo(e) {
    e.preventDefault();
@@ -60,19 +42,23 @@ class SignupForm extends React.Component {
    this.props.closeModal();
  };
  
-  
-
   renderErrors() {
     return (
       <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.state.errors[error]}</li>
+        {Object.values(this.props.errors).map((error, i) => (
+          <li key={`error-${i}`}>{error}</li>
         ))}
       </ul>
     );
   }
 
   render() {
+
+    if (this.props.loggedIn){
+      this.props.history.push('/minions');
+      this.props.closeModal();
+    }
+
     return (
       <div className="signupForm">
         <h3 className="signupTitle">Signup</h3>
