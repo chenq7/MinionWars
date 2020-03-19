@@ -1,3 +1,5 @@
+
+
 header {
   width: 100%;
   height: 8em;
@@ -37,7 +39,6 @@ header ul li a {
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: Blippo, fantasy;
   cursor: pointer;
 }
 
@@ -106,7 +107,6 @@ header .menu {
 
 .userProfile {
   color: gold;
-  font-family: Blippo, fantasy;
   font-weight: 800;
   cursor: pointer;
   text-align: center;
@@ -116,13 +116,15 @@ header .menu {
    transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
 }
 
+
+
 .SessionButton {
   color: gold;
-  font-family: Blippo, fantasy;
   font-weight: 800;
   cursor: pointer;
   font-size: 10px;
   text-align: center;
+  margin-right: 15px;
 }
 
 .userProfile {
@@ -146,7 +148,6 @@ header .menu {
 
 .nav a{
   color: gold;
-  font-family: Blippo, fantasy;
   font-weight: 800;
   cursor: pointer;
   font-size: 10px;

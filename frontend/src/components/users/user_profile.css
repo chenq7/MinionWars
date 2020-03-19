@@ -15,10 +15,13 @@
 
  .money { 
      color: gold;
-     font-family: Blippo, fantasy;
      font-weight: 800;
      font-size: 18px;
      transform: translate(0px, 15px);
+}
+
+.sell{
+    transform: translate(75px, -43px);
 }
 
 .coin {

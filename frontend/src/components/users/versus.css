@@ -41,7 +41,6 @@
     font-size: 30px;
     letter-spacing: 0.5px;
     line-height: 40px;
-    font-family: fantasy;    
     
 }
 
@@ -54,7 +53,6 @@
       font-size: 22px;
       letter-spacing: 1px;
       line-height: 40px;
-      font-family: fantasy;
 }
 
 .rightLog {
@@ -66,5 +64,4 @@
       font-size: 22px;
       letter-spacing: 1px;
       line-height: 40px;
-      font-family: fantasy;
 }

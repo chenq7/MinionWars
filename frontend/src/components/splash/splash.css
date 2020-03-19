@@ -1,25 +1,30 @@
-
+* {
+  font-family: "Caesar Dressing", cursive;
+}
 
 /*-------------------Responsive------------------*/
 @media (max-width: 600px) {
   .single-card-container {
-    max-width: 12rem;
-    max-height: 15rem;
+    max-width: 25rem;
+    max-height: 35rem;
   }
-  #item-1,#item-3{
+  #item-1,
+  #item-3 {
     display: none;
   }
-  .single-card-container{
-    width: 15rem;
-    height: 20rem;
+
+}
+
+@media(max-width: 800px){
+    #welcome-page-information h2{
+    font-size: 3rem !important;
+  }
+  #top-section-title h2 {
+    font-size: 3rem !important;
   }
 }
 
-
-
-
 /*-------------------css------------------*/
-
 
 body h1,
 h2,
@@ -33,9 +38,31 @@ ul {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  /* font-size: 100%; */
   font: inherit;
   list-style: none;
+}
+
+#welcome-page-information h2 {
+  font-size: 5rem;
+  margin-bottom: 25px;
+}
+#welcome-page-information p {
+  font-size: 2rem;
+  word-wrap: break-word;
+  line-height: 3rem;
+}
+
+#welcome-page-information a {
+  margin-top: 30px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 section {
@@ -45,10 +72,15 @@ section {
 
 #top-section {
   background: url("../../app/assets/background3.jpg") no-repeat center/cover;
+  padding: 2rem;
+}
+#top-section-title h2{
+  font-size: 5rem;
 }
 
 #top-section-title {
   text-align: center;
+  margin-bottom: 7rem;
 }
 
 #bottom-section {
@@ -58,16 +90,17 @@ section {
 
 #welcome-page-information {
   text-align: center;
+  /* padding: 5rem 20rem 5rem 20rem; */
 }
+
 
 .front {
   background: url("../../app/assets/frame_wood.png") no-repeat center;
 }
 
-.cards-container{
+.cards-container {
   margin: 0;
 }
-
 
 .cards {
   display: flex;
@@ -91,8 +124,6 @@ section {
   display: block;
   object-fit: cover;
 }
-
-
 
 body {
   margin: 0;

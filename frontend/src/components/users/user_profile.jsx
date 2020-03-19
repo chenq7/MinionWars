@@ -39,9 +39,9 @@ class UserProfile extends React.Component {
           return (
             <div className="grid">
               <div className="scene scene--card">
-                <SingleCard minion={minion} />
+                <SingleCard minion={minion}/>
+            <button className='sell' onClick={() => this.sellMinion(minion)}>sell for {minion.price/2}</button>
               </div>
-            <button onClick={() => this.sellMinion(minion)}>sell for {minion.price/2}</button>
             </div>
            
           );

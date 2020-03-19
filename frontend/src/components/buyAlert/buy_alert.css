@@ -1,41 +1,37 @@
-
-
 .scroll {
-    /* min-width: 600px; */
-    width: 60%;
-    min-height: 900px;
-    text-align: center;
+  /* min-width: 600px; */
+  width: 60%;
+  min-height: 900px;
+  text-align: center;
 }
 
-.scroll-image{
+.scroll-image {
   z-index: 0;
   max-width: 1000px;
   min-height: 800px;
   position: absolute;
   /* left:50%; */
-  top:50%;
-  right:50%;
-  transform: translate(43%,-50%)
+  top: 50%;
+  right: 50%;
+  transform: translate(43%, -50%);
 }
 
-.congrats { 
-    color: black;
-    font-style: Trattatello, fantasy;
-    font-size: 24px;
-    font-weight: 700;
-    transform: translate(85px, 100px)
-
+.congrats {
+  color: black;
+  font-style: Trattatello, fantasy;
+  font-size: 24px;
+  font-weight: 700;
+  transform: translate(85px, 100px);
 }
 
 .BuyAlert {
-  transform: translate(0px, -43px);
+  transform: translate(75px, -43px);
   height: 30px;
   background-image: linear-gradient(to bottom left, #c22a0cfd, brown);
   border-radius: 12px;
   font-weight: 700;
   font-size: 16px;
-   font-family: Lucida Console;
-   color: #ffbe33;
+  color: #ffbe33;
 }
 
 .BuyAlert:hover {
