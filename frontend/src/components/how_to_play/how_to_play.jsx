@@ -7,9 +7,7 @@ import M2 from '../../app/assets/witch.png';
 
 
 class HowToPlay extends React.Component {
-
-
-
+    
     render(){
         return(
             <div className='how-to-container'>
