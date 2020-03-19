@@ -24,7 +24,6 @@
    text-align: center;
    font-weight: 700;
    font-size: 16px;
-    font-family: Blippo, fantasy;
     color:gray;
     border-radius: 8px;
 }
@@ -35,7 +34,6 @@
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-   font-family: Blippo, fantasy;
    color:gray;
    border-radius: 8px;
 }
@@ -47,7 +45,6 @@
   border-radius: 8px;
     font-weight: 700;
   font-size: 16px;
-   font-family: Lucida Console;
    color: #fff5a0;
 }
 
@@ -60,7 +57,6 @@
 .loginTitle{ 
   color: #da823e;
   font-size: 26px;
-  font-family: Blippo, fantasy;
   text-align: center;
   display:none;
 }
@@ -68,7 +64,6 @@
 
   color: #fff5a0;
   font-size: 22px;
-  font-family: Blippo, fantasy;
   cursor: pointer;
   text-align: center;
 }

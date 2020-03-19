@@ -65,14 +65,12 @@
   color: #da823e;
   font-size: 26px;
   margin-bottom: 0;
-  font-family: Blippo, fantasy;
   text-align: center;
   display: none;
 }
 .loginLink{ 
   color: #fff5a0;
   font-size: 20px;
-  font-family: Blippo, fantasy;
   cursor: pointer;
   text-align: center;
   padding-top: 5px;
