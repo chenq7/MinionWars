@@ -69,6 +69,7 @@ class SingleCard extends React.Component {
             </div>
             {this.rarity(minion)}
           </div>
+          
         </div>
       </>
     );

@@ -2,30 +2,30 @@
   padding: 15px 20px;
   width: 620px;
   min-height: 720px;
-  background: url('../../app/assets/fire_sword.png') no-repeat center center/cover;
+  background: url("../../app/assets/fire_sword.png") no-repeat center
+    center/cover;
 }
 
 .loginFields {
-
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 45%;
   position: relative;
   top: 12em;
-  }
-.loginFieldContainer{
-   display: flex;
+}
+.loginFieldContainer {
+  display: flex;
   justify-content: center;
 }
 .usernameField {
   background-color: #fffbd7;
   height: 48px;
-   text-align: center;
-   font-weight: 700;
-   font-size: 16px;
-    color:gray;
-    border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: gray;
+  border-radius: 8px;
 }
 
 .passwordField {
@@ -34,18 +34,18 @@
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-   color:gray;
-   border-radius: 8px;
+  color: gray;
+  border-radius: 8px;
 }
 
-.submitButton{ 
+.submitButton {
   font-weight: 700;
   height: 0px;
   background-image: linear-gradient(to bottom right, #3b0000, #da823e);
   border-radius: 8px;
-    font-weight: 700;
+  font-weight: 700;
   font-size: 16px;
-   color: #fff5a0;
+  color: #fff5a0;
 }
 
 .submitButton:hover {
@@ -54,14 +54,14 @@
   cursor: pointer;
 }
 
-.loginTitle{ 
+.loginTitle {
   color: #da823e;
   font-size: 26px;
   text-align: center;
-  display:none;
+  display: none;
 }
-.signupLink{ 
-
+.signupLink {
+  font-family: Lucida Console;
   color: #fff5a0;
   font-size: 22px;
   cursor: pointer;

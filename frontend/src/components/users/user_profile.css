@@ -20,6 +20,10 @@
      transform: translate(0px, 15px);
 }
 
+.sell{
+    transform: translate(75px, -43px);
+}
+
 .coin {
     height: 70px;
     width: 70px;
