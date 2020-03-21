@@ -1,12 +1,11 @@
 import { connect } from "react-redux";
-import BuyAlert from "./buy_alert";
+import NotEnough from "./not_enough";
 import { closeModal } from "../../actions/modal_actions";
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownprops) => {
     return {
         loggedIn: state.session.isAuthenticated,
-        currentUser: state.session.user,
-        minions: state.entities.minions
+        currentUser: state.session.user
     }
 };
 
@@ -14,9 +13,9 @@ const mapDispatchToProps = dispatch => {
 
     return {
         closeModal: () => dispatch(closeModal()),
-     
+
     };
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(BuyAlert);
+export default connect(mapStateToProps, mapDispatchToProps)(NotEnough);

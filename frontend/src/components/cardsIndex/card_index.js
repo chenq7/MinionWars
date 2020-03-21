@@ -32,7 +32,8 @@ class CardIndex extends React.Component {
   buyMinion(minion){
     let newAmount = this.user.coins - minion.price;
     if (newAmount < 0){
-      this.setState({ notice: "not enough coins!"})
+      // this.setState({ notice: "not enough coins!"})
+      this.props.NotEnough()
       return
     }
     else {
@@ -86,7 +87,7 @@ class CardIndex extends React.Component {
         <div className="market">
            <h1>Minions Market</h1>
           <img className="coin" src="/static/media/coin.849bfb99.png"></img>
-          <span className="not-enough-coins">{this.state.notice}</span>    
+          {/* <span className="not-enough-coins">{this.state.notice}</span>     */}
           <div className="currency">{this.user ? + this.user.coins : null}</div>
         </div>
         {/* <span className="user-profile-btn" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>user profile</span> */}

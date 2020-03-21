@@ -1,16 +1,13 @@
 .scroll {
-  /* min-width: 600px; */
   width: 60%;
   min-height: 900px;
   text-align: center;
 }
 
 .scroll-image {
-  z-index: 0;
   max-width: 1000px;
   min-height: 800px;
   position: absolute;
-  /* left:50%; */
   top: 50%;
   right: 50%;
   transform: translate(43%, -50%);
@@ -18,10 +15,9 @@
 
 .congrats {
   color: black;
-  font-style: Trattatello, fantasy;
   font-size: 24px;
   font-weight: 700;
-  transform: translate(85px, 100px);
+  transform: translate(25%, 6vw);
 }
 
 .BuyAlert {
@@ -39,3 +35,19 @@
   transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
   cursor: pointer;
 }
+
+.brokeMan {
+  position: relative;
+  top: 12vw;
+  right: 3vw;
+}
+
+.notEnoughHeader {
+  color: black;
+  font-size: 38px;
+  font-weight: 900;
+  position: relative;
+  top: 11vw;
+  left: 2vw;
+}
+

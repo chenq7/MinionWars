@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from "../session/login_form_container";
 import SignupFormContainer from "../session/signup_form_container";
 import BuyAlert from "../buyAlert/buy_alert_container";
+import NotEnough from "../buyAlert/not_enough";
 import './modal.css';
 
 function Modal({ modal, closeModal }) {
@@ -20,6 +21,9 @@ function Modal({ modal, closeModal }) {
         break;
         case "BuyAlert":
             component = <BuyAlert />;
+            break;
+        case "NotEnough":
+            component = <NotEnough />;
             break;
       default:
         return null;
