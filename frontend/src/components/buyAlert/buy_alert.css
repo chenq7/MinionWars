@@ -51,3 +51,19 @@
   left: 2vw;
 }
 
+.handShake{
+  position: relative;
+  top: 16vw;
+  right: 3vw;
+  max-width: 500px;
+  max-height: 400px;
+}
+
+.deal {
+  color: black;
+  font-size: 38px;
+  font-weight: 900;
+  position: relative;
+  top: 11vw;
+  left: 4vw;
+}

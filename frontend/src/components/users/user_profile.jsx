@@ -23,12 +23,18 @@ class UserProfile extends React.Component {
     this.props.history.push({ pathname: `/users/${this.user._id}/vs/${user2}`, state: newState });
   }
 
+   refresh() {
+    setTimeout(function () {
+      window.location.reload()
+    }, 3000);
+  }
   sellMinion(minion){
-       
+    
     this.props.deleteMinion(minion._id);
     this.user.coins += minion.price / 2;
     this.props.updateUser(this.user);
-    window.location.reload();
+    this.props.SellMinion();
+    this.refresh();    
   }
 
   render() {
@@ -40,7 +46,7 @@ class UserProfile extends React.Component {
             <div className="grid">
               <div className="scene scene--card">
                 <SingleCard minion={minion}/>
-            <button className='sell' onClick={() => this.sellMinion(minion)}>sell for {minion.price/2}</button>
+                <button className='sell' onClick={() => this.sellMinion(minion)}>sell for {minion.price/2}</button>
               </div>
             </div>
            

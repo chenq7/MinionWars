@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import NotEnough from "./not_enough";
+import SellMinion from "./sell_minion";
 import { closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state) => {
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(NotEnough);
+export default connect(mapStateToProps, mapDispatchToProps)(SellMinion);

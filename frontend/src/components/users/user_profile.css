@@ -14,8 +14,21 @@
 
 
 .sell{
-    transform: translate(75px, -43px);
+    transform: translate(-14vw, 30vw);
+    height: 30px;
+    background-image: linear-gradient(to bottom left, #c22a0cfd, brown);
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffbe33;
 }
+
+.sell:hover {
+  color: #fbe148;
+  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  cursor: pointer;
+}
+
 
 .coin {
     height: 70px;

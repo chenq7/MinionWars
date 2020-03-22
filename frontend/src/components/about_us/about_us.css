@@ -20,7 +20,7 @@
 }
 
 .about-us-container ul>li>img {
-    width: 200px;
+    width: auto;
     height: 210px;
     border-radius: 6px;
     margin: 0 auto;

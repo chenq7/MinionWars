@@ -3,6 +3,7 @@ import { logout } from "../../actions/session_actions";
 import UserProfile from "./user_profile";
 import { fetchMinions, deleteMinion } from "../../actions/minion_actions";
 import { fetchUsers, updateUser } from "./../../actions/user_actions";
+import { openModal } from "../../actions/modal_actions";;
 
 const mapStateToProps = state => {
     return {
@@ -20,7 +21,8 @@ const mapDispatchToProps = dispatch => {
         fetchMinions: () => dispatch(fetchMinions()),
         fetchUsers: () => dispatch(fetchUsers()),
         deleteMinion: (minionId) => dispatch(deleteMinion(minionId)),
-        updateUser: (userData) => dispatch(updateUser(userData))
+        updateUser: (userData) => dispatch(updateUser(userData)),
+        SellMinion: () => dispatch(openModal("SellMinion"))
     };
 };
 
