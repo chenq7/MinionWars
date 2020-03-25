@@ -24,9 +24,9 @@ class UserProfile extends React.Component {
   }
 
    refresh() {
-    // setTimeout(function () {
-    //   window.location.reload()
-    // }, 3000);
+    setTimeout(function () {
+      window.location.reload()
+    }, 3000);
   }
   sellMinion(minion){
     
