@@ -9,7 +9,12 @@ class AboutUs extends React.Component {
   render() {
     return (
       <div className="about-us-container">
+        <div className="teamContainer">
         <h2 className="teamh2">Meet the Team</h2>
+        <a href="https://github.com/chenq7/MinionWars" target="_blank">
+          <i class="fa fa-github teamGithub" aria-hidden="true"></i>
+        </a>
+        </div>
         <div className="team-members">
           <ul>
             <li>

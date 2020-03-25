@@ -12,7 +12,12 @@
   #item-3 {
     display: none;
   }
-
+  .nav-dropdown li a {
+    font-size: 20px !important;
+  }
+  .userProfile {
+    font-size: 20px !important;
+  }
 }
 
 @media(max-width: 800px){
@@ -170,7 +175,7 @@ body {
     .market>h1{
       display: flex;
       align-items: center;
-      font-size: 50px;
+      font-size: 35px;
     }
 
     .currency{
