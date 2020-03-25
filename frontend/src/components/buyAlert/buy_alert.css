@@ -21,7 +21,7 @@
 }
 
 .BuyAlert {
-  transform: translate(75px, -43px);
+  transform: translate(75px, -50px);
   height: 30px;
   background-image: linear-gradient(to bottom left, #c22a0cfd, brown);
   border-radius: 12px;

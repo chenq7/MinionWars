@@ -18,6 +18,7 @@
     max-width: 100%;
 }
 .img-container {
+  padding: 6px;
     display: inline-block;
     position: relative;
 }
@@ -76,7 +77,7 @@ min-height: 75px;
 }
 
 .rareName{
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.8rem;
   color: blue;
 }
 
