@@ -74,6 +74,14 @@ header .menu {
 
 }
 
+.dropdown{
+  display: none;
+}
+
+.hamburger:hover .dropdown{
+  display: block;
+}
+
 .dropdown-content a:hover {
  cursor: pointer;
   color: orange;
@@ -81,14 +89,12 @@ header .menu {
 .dropdown-content {
   display: block;
 }
-.hide-me {
-  display: none;
-}
+
 
 .hamburger{
   color: gold;
-  font-size: 1rem;
-    margin-right: 1em;
+  font-size: 1.5rem;
+  margin-right: 1em;
 
 }
 
@@ -182,6 +188,7 @@ header .menu {
 
   .dropdown-container{
     display: block;
+    height: 1.5em;
   }
   .nav{
     display: none;
@@ -196,9 +203,5 @@ header .menu {
   }
   .userProfile{
     margin-right: 0;
-  }
-
-  .userProfile{
-    font-size: 10px;
   }
 }
