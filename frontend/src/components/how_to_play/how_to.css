@@ -1,8 +1,13 @@
+html, body, #root, #root > div {
+    height: 100%;
+}
+
 .how-to-container{
     background: url('../../app/assets/background2.jpg')no-repeat center/cover;
     z-index: 0;
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 
