@@ -74,6 +74,14 @@ header .menu {
 
 }
 
+.dropdown{
+  display: none;
+}
+
+.hamburger:hover .dropdown{
+  display: block;
+}
+
 .dropdown-content a:hover {
  cursor: pointer;
   color: orange;
@@ -81,9 +89,7 @@ header .menu {
 .dropdown-content {
   display: block;
 }
-.hide-me {
-  display: none;
-}
+
 
 .hamburger{
   color: gold;

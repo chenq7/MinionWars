@@ -27,6 +27,13 @@ class Nav extends React.Component {
     this.setState({ hidden: !currentState });
   }
 
+  close() {
+    debugger
+    const newState = this.state.hidden;
+
+    this.setState({ hidden: !newState });
+  }
+
   getLinks() {
     if (this.props.loggedIn) {
       return (
@@ -42,7 +49,7 @@ class Nav extends React.Component {
           <li className="SessionButton" onClick={this.logoutUser}>
             <a>Logout</a>
           </li>
-          </>
+        </>
       );
     } else {
       return (
@@ -65,16 +72,22 @@ class Nav extends React.Component {
           <img className="logo" src={Logo} />
         </div>
         <ul className="nav">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/minions">Marketplace</Link></li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/minions">Marketplace</Link>
+          </li>
           {this.getLinks()}
         </ul>
         <div className="dropdown-container">
-          <i onClick={this.changeClass} className="fas fa-bars hamburger"></i>
+          <i className="fas fa-bars hamburger">
           <div className="dropdown">
-            <div className={this.state.hidden ? "hide-me" : "dropdown-content"}>
-              <ul className='nav-dropdown'>
+            <div className="dropdown-content">
+              <ul className="nav-dropdown">
                 <li>
                   <Link to="/">Home</Link>
                 </li>
@@ -88,6 +101,7 @@ class Nav extends React.Component {
               </ul>
             </div>
           </div>
+          </i>
         </div>
       </header>
     );
