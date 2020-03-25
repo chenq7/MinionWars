@@ -57,7 +57,6 @@ class SingleCard extends React.Component {
        case "Epic":
          return <li className="epicName minionName">{minion.name}</li>;
          break;
-
        default:
          break;
      }
