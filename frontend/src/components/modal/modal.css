@@ -16,6 +16,17 @@
 }
 
 @media (max-width: 600px) {
+  .loginForm, .signupForm {
+    width: 375px;
+    min-height: 550px;
+    background-size: cover;
+  }
+  .loginFields {
+    top: 8em;
+  }
+  .signupFields {
+    top: 6em;
+  }
   .scroll-image {
     max-width: 400px;
     min-height: 600px;
