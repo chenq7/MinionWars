@@ -46,16 +46,16 @@ class SingleCard extends React.Component {
   minionName(minion){
      switch (minion.rarity) {
        case "Common":
-         return <li className="commonName">{minion.name}</li>;
+         return <li className="commonName minionName">{minion.name}</li>;
          break;
        case "Rare":
-         return <li className="rareName">{minion.name}</li>;
+         return <li className="rareName minionName">{minion.name}</li>;
          break;
        case "Legendary":
-         return <li className="legendaryName">{minion.name}</li>;
+         return <li className="legendaryName minionName">{minion.name}</li>;
          break;
        case "Epic":
-         return <li className="epicName">{minion.name}</li>;
+         return <li className="epicName minionName">{minion.name}</li>;
          break;
 
        default:

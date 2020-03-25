@@ -55,9 +55,16 @@ min-height: 75px;
   overflow: hidden;
 }
 
+
+
 .epic-text-color{
   color: lightgray;
 }
+
+.minionName{
+  font-size: larger;
+}
+
 .commonName{
   padding-bottom: 2rem;
   color: green;
