@@ -1,6 +1,6 @@
 .how-to-container{
     background: url('../../app/assets/background2.jpg')no-repeat center/cover;
-    height: 100vh;
+    height: 87.3vh;
     z-index: 0;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
     font-size: 2em;
     text-align: center;
     width: 500px;
-    height: 570px;
+    height: 80%;
     border-radius: 10px;
     background-color: black;
     opacity: 0.6;
@@ -33,20 +33,20 @@
     justify-content: center;
 }
 
-.vs{
-    width: 5em;
-    height: 5em;
+.how-to-vs{
+    width: 20%;
+    height: 0%;
 }
 
 .minion1, .minion2{
-    width: 3em;
-    height: 5em;
+    width: 50%;
+    height: 50%;
 }
 
 .vs-background {
-  background-image: radial-gradient(circle, #ffe786bf, #f06b0690);
+  /* background-image: radial-gradient(circle, #ffe786bf, #f06b0690);
   box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22); */
   width: 9rem;
   height: 12rem;
   display: flex;
@@ -54,4 +54,5 @@
   justify-content: center;
   z-index: 2;
   border-radius: 40px;
+  opacity: 1.0;
 }
