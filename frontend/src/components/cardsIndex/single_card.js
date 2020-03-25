@@ -43,6 +43,26 @@ class SingleCard extends React.Component {
     }
   }
 
+  minionName(minion){
+     switch (minion.rarity) {
+       case "Common":
+         return <li className="commonName">{minion.name}</li>;
+         break;
+       case "Rare":
+         return <li className="rareName">{minion.name}</li>;
+         break;
+       case "Legendary":
+         return <li className="legendaryName">{minion.name}</li>;
+         break;
+       case "Epic":
+         return <li className="epicName">{minion.name}</li>;
+         break;
+
+       default:
+         break;
+     }
+  }
+
   render() {
     const minion = this.props.minion;
     return (
@@ -54,6 +74,7 @@ class SingleCard extends React.Component {
             </div>
             <div className="positioning">
               <ul className={minion.rarity === 'Epic' ? 'epic-text-color':null}>
+                {this.minionName(minion)}
                 <li>
                   HP:{minion.hp}
                   <i className="fas fa-briefcase-medical"></i>

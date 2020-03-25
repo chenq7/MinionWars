@@ -58,5 +58,22 @@ min-height: 75px;
 .epic-text-color{
   color: lightgray;
 }
+.commonName{
+  padding-bottom: 2rem;
+  color: green;
+}
 
+.epicName{
+  padding-bottom: 3rem;
+  color: purple;
+}
 
+.rareName{
+  padding-bottom: 1.5rem;
+  color: blue;
+}
+
+.legendaryName{
+  padding-bottom: 1.5rem;
+  color: orange;
+}
