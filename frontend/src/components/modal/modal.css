@@ -14,3 +14,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media (max-width: 600px) {
+  .scroll-image {
+    max-width: 400px;
+    min-height: 600px;
+    transform: translate(50%, -50%);
+  }
+  .congrats {
+    transform: translate(2%, 75vw);
+    width: 250px;
+  }
+  .handShake {
+    top: 85vw;
+    right: 0vw;
+    width: 280px;
+    height: 180px;
+  }
+  .deal {
+    top: 70vw;
+    left: 15vw;
+  }
+}
