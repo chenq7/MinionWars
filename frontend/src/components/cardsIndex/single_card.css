@@ -10,7 +10,7 @@
     float: left;
     position: relative;
     min-height: 1px;
-    background-color: #aaa;
+    /* background-color: #aaa; */
     text-align: center;
     border-radius: 4px;
 }
