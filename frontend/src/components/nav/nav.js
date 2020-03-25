@@ -66,6 +66,9 @@ class Nav extends React.Component {
         </div>
         <ul className="nav">
           <Link to="/">Home</Link>
+          <a href="https://github.com/chenq7/MinionWars" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
           <Link to="/about">About Us</Link>
           <Link to="/minions">Marketplace</Link>
           {this.getLinks()}
