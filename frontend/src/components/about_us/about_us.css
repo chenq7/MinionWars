@@ -49,3 +49,16 @@
 .personal{
     margin-top: 20px;
 }
+.teamContainer{
+    display: flex;
+}
+
+.teamGithub{
+    color: black;
+    font-size: -webkit-xxx-large;
+    padding-left: 15px;
+}
+
+.teamGithub:hover{
+    color: gold;
+}
