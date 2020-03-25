@@ -44,7 +44,7 @@ class UserProfile extends React.Component {
         if(minion.userId === this.props.currentUser.id){
           return (
             <div className="grid">
-              <div className="scene scene--card">
+              <div className="sell-container">
                 <SingleCard minion={minion}/>
                 <button className='sell' onClick={() => this.sellMinion(minion)}>sell for {minion.price/2}</button>
               </div>
