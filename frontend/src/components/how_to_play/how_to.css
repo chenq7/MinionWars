@@ -55,3 +55,14 @@
   border-radius: 40px;
   opacity: 1.0;
 }
+
+@media (max-width: 600px) {
+    .how-to-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .description {
+        width: 350px;
+    }
+}
