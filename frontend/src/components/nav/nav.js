@@ -30,25 +30,25 @@ class Nav extends React.Component {
   getLinks() {
     if (this.props.loggedIn) {
       return (
-        <div className="nav-items">
-          <div
+        <>
+          <li
             className="userProfile"
             onClick={() =>
               this.props.history.push(`/users/${this.props.currentUser.id}`)
             }
           >
             Profile
-          </div>
-          <div className="SessionButton" onClick={this.logoutUser}>
+          </li>
+          <li className="SessionButton" onClick={this.logoutUser}>
             <a>Logout</a>
-          </div>
-        </div>
+          </li>
+          </>
       );
     } else {
       return (
-        <div className="SessionButton" onClick={this.props.loginForm}>
+        <li className="SessionButton" onClick={this.props.loginForm}>
           <a>Login</a>
-        </div>
+        </li>
       );
     }
   }
@@ -65,19 +65,16 @@ class Nav extends React.Component {
           <img className="logo" src={Logo} />
         </div>
         <ul className="nav">
-          <Link to="/">Home</Link>
-          <a href="https://github.com/chenq7/MinionWars" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
-          <Link to="/about">About Us</Link>
-          <Link to="/minions">Marketplace</Link>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/minions">Marketplace</Link></li>
           {this.getLinks()}
         </ul>
         <div className="dropdown-container">
           <i onClick={this.changeClass} className="fas fa-bars hamburger"></i>
           <div className="dropdown">
             <div className={this.state.hidden ? "hide-me" : "dropdown-content"}>
-              <ul>
+              <ul className='nav-dropdown'>
                 <li>
                   <Link to="/">Home</Link>
                 </li>
@@ -87,7 +84,7 @@ class Nav extends React.Component {
                 <li>
                   <Link to="/minions">Marketplace</Link>
                 </li>
-                <li>{this.getLinks()}</li>
+                {this.getLinks()}
               </ul>
             </div>
           </div>

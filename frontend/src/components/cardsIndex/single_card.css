@@ -43,4 +43,20 @@ min-height: 75px;
   overflow: hidden;
 }
 
+.epic-positioning{
+  position: absolute;
+  top: 10px;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 95%;
+  height: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.epic-text-color{
+  color: lightgray;
+}
+
 

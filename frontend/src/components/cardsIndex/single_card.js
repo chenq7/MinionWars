@@ -3,6 +3,8 @@ import troll from "./cardimage/troll.png";
 import dragon from "./cardimage/dragon1.png";
 import rare from '../../app/cards/rare.png'
 import legendary from '../../app/cards/legendary.png'
+import common from '../../app/cards/common.png'
+import epic from "../../app/cards/epic.png";
 
 
 
@@ -24,7 +26,7 @@ class SingleCard extends React.Component {
   rarity(minion){
     switch (minion.rarity) {
       case "Common":
-        return <img className="card" src={rare}></img>;
+        return <img className="card" src={common}></img>;
         break;
       case "Rare":
         return <img className="card" src={rare}></img>;
@@ -33,7 +35,7 @@ class SingleCard extends React.Component {
         return <img className="card" src={legendary}></img>;
         break;
       case "Epic":
-        return <img className="card" src={rare}></img>;
+        return <img className="card" src={epic}></img>;
         break;
 
       default:
@@ -47,11 +49,11 @@ class SingleCard extends React.Component {
       <>
         <div id="container" class="col-lg-3">
           <div class="img-container">
-            <div className='image-positioning'>
+            <div className={minion.rarity === 'Epic' ? 'epic-positioning':'image-positioning'}>
               <img src={minion.url}></img>
             </div>
             <div className="positioning">
-              <ul>
+              <ul className={minion.rarity === 'Epic' ? 'epic-text-color':null}>
                 <li>
                   HP:{minion.hp}
                   <i className="fas fa-briefcase-medical"></i>

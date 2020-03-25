@@ -14,13 +14,28 @@
 
 
 .sell{
-    transform: translate(-14vw, 30vw);
     height: 30px;
     background-image: linear-gradient(to bottom left, #c22a0cfd, brown);
     border-radius: 12px;
     font-weight: 700;
     font-size: 16px;
+    position: absolute;
     color: #ffbe33;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 10px);
+    top: 430px;
+}
+
+.sell-container{
+   width: 25%;
+    min-width: 20rem;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    /* background-color: #aaa; */
+    text-align: center;
+    border-radius: 4px;
 }
 
 .sell:hover {
