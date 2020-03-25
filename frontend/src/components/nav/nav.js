@@ -64,7 +64,7 @@ class Nav extends React.Component {
         <div className="logo-container">
           <img className="logo" src={Logo} />
         </div>
-        <ul className='nav'>
+        <ul className="nav">
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
           <Link to="/minions">Marketplace</Link>
@@ -77,6 +77,9 @@ class Nav extends React.Component {
               <ul>
                 <li>
                   <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/about">About Us</Link>
                 </li>
                 <li>
                   <Link to="/minions">Marketplace</Link>
