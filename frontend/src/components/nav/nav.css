@@ -87,8 +87,8 @@ header .menu {
 
 .hamburger{
   color: gold;
-  font-size: 1rem;
-    margin-right: 1em;
+  font-size: 1.5rem;
+  margin-right: 1em;
 
 }
 
@@ -182,6 +182,7 @@ header .menu {
 
   .dropdown-container{
     display: block;
+    height: 1.5em;
   }
   .nav{
     display: none;
@@ -196,9 +197,5 @@ header .menu {
   }
   .userProfile{
     margin-right: 0;
-  }
-
-  .userProfile{
-    font-size: 10px;
   }
 }
