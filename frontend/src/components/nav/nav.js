@@ -28,7 +28,6 @@ class Nav extends React.Component {
   }
 
   close() {
-    debugger
     const newState = this.state.hidden;
 
     this.setState({ hidden: !newState });

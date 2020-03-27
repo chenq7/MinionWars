@@ -62,9 +62,9 @@ class UserProfile extends React.Component {
           otherUsers.push(allUsers[i]);
         }
       }
-      allUsers = allUsers.sort(() => 0.5 - Math.random()).slice(0, 10);
+      otherUsers = otherUsers.sort(() => 0.5 - Math.random()).slice(0, 10);
 
-      otherUsers = allUsers.map(user => {
+      otherUsers = otherUsers.map(user => {
         return (
           <button className="userToAttack" onClick={() => this.handleVersus(user)}>
             {user.username}
