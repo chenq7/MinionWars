@@ -23,10 +23,10 @@ class UserProfile extends React.Component {
     this.props.history.push({ pathname: `/users/${this.user._id}/vs/${user2}`, state: newState });
   }
 
-   refresh() {
+  refresh() {
     setTimeout(function () {
       window.location.reload()
-    }, 3000);
+    }, 2500);
   }
   sellMinion(minion){
     
@@ -54,16 +54,24 @@ class UserProfile extends React.Component {
         }
       }) : null;
 
-    const otherUsers = this.props.users && this.props.users.data ?
-      this.props.users.data.map(user => {
-        if (user.username !== this.props.currentUser.username){
-          return (
-            <button className="userToAttack" onClick={() => this.handleVersus(user)}>
-              {user.username}
-            </button>
-          );
+    let otherUsers = [];
+    if (this.props.users && this.props.users.data) {
+      let allUsers = this.props.users.data;
+      for (let i = 0; i < allUsers.length; i++) {
+        if (allUsers[i].username !== this.props.currentUser.username) {
+          otherUsers.push(allUsers[i]);
         }
-      }) : null;
+      }
+      otherUsers = otherUsers.sort(() => 0.5 - Math.random()).slice(0, 10);
+
+      otherUsers = otherUsers.map(user => {
+        return (
+          <button className="userToAttack" onClick={() => this.handleVersus(user)}>
+            {user.username}
+          </button>
+        );
+      });
+    }
 
     if (this.props.currentUser && this.props.users.data) {
       for (let i = 0; i < this.props.users.data.length; i++) {
