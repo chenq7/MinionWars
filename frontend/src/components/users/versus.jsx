@@ -24,6 +24,8 @@ class Versus extends React.Component {
     super(props);
     this.currentUser = null;
     this.enemy = null;
+    this.userMinions = [];
+    this.enemyMinions = [];
     this.minion1 = null;
     this.minion2 = null;
     this.result = "";
@@ -80,16 +82,16 @@ class Versus extends React.Component {
 
       if (minions) {
         for (let i = 0; i < minions.length; i++) {
-          if (this.minion1 && this.minion2) break;
-          else if (minions[i].userId === this.currentUser._id){
-            this.minion1 = minions[i];
+          if (minions[i].userId === this.currentUser._id){
+            this.userMinions.push(minions[i]);
           }
           else if (minions[i].userId === this.enemy._id) {
-            this.minion2 = minions[i];
+            this.enemyMinions.push(minions[i]);
           }
         }
       }
-
+      this.minion1 = this.userMinions[Math.floor(Math.random() * (this.userMinions.length - 1))];
+      this.minion2 = this.enemyMinions[Math.floor(Math.random() * (this.enemyMinions.length - 1))];
       this.attack(this.minion1, this.minion2);
     }
 

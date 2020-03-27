@@ -23,7 +23,7 @@ class UserProfile extends React.Component {
     this.props.history.push({ pathname: `/users/${this.user._id}/vs/${user2}`, state: newState });
   }
 
-   refresh() {
+  refresh() {
     setTimeout(function () {
       window.location.reload()
     }, 3000);
