@@ -44,15 +44,15 @@ class Splash extends React.Component {
 
           <section id="bottom-section">
             <div id="welcome-page-information">
-              <h2>Let The Battle Begin</h2>
+              <h2 className="bottom-section-title">Let The Battle Begin</h2>
               <br></br>
-              <p>
+              <p className="bottom-section-detail">
                 They were called Minions. Creatures of many sizes, shapes,
                 origins: followers of your command. Once a myth of the past. Now
                 they are in your hands.
               </p>
               <br></br>
-              <Link to="./learn">Learn more</Link>
+              <Link to="./learn" id="learn-more-link"><span id="learn-more-text">Learn More Here</span></Link>
             </div>
           </section>
         </div>
