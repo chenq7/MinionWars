@@ -47,9 +47,9 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 * Greg: Supervising group/research/planning material for next day 
 
 ### Day two: Display (handles window resizing, canvas) AND Game logic
-* Greg: Backend - User & Minion schema, validations, routes
-* John: Backend - User & Minion schema, validations, routes
-* Lawrence: Frontend Splash page
+* Greg: Backend - User & minion schema, validations, routes
+* John: Backend - User & minion schema, validations, routes
+* Lawrence: Frontend splash page
 * Anton: User profile page
 
 ### Day three: 
@@ -59,13 +59,13 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 * Anton: Frontend - profile page, and minion index, as well as a footer for all the pages
 
 ### Day four: 
-* Greg: Backend - buy/sell feature
-* John: Backend - buy/sell feature
-* Lawrence: Frontend - update navbar, slash page 
-* Anton: Frontend - attack page, profile page
+* Greg: Backend - Buy/sell feature
+* John: Backend - Buy/sell feature
+* Lawrence: Frontend - Update navbar, slash page 
+* Anton: Frontend - Attack page, profile page
 
 ### Day five: Test and Update README
-* Greg: Backend - attack feature and refactor miscellaneous
-* John: Backend - attack feature and refactor miscellaneous 
+* Greg: Backend - Attack feature and refactor miscellaneous
+* John: Backend - Attack feature and refactor miscellaneous 
 * Lawrence: Frontend - Update miscellaneous CSS
 * Anton: Frontend - Update miscellaneous CSS 
