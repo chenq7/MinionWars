@@ -2,13 +2,16 @@ import React from "react";
 import { fetchMinions } from '../../actions/minion_actions';
 import { connect } from 'react-redux';
 import { updateUser } from "../../actions/user_actions";
+import { Link } from "react-router-dom";
 
 import './versus.css';
 
 const mapStateToProps = (state) => {
+  const user = state.session ? state.session.user : null;
   return {
     minions: state.entities.minions,
-    users: state.entities.users
+    users: state.entities.users,
+    currentUser: user
   };
 };
 
@@ -106,37 +109,41 @@ class Versus extends React.Component {
     };
     
 
-    return(
-        <div className="vs">  
-          <div className="textLog"> 
-               
-                <ul className="leftLog">   
-                  {leftList.split("\n").map(line => {
-                    return <li>
-                      {line}
-                    </li>
-                  })}
-                  <li>{this.victoryNotice}</li>
-                </ul>
+    return (
+      <div className="vs">
+        <div className="textLog">
+          <ul className="leftLog">
+            {leftList.split("\n").map(line => {
+              return <li>{line}</li>;
+            })}
+            <li>{this.victoryNotice}</li>
+          </ul>
 
-              <div className="versusNames">
-                  {this.currentUser ? this.currentUser.username : null}
-                {" vs "}
-                {this.enemy ? this.enemy.username : null } <br></br>
-                {this.minion1 ? this.minion1.name : null}
-                {" vs "}
-                {this.minion2 ? this.minion2.name : null} <br></br>
-              </div>
-
-                  <ul className="rightLog">
-                  {rightList.split("\n").map(line => {
-                    return <li>
-                      {line}
-                    </li>
-                  })}
-                </ul>
+          <div>
+            <li
+              id="back-profile-link"
+              onClick={() =>
+                this.props.history.push(`/users/${this.props.currentUser.id}`)
+              }>
+              <span id="back-profile-text"></span>
+            </li>
+            <div className="versusNames">
+              {this.currentUser ? this.currentUser.username : null}
+              {" vs "}
+              {this.enemy ? this.enemy.username : null} <br></br>
+              {this.minion1 ? this.minion1.name : null}
+              {" vs "}
+              {this.minion2 ? this.minion2.name : null} <br></br>
             </div>
           </div>
+
+          <ul className="rightLog">
+            {rightList.split("\n").map(line => {
+              return <li>{line}</li>;
+            })}
+          </ul>
+        </div>
+      </div>
     );
   }
 }

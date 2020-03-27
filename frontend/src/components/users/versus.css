@@ -65,3 +65,50 @@
       letter-spacing: 1px;
       line-height: 40px;
 }
+
+
+/* Back to Profile Button transition begin */
+#back-profile-link{
+  margin-top: 0;
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 5px black;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  transition: all 0.5s;
+  margin: 5px;
+  text-align: center;
+}
+
+#back-profile-text{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+
+}
+
+#back-profile-text:after {
+  content: '<<Back to Profile>>';
+  position: absolute;
+  opacity: 1;
+  top: 0;
+ cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+#back-profile-link:hover{
+
+  color: black;
+  text-shadow: 0px 0px 11px gold;
+}
+
+#back-profile-link:hover #back-profile-text:after {
+    content: ">>Back to Profile<<";
+  opacity: 1;
+  right: 1;
+}
+/* end here */
