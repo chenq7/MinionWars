@@ -59,15 +59,14 @@ ul {
 }
 
 #welcome-page-information a {
-  margin-top: 30px;
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  /* margin-top: 30px; */
+  /* border: none; */
+  /* color: white; */
+  /* padding: 15px 32px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 section {
@@ -152,35 +151,87 @@ body {
 }
 
 .goto-next:before {
-			background-image: url("arrow.svg");
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			content: '';
-			display: block;
-			height: 1.5em;
-			left: 50%;
-			margin: -0.75em 0 0 -1em;
-			position: absolute;
-			top: 50%;
-			width: 2em;
-			z-index: 1;
-    }
+  background-image: url("arrow.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  display: block;
+  height: 1.5em;
+  left: 50%;
+  margin: -0.75em 0 0 -1em;
+  position: absolute;
+  top: 50%;
+  width: 2em;
+  z-index: 1;
+}
     
-    .market{
-      display: flex;
-      justify-content: center;
-    }
+.market{
+  display: flex;
+  justify-content: center;
+}
 
-    .market>h1{
-      display: flex;
-      align-items: center;
-      font-size: 35px;
-    }
+.market>h1{
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+}
 
-    .currency{
-      display: flex;
-      align-items: center;
-      font-size: 25px;
-      color: gold;
-    } 
+.currency{
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: gold;
+} 
+
+.bottom-section-detail, .bottom-section-title{
+  text-shadow: 0px 0px 11px white;
+}
+
+
+/* Learn More Button transition begin */
+#learn-more-link{
+  margin-top: 0;
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 6px black;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  margin: 5px;
+}
+
+#learn-more-text{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  /* transition: 0.5s; */
+}
+
+#learn-more-text:after {
+  content: '>>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -35px;
+  /* transition: 0.0s; */
+}
+
+#learn-more-link:hover{
+  padding-right: 40px;
+  /* background-color: rgb(128, 125, 120); */
+  color: black;
+  text-shadow: 0px 0px 11px white;
+}
+
+#learn-more-link:hover #learn-more-text:after {
+  opacity: 1;
+  right: 1;
+
+}
+
+/* end here */
