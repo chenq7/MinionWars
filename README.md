@@ -1,5 +1,5 @@
 # Background and Overview:
-Minion Wars is a MERN stack project game that is centered around collecting, selling, battling digital tokens called minions. Minions are represented by a image. Each minion has an assigned trait value that is randomzied upon creation. Users also have the option of mating their existing minions to create new child minions. The website includes interactions between users. A user has the option of attacking another user's territory, the recieveing end will get a notification that another user has attacked them. Attacking user can leave comment to the defending user.  
+Minion Wars is a MERN stack project game that is centered around collecting, selling, battling digital tokens called minions. Minions are represented by an image. Each minion has an assigned trait value that is randomized upon creation. Users also have the option of mating their existing minions to create new child minions. The website includes interactions between users. A user has the option of attacking another user's territory, the receiving end will get a notification that another user has attacked them. Attacking users can leave comments to the defending user.  
 
 [Live Link](https://minion-wars.herokuapp.com/#/)
 
@@ -53,8 +53,8 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 * Anton: User profile page
 
 ### Day three: 
-* Greg: Backend - User, minion assoicatation, seeding 
-* John: Backend - User, minion assoicatation, seeding
+* Greg: Backend - User, minion association, seeding 
+* John: Backend - User, minion association, seeding
 * Lawrence: Frontend - profile page, and minion index, as well as a footer for all the pages
 * Anton: Frontend - profile page, and minion index, as well as a footer for all the pages
 
@@ -67,5 +67,5 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 ### Day five: Test and Update README
 * Greg: Backend - attack feature and refactor miscellaneous
 * John: Backend - attack feature and refactor miscellaneous 
-* Lawrence: Frontend - Update miscellaneous css
-* Anton: Frontend - Update miscellaneous css 
+* Lawrence: Frontend - Update miscellaneous CSS
+* Anton: Frontend - Update miscellaneous CSS 
