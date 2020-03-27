@@ -15,21 +15,21 @@ class HowToPlay extends React.Component {
                     <h1 className='how-title'>How to play:</h1>
                 </div>
                 <div className='description'>
-                    <p>Market Place</p>
+                    <h3 id="how-to-market-title">Market Place</h3>
                     <p>
                         Player can buy minions with coins from market place to improve their territory. As well as sell their minions to earn coins.
                     </p>
-                    <p>Battle</p>
+                    <h2 id="how-to-battle-title">Battle</h2>
                     <p> 
                         Player select another player to faces off against in a duel between their minion. The goal is to eliminate the opponent's minion by attacking them base on the minion's stats. Attacking player earns coins if the battle is won. While defending player will be notified of the result. 
                     </p>
                     <div className="mvsm">
                         <div className="vs-background">
-                            <img className="minion1" src={M1} />
+                            <img id="minion1" src={M1} />
                         </div>
                         <img className='how-to-vs' src={Vs} />
                         <div className="vs-background">
-                            <img className="minion2" src={M2} />
+                            <img id="minion2" src={M2} />
                         </div>
                     </div>
                 </div>

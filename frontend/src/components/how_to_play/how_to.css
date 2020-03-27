@@ -42,7 +42,7 @@ html, body, #root, #root > div {
     height: 0%;
 }
 
-.minion1, .minion2{
+#minion1, #minion2{
     width: 50%;
     height: 50%;
 }
@@ -70,4 +70,11 @@ html, body, #root, #root > div {
     .description {
         width: 350px;
     }
+}
+
+#how-to-market-title, #how-to-battle-title{
+    font-size: 3rem;
+    font-weight: 900;
+    text-decoration: underline;
+    opacity: 1;
 }
