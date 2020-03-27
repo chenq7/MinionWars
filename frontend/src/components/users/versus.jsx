@@ -2,7 +2,7 @@ import React from "react";
 import { fetchMinions } from '../../actions/minion_actions';
 import { connect } from 'react-redux';
 import { updateUser } from "../../actions/user_actions";
-import { Link } from "react-router-dom";
+
 
 import './versus.css';
 
