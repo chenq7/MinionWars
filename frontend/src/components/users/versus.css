@@ -122,13 +122,13 @@
 .vs-minion1-img, .vs-minion2-img{
     width: 30%;
     height: 70%;
-
+    
 }
 
 .vs-img{
     width: 10%;
     height: 10%;
-    padding-top: 15%;
+    padding-top: 5%;
 }
 
 .leftLog, .rightLog{
@@ -139,4 +139,9 @@
 
 .midLog{
     width: 35%;
+}
+.vsTurns{
+    text-decoration: underline;
+    text-align: center;
+    /* position: absolute; */
 }

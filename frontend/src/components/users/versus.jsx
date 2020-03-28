@@ -115,6 +115,7 @@ class Versus extends React.Component {
       <div className="vs">
         <div className="textLog">
           <ul className="leftLog">
+            <li className="vsTurns">Your Turns</li>
             {leftList.split("\n").map(line => {
               return <li>{line}</li>;
             })}
@@ -146,6 +147,7 @@ class Versus extends React.Component {
           </div>
 
           <ul className="rightLog">
+            <li className="vsTurns">Enemy's Turns</li>
             {rightList.split("\n").map(line => {
               return <li>{line}</li>;
             })}
