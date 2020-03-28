@@ -5,6 +5,7 @@ import '../cardsIndex/card_index.css';
 import '../cardsIndex/single_card.css'; 
 import Coin from '../../../src/app/assets/coin.png'
 
+
 class UserProfile extends React.Component {
   constructor(props){
     super(props);
