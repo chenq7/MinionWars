@@ -28,10 +28,10 @@
 }
 
 .versusNames {
-    display: flex;
+    /* display: flex; */
     text-align: center;
     height: fit-content;
-    margin-top: 20%;
+    margin-top: 5%;
     background-image: linear-gradient(to top left, #e1bc8d, #a66c39);
     box-shadow: 0px 0px 20px 5px #e1bd8d75;
     border: solid 0.5px #aa703a;
@@ -112,3 +112,31 @@
   right: 1;
 }
 /* end here */
+
+.vs-minions{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.vs-minion1-img, .vs-minion2-img{
+    width: 30%;
+    height: 70%;
+
+}
+
+.vs-img{
+    width: 10%;
+    height: 10%;
+    padding-top: 15%;
+}
+
+.leftLog, .rightLog{
+    overflow: auto;
+    max-height: 75vh;
+    width: 25%;
+}
+
+.midLog{
+    width: 35%;
+}
