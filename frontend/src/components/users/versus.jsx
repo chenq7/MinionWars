@@ -2,7 +2,7 @@ import React from "react";
 import { fetchMinions } from '../../actions/minion_actions';
 import { connect } from 'react-redux';
 import { updateUser } from "../../actions/user_actions";
-
+import Vs from "../../app/assets/vs.png";
 
 import './versus.css';
 
@@ -121,14 +121,20 @@ class Versus extends React.Component {
             <li>{this.victoryNotice}</li>
           </ul>
 
-          <div>
+          <div className="midLog">
             <li
               id="back-profile-link"
               onClick={() =>
                 this.props.history.push(`/users/${this.props.currentUser.id}`)
-              }>
+              }
+            >
               <span id="back-profile-text"></span>
             </li>
+          <div className="vs-minions">
+            <img className="vs-minion1-img" src={this.minion1 ? this.minion1.url : null}></img>
+            <img className="vs-img" src={Vs}></img>
+            <img className="vs-minion2-img" src={this.minion2 ? this.minion2.url : null}></img>
+          </div>
             <div className="versusNames">
               {this.currentUser ? this.currentUser.username : null}
               {" vs "}
