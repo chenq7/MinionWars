@@ -122,7 +122,6 @@
 .vs-minion1-img, .vs-minion2-img{
     width: 30%;
     height: 70%;
-    
 }
 
 .vs-img{
@@ -145,3 +144,21 @@
     text-align: center;
     /* position: absolute; */
 }
+
+/* Scrollbar css */
+.leftLog::-webkit-scrollbar, .rightLog::-webkit-scrollbar{
+    background-color: transparent;
+    width: 3px;
+}
+
+.leftLog::-webkit-scrollbar-track, .rightLog::-webkit-scrollbar-track{
+    border-radius: 20px;
+}
+
+.leftLog::-webkit-scrollbar-thumb, .rightLog::-webkit-scrollbar-thumb{
+    background-color: gold;
+    border-radius: 20px;
+}
+
+
+/* end */
