@@ -121,7 +121,7 @@ class Versus extends React.Component {
             })}
             <li>{this.victoryNotice}</li>
           </ul>
-
+          
           <div className="midLog">
             <li
               id="back-profile-link"

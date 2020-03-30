@@ -111,7 +111,7 @@
   opacity: 1;
   right: 1;
 }
-/* end here */
+/* profile button end */
 
 .vs-minions{
     display: flex;
@@ -134,6 +134,7 @@
     overflow: auto;
     max-height: 75vh;
     width: 25%;
+    border-radius: 20px;
 }
 
 .midLog{
@@ -142,7 +143,6 @@
 .vsTurns{
     text-decoration: underline;
     text-align: center;
-    /* position: absolute; */
 }
 
 /* Scrollbar css */
@@ -159,6 +159,5 @@
     background-color: gold;
     border-radius: 20px;
 }
+/*scroll end */
 
-
-/* end */
