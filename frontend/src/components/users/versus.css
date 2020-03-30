@@ -55,6 +55,13 @@
       line-height: 40px;
 }
 
+.leftLogUl, .rightLogUl {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    padding: 7.5px 7.5px 0px 7.5px;
+}
+
 .rightLog {
       background-image: linear-gradient(to bottom right, #632917, rgba(34, 6, 6, 0.915));
       box-shadow: 0px 20px 20px 15px #641d0871;
@@ -131,7 +138,7 @@
 }
 
 .leftLog, .rightLog{
-    overflow: auto;
+    overflow: hidden;
     max-height: 75vh;
     width: 25%;
     border-radius: 20px;
@@ -146,16 +153,16 @@
 }
 
 /* Scrollbar css */
-.leftLog::-webkit-scrollbar, .rightLog::-webkit-scrollbar{
+.leftLogUl::-webkit-scrollbar, .rightLogUl::-webkit-scrollbar{
     background-color: transparent;
-    width: 3px;
+    width: 5px;
 }
 
-.leftLog::-webkit-scrollbar-track, .rightLog::-webkit-scrollbar-track{
+.leftLogUl::-webkit-scrollbar-track, .rightLogUl::-webkit-scrollbar-track{
     border-radius: 20px;
 }
 
-.leftLog::-webkit-scrollbar-thumb, .rightLog::-webkit-scrollbar-thumb{
+.leftLogUl::-webkit-scrollbar-thumb, .rightLogUl::-webkit-scrollbar-thumb{
     background-color: gold;
     border-radius: 20px;
 }
