@@ -6,7 +6,7 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 #### Homepage
 <img src="https://user-images.githubusercontent.com/50147749/77571578-fc4f4700-6ea3-11ea-978f-f04129a89174.png">
 
-#### React modal
+#### React Modal
 ![](/frontend/src/app/assets/login_demo.gif)
 Quick and intuitive react modals are utilized throughout the app to enhance the user's experience.
 
