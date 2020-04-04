@@ -41,6 +41,7 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 
 # Code Snippet
 
+### Battle Feature
 Implement a battle feature that would result in a different outcome base on the attacking and defending  minion's stats. 
 
 ```
@@ -71,7 +72,7 @@ Implement a battle feature that would result in a different outcome base on the 
         this.props.updateUser(this.currentUser);
         break
       }
-      
+
       dmg = minion2.attack - minion1.defense
       minion1.hp -= dmg;
       this.result += `${minion2.name} deals ${dmg} to ${minion1.name}, hp left: ${minion1.hp}\n`;
@@ -81,6 +82,80 @@ Implement a battle feature that would result in a different outcome base on the 
       }
     }
   }
+```
+### User Validation
+
+Built user authentication by encrypting user details with JSON Webtoken to be used with Axios to be decrypted with the JWT-Decode library in the frontend.
+
+```
+router.post("/register", (req, res) => {
+  const { errors, isValid } = validateRegisterInput(req.body);
+
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
+
+  User.findOne({ username: req.body.username }).then(user => {
+    if (user) {
+      errors.username = "User already exists";
+      return res.status(400).json(errors);
+    } else {
+      const newUser = new User({
+        username: req.body.username,
+        password: req.body.password
+      });
+
+      bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+          if (err) throw err;
+          newUser.password = hash;
+          newUser
+            .save()
+            .then(user => {
+              const payload = { id: user.id, username: user.username };
+
+              jwt.sign(
+                payload,
+                keys.secretOrKey,
+                { expiresIn: 3600 },
+                (err, token) => {
+                  res.json({
+                    success: true,
+                    token: "Bearer " + token
+                  });
+                }
+              );
+            })
+            .catch(err => console.log(err));
+        });
+      });
+    }
+  });
+});
+```
+
+Included Validator.js library to check model validation for the inclusion of password & email upon login.
+```
+function validateLoginInput(data) {
+  let errors = {};
+
+  data.username = validText(data.username) ? data.username : "";
+  data.password = validText(data.password) ? data.password : "";
+
+
+  if (Validator.isEmpty(data.username)) {
+    errors.username = "username field is required";
+  }
+
+  if (Validator.isEmpty(data.password)) {
+    errors.password = "Password field is required";
+  }
+
+  return {
+    errors,
+    isValid: Object.keys(errors).length === 0
+  };
+};
 ```
 
 ## Group Members and Work Breakdown:
