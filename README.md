@@ -39,6 +39,50 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 * Axios
 * Postman
 
+# Code Snippet
+
+Implement a battle feature that would result in a different outcome base on the attacking and defending  minion's stats. 
+
+```
+  attack(minion1, minion2){
+    this.attacked = true;
+    if (!minion1){
+      this.result = this.currentUser.username + " go buy a minion!"
+      return;
+    }
+
+    if (!minion2){
+      this.result = this.currentUser.username + " wins by default"
+      this.victoryNotice = "You have earned 100 coins for this victory!";
+      this.currentUser.coins += 100;
+      this.props.updateUser(this.currentUser);
+      return;
+    }
+
+    let dmg;
+    while (minion1.hp > 0 && minion2.hp > 0){
+      dmg = minion1.attack - minion2.defense;
+      minion2.hp -= dmg;
+      this.result += `${minion1.name} deals ${dmg} to ${minion2.name}, hp left: ${minion2.hp}\n`;
+      if (minion2.hp <= 0){
+        this.result += this.currentUser.username + "'s " + minion1.name + " wins";
+        this.victoryNotice = "You have earned 100 coins for this victory!";
+        this.currentUser.coins += 100;
+        this.props.updateUser(this.currentUser);
+        break
+      }
+      
+      dmg = minion2.attack - minion1.defense
+      minion1.hp -= dmg;
+      this.result += `${minion2.name} deals ${dmg} to ${minion1.name}, hp left: ${minion1.hp}\n`;
+      if (minion1.hp <= 0) {
+        this.result += this.enemy.username + "'s " + minion2.name + " wins";
+        break
+      }
+    }
+  }
+```
+
 ## Group Members and Work Breakdown:
 * Greg: 
 * Lawrence:
