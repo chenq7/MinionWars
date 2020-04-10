@@ -159,37 +159,37 @@ function validateLoginInput(data) {
 ```
 
 ## Group Members and Work Breakdown:
-* Greg: 
-* Lawrence:
-* John:
-* Anton:
+* Qixiang: https://github.com/chenq7
+* Lawrence: https://github.com/lawrence14701
+* John: https://github.com/CsJohnJJ
+* Anton: https://github.com/Wayattearp
 
 ### Day one: Splash page and user backend/frontend
 * John: Backend 
 * Lawrence: Backend
 * Anton: Frontend 
-* Greg: Supervising group/research/planning material for next day 
+* Qixiang: Supervising group/research/planning material for next day 
 
 ### Day two: Display (handles window resizing, canvas) AND Game logic
-* Greg: Backend - User & minion schema, validations, routes
+* Qixiang: Backend - User & minion schema, validations, routes
 * John: Backend - User & minion schema, validations, routes
-* Lawrence: Frontend splash page
-* Anton: User profile page
+* Lawrence: Frontend - splash page
+* Anton: Frontend - User profile page
 
 ### Day three: 
-* Greg: Backend - User, minion association, seeding 
+* Qixiang: Backend - User, minion association, seeding 
 * John: Backend - User, minion association, seeding
 * Lawrence: Frontend - profile page, and minion index, as well as a footer for all the pages
 * Anton: Frontend - profile page, and minion index, as well as a footer for all the pages
 
 ### Day four: 
-* Greg: Backend - Buy/sell feature
+* Qixiang: Backend - Buy/sell feature
 * John: Backend - Buy/sell feature
 * Lawrence: Frontend - Update navbar, slash page 
 * Anton: Frontend - Attack page, profile page
 
 ### Day five: Test and Update README
-* Greg: Backend - Attack feature and refactor miscellaneous
+* Qixiang: Backend - Attack feature and refactor miscellaneous
 * John: Backend - Attack feature and refactor miscellaneous 
 * Lawrence: Frontend - Update miscellaneous CSS
 * Anton: Frontend - Update miscellaneous CSS 
