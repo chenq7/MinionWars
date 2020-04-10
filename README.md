@@ -1,5 +1,5 @@
 # Background and Overview:
-Minion Wars is a MERN stack project game that is centered around collecting, selling, battling digital tokens called minions. Minions are represented by an image. Each minion has an assigned trait value that is randomized upon creation. Users also have the option of mating their existing minions to create new child minions. The website includes interactions between users. A user has the option of attacking another user's territory, the receiving end will get a notification that another user has attacked them. Attacking users can leave comments to the defending user.  
+Minion Wars is a Mongo-Express-React-Node (MERN stack) project that is centered around collecting, selling, and battling digital tokens called minions. Each minion is represented by an image and each minion has an assigned trait value upon creation. The website includes interactions between users and a learn more page with instructions on how to play the game. A user has the option of attacking another user's territory in order to gain gold used to buy more minions.  
 
 [Live Link](https://minion-wars.herokuapp.com/#/)
 
@@ -42,7 +42,7 @@ Minion Wars is a MERN stack project game that is centered around collecting, sel
 # Code Snippet
 
 ### Battle Feature
-Implement a battle feature that would result in a different outcome base on the attacking and defending  minion's stats. 
+Implement a battle feature that would result in a different outcome based on the attacking and defending  minion's stats. 
 
 ```
   attack(minion1, minion2){
