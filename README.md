@@ -1,8 +1,6 @@
 # Background and Overview:
 Minion Wars is a Mongo-Express-React-Node (MERN stack) project that is centered around collecting, selling, and battling digital tokens called minions. Each minion is represented by an image and each minion has an assigned trait value upon creation. The website includes interactions between users and a learn more page with instructions on how to play the game. A user has the option of attacking another user's territory in order to gain gold used to buy more minions.  
 
-[Live Link](https://minion-wars.herokuapp.com/#/)
-
 #### Homepage
 <img src="https://user-images.githubusercontent.com/50147749/77571578-fc4f4700-6ea3-11ea-978f-f04129a89174.png">
 
